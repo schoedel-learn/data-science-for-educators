@@ -1,0 +1,35 @@
+{
+  "name": "data-science-for-educators",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@mdx-js/react": "^2.3.0",
+    "gatsby": "^5.16.1",
+    "gatsby-plugin-manifest": "^5.16.0",
+    "gatsby-plugin-mdx": "^5.16.0",
+    "gatsby-source-filesystem": "^5.16.0",
+    "gatsby-transformer-remark": "^6.16.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "allowScripts": {
+    "lmdb@2.5.2": true,
+    "lmdb@2.5.3": true,
+    "@parcel/watcher@2.5.6": true,
+    "core-js@3.49.0": true,
+    "core-js-pure@3.49.0": true,
+    "es5-ext@0.10.64": true,
+    "gatsby@5.16.1": true,
+    "gatsby-cli@5.16.0": true,
+    "msgpackr-extract@3.0.4": true,
+    "sharp@0.32.6": true
+  }
+}
