@@ -39,27 +39,30 @@ That is a big part of what applied educational data science looks like in practi
 
 ## How to read the walkthrough
 
-The code below is broken into sections. Each section shows the exact lines from the script and then explains them in plain language. Blank lines are not listed individually; they are there to visually separate ideas.
+The code below is broken into sections. Each section shows the exact lines from the script in an editor-style block and then explains them in plain language. Long lines wrap to the viewport, but each original script line keeps only one line number in the left gutter.
 
 ## Lines 1–15: preparing the script and importing tools
 
-```python
-  1 | #!/usr/bin/env python3
-  2 | from __future__ import annotations
-  3 | 
-  4 | import re
-  5 | import subprocess
-  6 | import urllib.request
-  7 | from io import BytesIO
-  8 | from pathlib import Path
-  9 | 
- 10 | import matplotlib
- 11 | matplotlib.use('Agg')
- 12 | import matplotlib.pyplot as plt
- 13 | import numpy as np
- 14 | import pandas as pd
- 15 | from openpyxl import load_workbook
-```
+<div class="code-editor-wrap">
+  <div class="code-editor-label">build_question4_50state_math_reading.py · lines 1–15</div>
+  <pre class="code-editor" aria-label="Python code block from build_question4_50state_math_reading.py, lines 1 to 15"><code>
+<span class="code-line"><span class="code-gutter">1</span><span class="code-text">#!/usr/bin/env python3</span></span>
+<span class="code-line"><span class="code-gutter">2</span><span class="code-text">from __future__ import annotations</span></span>
+<span class="code-line"><span class="code-gutter">3</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">4</span><span class="code-text">import re</span></span>
+<span class="code-line"><span class="code-gutter">5</span><span class="code-text">import subprocess</span></span>
+<span class="code-line"><span class="code-gutter">6</span><span class="code-text">import urllib.request</span></span>
+<span class="code-line"><span class="code-gutter">7</span><span class="code-text">from io import BytesIO</span></span>
+<span class="code-line"><span class="code-gutter">8</span><span class="code-text">from pathlib import Path</span></span>
+<span class="code-line"><span class="code-gutter">9</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">10</span><span class="code-text">import matplotlib</span></span>
+<span class="code-line"><span class="code-gutter">11</span><span class="code-text">matplotlib.use(&#x27;Agg&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">12</span><span class="code-text">import matplotlib.pyplot as plt</span></span>
+<span class="code-line"><span class="code-gutter">13</span><span class="code-text">import numpy as np</span></span>
+<span class="code-line"><span class="code-gutter">14</span><span class="code-text">import pandas as pd</span></span>
+<span class="code-line"><span class="code-gutter">15</span><span class="code-text">from openpyxl import load_workbook</span></span>
+  </code></pre>
+</div>
 
 - **Line 1** tells Linux which Python interpreter should run this file. This first line is called a **shebang**, which is a startup instruction for the operating system.
 - **Line 2** enables a newer way of handling type annotations. A **type annotation** is a small hint about what kind of value a variable or function is expected to use.
@@ -73,25 +76,28 @@ The code below is broken into sections. Each section shows the exact lines from 
 
 ## Lines 17–33: defining where files go and which states to include
 
-```python
- 17 | BASE = Path('/home/barry-schoedel/Documents/Obsidian Vault/🎓 Education/STEM-5328/Question 4 Exploration')
- 18 | BASE.mkdir(parents=True, exist_ok=True)
- 19 | 
- 20 | CSV_PATH = BASE / 'question-4-charter-share-vs-naep-2024-50states.csv'
- 21 | PNG_PATH = BASE / 'question-4-charter-share-vs-naep-2024-50states.png'
- 22 | MD_PATH = BASE / 'question-4-charter-share-vs-naep-2024-50states.md'
- 23 | 
- 24 | CHARTER_XLSX = 'https://nces.ed.gov/programs/digest/d23/tables/xls/tabn216.90.xlsx'
- 25 | STATE_CODES = 'AL,AK,AZ,AR,CA,CO,CT,DE,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY'
- 26 | ALL_50_STATES = [
- 27 |     'Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia',
- 28 |     'Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts',
- 29 |     'Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey',
- 30 |     'New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island',
- 31 |     'South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia',
- 32 |     'Wisconsin','Wyoming'
- 33 | ]
-```
+<div class="code-editor-wrap">
+  <div class="code-editor-label">build_question4_50state_math_reading.py · lines 17–33</div>
+  <pre class="code-editor" aria-label="Python code block from build_question4_50state_math_reading.py, lines 17 to 33"><code>
+<span class="code-line"><span class="code-gutter">17</span><span class="code-text">BASE = Path(&#x27;/home/barry-schoedel/Documents/Obsidian Vault/🎓 Education/STEM-5328/Question 4 Exploration&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">18</span><span class="code-text">BASE.mkdir(parents=True, exist_ok=True)</span></span>
+<span class="code-line"><span class="code-gutter">19</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">20</span><span class="code-text">CSV_PATH = BASE / &#x27;question-4-charter-share-vs-naep-2024-50states.csv&#x27;</span></span>
+<span class="code-line"><span class="code-gutter">21</span><span class="code-text">PNG_PATH = BASE / &#x27;question-4-charter-share-vs-naep-2024-50states.png&#x27;</span></span>
+<span class="code-line"><span class="code-gutter">22</span><span class="code-text">MD_PATH = BASE / &#x27;question-4-charter-share-vs-naep-2024-50states.md&#x27;</span></span>
+<span class="code-line"><span class="code-gutter">23</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">24</span><span class="code-text">CHARTER_XLSX = &#x27;https://nces.ed.gov/programs/digest/d23/tables/xls/tabn216.90.xlsx&#x27;</span></span>
+<span class="code-line"><span class="code-gutter">25</span><span class="code-text">STATE_CODES = &#x27;AL,AK,AZ,AR,CA,CO,CT,DE,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY&#x27;</span></span>
+<span class="code-line"><span class="code-gutter">26</span><span class="code-text">ALL_50_STATES = [</span></span>
+<span class="code-line"><span class="code-gutter">27</span><span class="code-text">    &#x27;Alabama&#x27;,&#x27;Alaska&#x27;,&#x27;Arizona&#x27;,&#x27;Arkansas&#x27;,&#x27;California&#x27;,&#x27;Colorado&#x27;,&#x27;Connecticut&#x27;,&#x27;Delaware&#x27;,&#x27;Florida&#x27;,&#x27;Georgia&#x27;,</span></span>
+<span class="code-line"><span class="code-gutter">28</span><span class="code-text">    &#x27;Hawaii&#x27;,&#x27;Idaho&#x27;,&#x27;Illinois&#x27;,&#x27;Indiana&#x27;,&#x27;Iowa&#x27;,&#x27;Kansas&#x27;,&#x27;Kentucky&#x27;,&#x27;Louisiana&#x27;,&#x27;Maine&#x27;,&#x27;Maryland&#x27;,&#x27;Massachusetts&#x27;,</span></span>
+<span class="code-line"><span class="code-gutter">29</span><span class="code-text">    &#x27;Michigan&#x27;,&#x27;Minnesota&#x27;,&#x27;Mississippi&#x27;,&#x27;Missouri&#x27;,&#x27;Montana&#x27;,&#x27;Nebraska&#x27;,&#x27;Nevada&#x27;,&#x27;New Hampshire&#x27;,&#x27;New Jersey&#x27;,</span></span>
+<span class="code-line"><span class="code-gutter">30</span><span class="code-text">    &#x27;New Mexico&#x27;,&#x27;New York&#x27;,&#x27;North Carolina&#x27;,&#x27;North Dakota&#x27;,&#x27;Ohio&#x27;,&#x27;Oklahoma&#x27;,&#x27;Oregon&#x27;,&#x27;Pennsylvania&#x27;,&#x27;Rhode Island&#x27;,</span></span>
+<span class="code-line"><span class="code-gutter">31</span><span class="code-text">    &#x27;South Carolina&#x27;,&#x27;South Dakota&#x27;,&#x27;Tennessee&#x27;,&#x27;Texas&#x27;,&#x27;Utah&#x27;,&#x27;Vermont&#x27;,&#x27;Virginia&#x27;,&#x27;Washington&#x27;,&#x27;West Virginia&#x27;,</span></span>
+<span class="code-line"><span class="code-gutter">32</span><span class="code-text">    &#x27;Wisconsin&#x27;,&#x27;Wyoming&#x27;</span></span>
+<span class="code-line"><span class="code-gutter">33</span><span class="code-text">]</span></span>
+  </code></pre>
+</div>
 
 - **Line 17** creates a base folder path called `BASE`. This is where the output files will be written.
 - **Line 18** makes sure that folder exists. `parents=True` means Python should create any missing parent folders too. `exist_ok=True` means it should not crash if the folder already exists.
@@ -99,46 +105,44 @@ The code below is broken into sections. Each section shows the exact lines from 
 - **Line 24** stores the URL of the NCES Excel file that contains charter-school enrollment share by state.
 - **Line 25** stores the two-letter state codes used by the NAEP tool.
 - **Line 26** begins a Python list named `ALL_50_STATES`.
-- **Line 27** lists the first group of state names.
-- **Line 28** continues the list with more state names.
-- **Line 29** continues the list again.
-- **Line 30** continues the list again.
-- **Line 31** continues the list again.
-- **Line 32** finishes the list with Wisconsin and Wyoming.
+- **Lines 27–32** fill that list with every state name so the script can enforce a full 50-state frame.
 - **Line 33** closes the list.
 
 Why this matters: the script is being explicit about the 50-state frame. That was important because an earlier version accidentally dropped Wyoming and omitted some zero-charter states.
 
 ## Lines 36–61: downloading and cleaning the charter-share table
 
-```python
- 36 | def fetch_charter_share_all_50() -> pd.DataFrame:
- 37 |     with urllib.request.urlopen(CHARTER_XLSX) as resp:
- 38 |         data = resp.read()
- 39 |     wb = load_workbook(filename=BytesIO(data), data_only=True)
- 40 |     ws = wb.active
- 41 | 
- 42 |     charter = {}
- 43 |     for row in ws.iter_rows(min_row=5, max_row=56, values_only=True):
- 44 |         state = str(row[0]).replace('\xa0', ' ').strip() if row[0] is not None else ''
- 45 |         if state in {'United States', 'District of Columbia', ''}:
- 46 |             continue
- 47 |         raw = row[16]  # 2022-23 charter enrollment share
- 48 |         if raw == '#':
- 49 |             charter[state] = 0.0
- 50 |         elif raw in ('†', '---', None):
- 51 |             # For the assignment we include all 50 states; states with no charter legislation / no charters
- 52 |             # are coded as 0% charter enrollment so every state can appear as one dot.
- 53 |             charter[state] = 0.0
- 54 |         else:
- 55 |             charter[state] = float(raw)
- 56 | 
- 57 |     # guarantee all 50 states present
- 58 |     for state in ALL_50_STATES:
- 59 |         charter.setdefault(state, 0.0)
- 60 | 
- 61 |     return pd.DataFrame({'state': ALL_50_STATES, 'charter_enroll_pct_2022_23': [charter[s] for s in ALL_50_STATES]})
-```
+<div class="code-editor-wrap">
+  <div class="code-editor-label">build_question4_50state_math_reading.py · lines 36–61</div>
+  <pre class="code-editor" aria-label="Python code block from build_question4_50state_math_reading.py, lines 36 to 61"><code>
+<span class="code-line"><span class="code-gutter">36</span><span class="code-text">def fetch_charter_share_all_50() -&gt; pd.DataFrame:</span></span>
+<span class="code-line"><span class="code-gutter">37</span><span class="code-text">    with urllib.request.urlopen(CHARTER_XLSX) as resp:</span></span>
+<span class="code-line"><span class="code-gutter">38</span><span class="code-text">        data = resp.read()</span></span>
+<span class="code-line"><span class="code-gutter">39</span><span class="code-text">    wb = load_workbook(filename=BytesIO(data), data_only=True)</span></span>
+<span class="code-line"><span class="code-gutter">40</span><span class="code-text">    ws = wb.active</span></span>
+<span class="code-line"><span class="code-gutter">41</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">42</span><span class="code-text">    charter = {}</span></span>
+<span class="code-line"><span class="code-gutter">43</span><span class="code-text">    for row in ws.iter_rows(min_row=5, max_row=56, values_only=True):</span></span>
+<span class="code-line"><span class="code-gutter">44</span><span class="code-text">        state = str(row[0]).replace(&#x27;\xa0&#x27;, &#x27; &#x27;).strip() if row[0] is not None else &#x27;&#x27;</span></span>
+<span class="code-line"><span class="code-gutter">45</span><span class="code-text">        if state in {&#x27;United States&#x27;, &#x27;District of Columbia&#x27;, &#x27;&#x27;}:</span></span>
+<span class="code-line"><span class="code-gutter">46</span><span class="code-text">            continue</span></span>
+<span class="code-line"><span class="code-gutter">47</span><span class="code-text">        raw = row[16]  # 2022-23 charter enrollment share</span></span>
+<span class="code-line"><span class="code-gutter">48</span><span class="code-text">        if raw == &#x27;#&#x27;:</span></span>
+<span class="code-line"><span class="code-gutter">49</span><span class="code-text">            charter[state] = 0.0</span></span>
+<span class="code-line"><span class="code-gutter">50</span><span class="code-text">        elif raw in (&#x27;†&#x27;, &#x27;---&#x27;, None):</span></span>
+<span class="code-line"><span class="code-gutter">51</span><span class="code-text">            # For the assignment we include all 50 states; states with no charter legislation / no charters</span></span>
+<span class="code-line"><span class="code-gutter">52</span><span class="code-text">            # are coded as 0% charter enrollment so every state can appear as one dot.</span></span>
+<span class="code-line"><span class="code-gutter">53</span><span class="code-text">            charter[state] = 0.0</span></span>
+<span class="code-line"><span class="code-gutter">54</span><span class="code-text">        else:</span></span>
+<span class="code-line"><span class="code-gutter">55</span><span class="code-text">            charter[state] = float(raw)</span></span>
+<span class="code-line"><span class="code-gutter">56</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">57</span><span class="code-text">    # guarantee all 50 states present</span></span>
+<span class="code-line"><span class="code-gutter">58</span><span class="code-text">    for state in ALL_50_STATES:</span></span>
+<span class="code-line"><span class="code-gutter">59</span><span class="code-text">        charter.setdefault(state, 0.0)</span></span>
+<span class="code-line"><span class="code-gutter">60</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">61</span><span class="code-text">    return pd.DataFrame({&#x27;state&#x27;: ALL_50_STATES, &#x27;charter_enroll_pct_2022_23&#x27;: [charter[s] for s in ALL_50_STATES]})</span></span>
+  </code></pre>
+</div>
 
 - **Line 36** starts a function named `fetch_charter_share_all_50`. A **function** is a reusable block of code that performs one job.
 - **Line 37** opens the NCES Excel-file URL.
@@ -148,252 +152,226 @@ Why this matters: the script is being explicit about the 50-state frame. That wa
 - **Line 42** creates an empty Python dictionary named `charter`. A **dictionary** stores key-value pairs, like `state → charter share`.
 - **Line 43** loops through rows 5 to 56 of the worksheet. The script does not scan the whole file; it goes straight to the rows that contain the state table.
 - **Line 44** extracts the state name from the first column, replaces a nonstandard spacing character if needed, and strips extra whitespace. This is a data-cleaning step.
-- **Line 45** checks whether the current row is not really a state row we want to keep, such as the United States total, the District of Columbia, or an empty line.
-- **Line 46** skips those rows.
-- **Line 47** pulls the 2022–23 charter-enrollment share from column 17 (Python counts from zero, so `row[16]` means the seventeenth column).
-- **Line 48** checks whether the cell contains `#`.
-- **Line 49** converts that symbol into `0.0`.
-- **Line 50** checks for other nonstandard values like `†`, `---`, or `None`.
+- **Lines 45–46** skip non-state rows like the United States total, the District of Columbia, or blanks.
+- **Line 47** pulls the 2022–23 charter-enrollment share from column 17. Python counts from zero, so `row[16]` means the seventeenth column.
+- **Lines 48–55** convert special symbols and normal numeric cells into usable numbers.
 - **Lines 51–52** are comments explaining the coding decision. Comments are ignored by Python but are crucial for human readers.
-- **Line 53** also converts those nonstandard entries into `0.0` so every state can still appear as one dot in the scatterplot.
-- **Line 54** handles the normal case: the value is a regular number.
-- **Line 55** converts the value to a floating-point number with `float(raw)`.
-- **Line 57** begins a second loop as a safety check.
-- **Line 58** goes through every state in the master 50-state list.
-- **Line 59** uses `setdefault` to make sure every state exists in the dictionary, even if it was missing from the earlier row scan.
+- **Lines 57–59** guarantee that every state appears in the final dictionary, even if something unusual happened in the source table.
 - **Line 61** converts the finished dictionary into a `pandas` DataFrame with two columns: state and charter-enrollment share.
 
 Why this matters: real data files often contain symbols, special cases, or rows you do not want. Data science is not just statistics; it is also careful cleaning and documentation.
 
 ## Lines 64–87: asking the local NAEP tool for math or reading data
 
-```python
- 64 | def fetch_naep(subject: str) -> pd.DataFrame:
- 65 |     cmd = [
- 66 |         '/home/barry-schoedel/bin/naep-search',
- 67 |         'data',
- 68 |         subject,
- 69 |         '8',
- 70 |         '-y',
- 71 |         '2024',
- 72 |         '-g',
- 73 |         'TOTAL',
- 74 |         '-t',
- 75 |         'MN:MN',
- 76 |         '-j',
- 77 |         STATE_CODES,
- 78 |     ]
- 79 |     out = subprocess.check_output(cmd, text=True)
- 80 |     pat = re.compile(r'^(\d{4})\s+([A-Z]{2})\s+(.+?)\s+TOTAL\s+All students\s+1\s+All students\s+([0-9.]+)\s+1\s+0\s*$')
- 81 |     rows = []
- 82 |     for line in out.splitlines()[2:]:
- 83 |         m = pat.match(line)
- 84 |         if m:
- 85 |             _, code, state, value = m.groups()
- 86 |             rows.append({'state': state.strip(), f'naep_{subject}_2024': float(value), 'state_code': code})
- 87 |     return pd.DataFrame(rows)
-```
+<div class="code-editor-wrap">
+  <div class="code-editor-label">build_question4_50state_math_reading.py · lines 64–87</div>
+  <pre class="code-editor" aria-label="Python code block from build_question4_50state_math_reading.py, lines 64 to 87"><code>
+<span class="code-line"><span class="code-gutter">64</span><span class="code-text">def fetch_naep(subject: str) -&gt; pd.DataFrame:</span></span>
+<span class="code-line"><span class="code-gutter">65</span><span class="code-text">    cmd = [</span></span>
+<span class="code-line"><span class="code-gutter">66</span><span class="code-text">        &#x27;/home/barry-schoedel/bin/naep-search&#x27;,</span></span>
+<span class="code-line"><span class="code-gutter">67</span><span class="code-text">        &#x27;data&#x27;,</span></span>
+<span class="code-line"><span class="code-gutter">68</span><span class="code-text">        subject,</span></span>
+<span class="code-line"><span class="code-gutter">69</span><span class="code-text">        &#x27;8&#x27;,</span></span>
+<span class="code-line"><span class="code-gutter">70</span><span class="code-text">        &#x27;-y&#x27;,</span></span>
+<span class="code-line"><span class="code-gutter">71</span><span class="code-text">        &#x27;2024&#x27;,</span></span>
+<span class="code-line"><span class="code-gutter">72</span><span class="code-text">        &#x27;-g&#x27;,</span></span>
+<span class="code-line"><span class="code-gutter">73</span><span class="code-text">        &#x27;TOTAL&#x27;,</span></span>
+<span class="code-line"><span class="code-gutter">74</span><span class="code-text">        &#x27;-t&#x27;,</span></span>
+<span class="code-line"><span class="code-gutter">75</span><span class="code-text">        &#x27;MN:MN&#x27;,</span></span>
+<span class="code-line"><span class="code-gutter">76</span><span class="code-text">        &#x27;-j&#x27;,</span></span>
+<span class="code-line"><span class="code-gutter">77</span><span class="code-text">        STATE_CODES,</span></span>
+<span class="code-line"><span class="code-gutter">78</span><span class="code-text">    ]</span></span>
+<span class="code-line"><span class="code-gutter">79</span><span class="code-text">    out = subprocess.check_output(cmd, text=True)</span></span>
+<span class="code-line"><span class="code-gutter">80</span><span class="code-text">    pat = re.compile(r&#x27;^(\d{4})\s+([A-Z]{2})\s+(.+?)\s+TOTAL\s+All students\s+1\s+All students\s+([0-9.]+)\s+1\s+0\s*$&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">81</span><span class="code-text">    rows = []</span></span>
+<span class="code-line"><span class="code-gutter">82</span><span class="code-text">    for line in out.splitlines()[2:]:</span></span>
+<span class="code-line"><span class="code-gutter">83</span><span class="code-text">        m = pat.match(line)</span></span>
+<span class="code-line"><span class="code-gutter">84</span><span class="code-text">        if m:</span></span>
+<span class="code-line"><span class="code-gutter">85</span><span class="code-text">            _, code, state, value = m.groups()</span></span>
+<span class="code-line"><span class="code-gutter">86</span><span class="code-text">            rows.append({&#x27;state&#x27;: state.strip(), f&#x27;naep_{subject}_2024&#x27;: float(value), &#x27;state_code&#x27;: code})</span></span>
+<span class="code-line"><span class="code-gutter">87</span><span class="code-text">    return pd.DataFrame(rows)</span></span>
+  </code></pre>
+</div>
 
 - **Line 64** starts a second function, this one named `fetch_naep`.
-- **Line 65** begins a Python list named `cmd`.
-- **Line 66** points to the local helper program `naep-search`.
-- **Line 67** passes the subcommand `data`.
-- **Line 68** inserts the subject, which will later be either `math` or `reading`.
-- **Line 69** requests Grade 8.
-- **Lines 70–71** supply the year flag `-y` and the year `2024`.
-- **Lines 72–73** supply the demographic-group flag `-g` and the value `TOTAL`.
-- **Lines 74–75** supply the statistic-type flag `-t` and the value `MN:MN`, which asks for the state mean score.
-- **Lines 76–77** supply the jurisdiction flag `-j` and the long list of state codes.
+- **Lines 65–78** build the command that will be sent to the local `naep-search` helper.
+- **Line 66** points to the external program.
+- **Lines 68–77** define the specific query: subject, grade, year, demographic group, statistic type, and states.
 - **Line 79** runs the command and captures its text output.
 - **Line 80** compiles a regular expression. A **regular expression** is a text pattern used to pull structure out of messy strings.
-- **Line 81** creates an empty list of rows.
-- **Line 82** loops over the command output line by line, skipping the first two lines because they are not data rows.
-- **Line 83** tries to match the regular-expression pattern against the current line.
-- **Line 84** checks whether the match succeeded.
-- **Line 85** extracts the matched pieces. The underscore `_` means “there is a value here, but I do not plan to use it later.”
-- **Line 86** appends one cleaned row to the list, including the state name, the NAEP value, and the state code.
+- **Lines 81–86** loop through the output, match valid data rows, and append cleaned values to a list.
+- **Line 85** uses `_` to hold a value that exists but is not needed later.
 - **Line 87** converts the whole list into a DataFrame.
 
 Why this matters: sometimes the hardest part of data science is not the model. It is getting machine-readable values out of a tool or data service in a reliable way.
 
 ## Lines 90–112: calculating the trend and drawing one scatterplot panel
 
-```python
- 90 | def summarize(ax, df, ycol: str, title: str) -> tuple[float, float]:
- 91 |     x = df['charter_enroll_pct_2022_23'].to_numpy()
- 92 |     y = df[ycol].to_numpy()
- 93 |     corr = float(np.corrcoef(x, y)[0, 1])
- 94 |     slope, intercept = np.polyfit(x, y, 1)
- 95 |     xs = np.linspace(x.min(), x.max(), 200)
- 96 | 
- 97 |     zero_mask = df['charter_enroll_pct_2022_23'] == 0.0
- 98 |     ax.scatter(x[~zero_mask], y[~zero_mask], s=42, alpha=0.85, color='#2563eb', edgecolor='white', linewidth=0.5, label='States with charter share > 0%')
- 99 |     ax.scatter(x[zero_mask], y[zero_mask], s=52, alpha=0.95, color='#f59e0b', marker='s', edgecolor='white', linewidth=0.6, label='States coded at 0% charter share')
-100 |     ax.plot(xs, slope * xs + intercept, color='#dc2626', linewidth=2, label='Best-fit line')
-101 |     ax.set_title(f'{title}\nr = {corr:.2f}, slope = {slope:.2f}\nRaw, unadjusted state-level relationship; exploratory only', fontsize=11)
-102 |     ax.set_xlabel('Charter enrollment share (2022–23)')
-103 |     ax.set_ylabel('NAEP grade 8 mean score (2024)')
-104 |     ax.grid(True, linestyle='--', alpha=0.25)
-105 |     ax.legend(frameon=False, fontsize=8, loc='best')
-106 | 
-107 |     for state in ['Arizona', 'Massachusetts', 'Texas', 'Colorado', 'New Mexico', 'Florida']:
-108 |         row = df[df['state'] == state]
-109 |         if not row.empty:
-110 |             ax.annotate(state, (row.iloc[0]['charter_enroll_pct_2022_23'], row.iloc[0][ycol]), xytext=(4, 4), textcoords='offset points', fontsize=8)
-111 | 
-112 |     return corr, slope
-```
+<div class="code-editor-wrap">
+  <div class="code-editor-label">build_question4_50state_math_reading.py · lines 90–112</div>
+  <pre class="code-editor" aria-label="Python code block from build_question4_50state_math_reading.py, lines 90 to 112"><code>
+<span class="code-line"><span class="code-gutter">90</span><span class="code-text">def summarize(ax, df, ycol: str, title: str) -&gt; tuple[float, float]:</span></span>
+<span class="code-line"><span class="code-gutter">91</span><span class="code-text">    x = df[&#x27;charter_enroll_pct_2022_23&#x27;].to_numpy()</span></span>
+<span class="code-line"><span class="code-gutter">92</span><span class="code-text">    y = df[ycol].to_numpy()</span></span>
+<span class="code-line"><span class="code-gutter">93</span><span class="code-text">    corr = float(np.corrcoef(x, y)[0, 1])</span></span>
+<span class="code-line"><span class="code-gutter">94</span><span class="code-text">    slope, intercept = np.polyfit(x, y, 1)</span></span>
+<span class="code-line"><span class="code-gutter">95</span><span class="code-text">    xs = np.linspace(x.min(), x.max(), 200)</span></span>
+<span class="code-line"><span class="code-gutter">96</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">97</span><span class="code-text">    zero_mask = df[&#x27;charter_enroll_pct_2022_23&#x27;] == 0.0</span></span>
+<span class="code-line"><span class="code-gutter">98</span><span class="code-text">    ax.scatter(x[~zero_mask], y[~zero_mask], s=42, alpha=0.85, color=&#x27;#2563eb&#x27;, edgecolor=&#x27;white&#x27;, linewidth=0.5, label=&#x27;States with charter share &gt; 0%&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">99</span><span class="code-text">    ax.scatter(x[zero_mask], y[zero_mask], s=52, alpha=0.95, color=&#x27;#f59e0b&#x27;, marker=&#x27;s&#x27;, edgecolor=&#x27;white&#x27;, linewidth=0.6, label=&#x27;States coded at 0% charter share&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">100</span><span class="code-text">    ax.plot(xs, slope * xs + intercept, color=&#x27;#dc2626&#x27;, linewidth=2, label=&#x27;Best-fit line&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">101</span><span class="code-text">    ax.set_title(f&#x27;{title}\nr = {corr:.2f}, slope = {slope:.2f}\nRaw, unadjusted state-level relationship; exploratory only&#x27;, fontsize=11)</span></span>
+<span class="code-line"><span class="code-gutter">102</span><span class="code-text">    ax.set_xlabel(&#x27;Charter enrollment share (2022–23)&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">103</span><span class="code-text">    ax.set_ylabel(&#x27;NAEP grade 8 mean score (2024)&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">104</span><span class="code-text">    ax.grid(True, linestyle=&#x27;--&#x27;, alpha=0.25)</span></span>
+<span class="code-line"><span class="code-gutter">105</span><span class="code-text">    ax.legend(frameon=False, fontsize=8, loc=&#x27;best&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">106</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">107</span><span class="code-text">    for state in [&#x27;Arizona&#x27;, &#x27;Massachusetts&#x27;, &#x27;Texas&#x27;, &#x27;Colorado&#x27;, &#x27;New Mexico&#x27;, &#x27;Florida&#x27;]:</span></span>
+<span class="code-line"><span class="code-gutter">108</span><span class="code-text">        row = df[df[&#x27;state&#x27;] == state]</span></span>
+<span class="code-line"><span class="code-gutter">109</span><span class="code-text">        if not row.empty:</span></span>
+<span class="code-line"><span class="code-gutter">110</span><span class="code-text">            ax.annotate(state, (row.iloc[0][&#x27;charter_enroll_pct_2022_23&#x27;], row.iloc[0][ycol]), xytext=(4, 4), textcoords=&#x27;offset points&#x27;, fontsize=8)</span></span>
+<span class="code-line"><span class="code-gutter">111</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">112</span><span class="code-text">    return corr, slope</span></span>
+  </code></pre>
+</div>
 
 - **Line 90** starts a function named `summarize`. It takes an axis object `ax`, a DataFrame `df`, the name of the outcome column `ycol`, and a title.
-- **Line 91** pulls the charter-share column into a NumPy array named `x`.
-- **Line 92** pulls the selected outcome column into a NumPy array named `y`.
+- **Lines 91–92** pull the charter-share and outcome columns into NumPy arrays.
 - **Line 93** calculates the Pearson correlation coefficient. A **correlation coefficient** measures how strongly two variables move together in a straight-line pattern.
 - **Line 94** calculates the best-fit line using `np.polyfit`. Here the `1` means “fit a straight line rather than a curve.”
 - **Line 95** creates evenly spaced x-values so the trend line can be drawn smoothly across the chart.
-- **Line 97** creates a Boolean mask identifying which states have exactly `0.0` charter share.
-- **Line 98** plots the nonzero-charter states as blue circles. Parameters like `s`, `alpha`, `color`, and `edgecolor` control marker size, transparency, fill color, and border color.
-- **Line 99** plots the zero-charter states as gold squares so readers can see that they were handled specially.
-- **Line 100** draws the red best-fit line.
-- **Line 101** sets the panel title and also prints the correlation and slope directly on the chart.
-- **Line 102** labels the x-axis.
-- **Line 103** labels the y-axis.
-- **Line 104** turns on a light grid to make the chart easier to read.
-- **Line 105** adds a legend.
-- **Line 107** begins a loop over a few selected states that are worth labeling.
-- **Line 108** filters the DataFrame down to the current state.
-- **Line 109** checks whether the filtered result is nonempty.
-- **Line 110** writes the state name next to its point.
+- **Lines 97–100** draw the points and fitted line, separating zero-charter states from the rest for visual clarity.
+- **Lines 101–105** add the title, axes labels, grid, and legend.
+- **Lines 107–110** label a few selected states directly on the plot.
 - **Line 112** returns the correlation and slope so the main function can reuse them later.
 
 Why this matters: visualization code is not just about making a picture. It also makes analytic choices visible, such as which states were coded at zero and which points are important enough to label.
 
 ## Lines 115–129: building the main data table and saving the image
 
-```python
-115 | def main() -> None:
-116 |     charter = fetch_charter_share_all_50()
-117 |     math_df = fetch_naep('math').drop(columns=['state_code'])
-118 |     reading_df = fetch_naep('reading').drop(columns=['state_code'])
-119 | 
-120 |     df = charter.merge(math_df, on='state', how='left').merge(reading_df, on='state', how='left')
-121 |     df = df.sort_values('charter_enroll_pct_2022_23').reset_index(drop=True)
-122 |     df.to_csv(CSV_PATH, index=False)
-123 | 
-124 |     fig, axes = plt.subplots(1, 2, figsize=(14, 6), constrained_layout=True)
-125 |     math_corr, math_slope = summarize(axes[0], df, 'naep_math_2024', 'Charter Share vs. NAEP Math')
-126 |     read_corr, read_slope = summarize(axes[1], df, 'naep_reading_2024', 'Charter Share vs. NAEP Reading')
-127 |     fig.suptitle('Question 4 Exploratory Scatterplots — All 50 States', fontsize=15)
-128 |     fig.savefig(PNG_PATH, dpi=220)
-129 |     plt.close(fig)
-```
+<div class="code-editor-wrap">
+  <div class="code-editor-label">build_question4_50state_math_reading.py · lines 115–129</div>
+  <pre class="code-editor" aria-label="Python code block from build_question4_50state_math_reading.py, lines 115 to 129"><code>
+<span class="code-line"><span class="code-gutter">115</span><span class="code-text">def main() -&gt; None:</span></span>
+<span class="code-line"><span class="code-gutter">116</span><span class="code-text">    charter = fetch_charter_share_all_50()</span></span>
+<span class="code-line"><span class="code-gutter">117</span><span class="code-text">    math_df = fetch_naep(&#x27;math&#x27;).drop(columns=[&#x27;state_code&#x27;])</span></span>
+<span class="code-line"><span class="code-gutter">118</span><span class="code-text">    reading_df = fetch_naep(&#x27;reading&#x27;).drop(columns=[&#x27;state_code&#x27;])</span></span>
+<span class="code-line"><span class="code-gutter">119</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">120</span><span class="code-text">    df = charter.merge(math_df, on=&#x27;state&#x27;, how=&#x27;left&#x27;).merge(reading_df, on=&#x27;state&#x27;, how=&#x27;left&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">121</span><span class="code-text">    df = df.sort_values(&#x27;charter_enroll_pct_2022_23&#x27;).reset_index(drop=True)</span></span>
+<span class="code-line"><span class="code-gutter">122</span><span class="code-text">    df.to_csv(CSV_PATH, index=False)</span></span>
+<span class="code-line"><span class="code-gutter">123</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">124</span><span class="code-text">    fig, axes = plt.subplots(1, 2, figsize=(14, 6), constrained_layout=True)</span></span>
+<span class="code-line"><span class="code-gutter">125</span><span class="code-text">    math_corr, math_slope = summarize(axes[0], df, &#x27;naep_math_2024&#x27;, &#x27;Charter Share vs. NAEP Math&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">126</span><span class="code-text">    read_corr, read_slope = summarize(axes[1], df, &#x27;naep_reading_2024&#x27;, &#x27;Charter Share vs. NAEP Reading&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">127</span><span class="code-text">    fig.suptitle(&#x27;Question 4 Exploratory Scatterplots — All 50 States&#x27;, fontsize=15)</span></span>
+<span class="code-line"><span class="code-gutter">128</span><span class="code-text">    fig.savefig(PNG_PATH, dpi=220)</span></span>
+<span class="code-line"><span class="code-gutter">129</span><span class="code-text">    plt.close(fig)</span></span>
+  </code></pre>
+</div>
 
 - **Line 115** starts the `main` function. This is the central workflow of the script.
-- **Line 116** loads the charter-share table.
-- **Line 117** loads the mathematics NAEP table and drops the `state_code` column because it is no longer needed for the merge.
-- **Line 118** does the same for reading.
+- **Lines 116–118** load the charter, math, and reading data.
 - **Line 120** merges the three tables together by the `state` column. A **merge** is the table operation that lines up rows from different data sources using a shared key.
 - **Line 121** sorts the finished table by charter share and resets the row numbers.
 - **Line 122** saves the merged data to a CSV file.
 - **Line 124** creates a figure with two side-by-side panels.
-- **Line 125** fills the first panel with the mathematics scatterplot and stores the returned correlation and slope.
-- **Line 126** does the same for reading.
-- **Line 127** adds an overall title across the full figure.
-- **Line 128** saves the figure to the PNG path.
-- **Line 129** closes the figure to free memory.
+- **Lines 125–126** populate those panels with mathematics and reading scatterplots.
+- **Lines 127–129** add a figure title, save the PNG, and close the figure.
 
 Why this matters: once the three data sources are combined into one clean DataFrame, the rest of the analysis becomes much easier. This is a common pattern in applied data science: build one trusted merged table, then analyze it.
 
 ## Lines 131–185: writing the human-readable summary note
 
-```python
-131 |     no_charter_states = [s for s in ALL_50_STATES if float(df.loc[df['state'] == s, 'charter_enroll_pct_2022_23'].iloc[0]) == 0.0]
-132 |     nonzero = df[df['charter_enroll_pct_2022_23'] > 0].copy()
-133 |     math_corr_nz = float(nonzero['charter_enroll_pct_2022_23'].corr(nonzero['naep_math_2024']))
-134 |     read_corr_nz = float(nonzero['charter_enroll_pct_2022_23'].corr(nonzero['naep_reading_2024']))
-135 | 
-136 |     MD_PATH.write_text(f'''---
-137 | type: analysis-note
-138 | title: "Question 4 — 50-State 2024 Charter Share vs. NAEP Scatterplots"
-139 | created: 2026-08-02
-140 | question: "What is the relationship between state-level charter school penetration and aggregate NAEP performance, controlling for demographic composition?"
-141 | source_1: "NAEP Data Service API (2024 grade 8 math and reading state means)"
-142 | source_2: "NCES Digest table 216.90 (2022–23 charter enrollment share by state)"
-143 | ---
-144 | 
-145 | # Question 4 — 50-State 2024 Scatterplots
-146 | 
-147 | Files created:
-148 | - CSV: `{CSV_PATH.name}`
-149 | - Chart: `{PNG_PATH.name}`
-150 | 
-151 | ## Accuracy correction from the earlier draft
-152 | 
-153 | The earlier exploratory pass used 44 states because five no-charter states were omitted as “not applicable,” and Wyoming was accidentally dropped by an Excel row-slice bug. This corrected version includes **all 50 states**.
-154 | 
-155 | To make that possible, states reported by NCES as having **no charter share in 2022–23** were coded as **0% charter enrollment**. This includes both states with no charter legislation / no operating charter schools in the table and Kentucky, which is listed at 0.0%.
-156 | 
-157 | States at 0% charter enrollment in this file:
-158 | - {', '.join(no_charter_states)}
-159 | 
-160 | ## Math (2024)
-161 | - Correlation: **{math_corr:.2f}**
-162 | - Slope: **{math_slope:.2f}** NAEP math points per 1 percentage-point increase in charter share
-163 | 
-164 | Plain-language reading:
-165 | - The raw relationship is **negative**, but weak.
-166 | - Charter share alone shows only a **weak linear relationship** with state math performance.
-167 | 
-168 | Sensitivity check:
-169 | - Excluding the 0% charter-share states, the relationship stays negative but becomes smaller (**r = {math_corr_nz:.2f}**).
-170 | 
-171 | ## Reading (2024)
-172 | - Correlation: **{read_corr:.2f}**
-173 | - Slope: **{read_slope:.2f}** NAEP reading points per 1 percentage-point increase in charter share
-174 | 
-175 | Plain-language reading:
-176 | - The raw relationship is **negative**, but weak.
-177 | - Charter share alone shows only a **weak linear relationship** with state reading performance.
-178 | 
-179 | Sensitivity check:
-180 | - Excluding the 0% charter-share states, the relationship stays negative but becomes smaller (**r = {read_corr_nz:.2f}**).
-181 | 
-182 | ## Interpretation
-183 | 
-184 | These are exploratory, raw scatterplots. They show whether there is a visible relationship worth investigating, not whether charter schools cause better or worse scores. The next step is to add controls for poverty, race/ethnicity, disability, English-learner status, and possibly spending.
-185 | ''')
-```
+<div class="code-editor-wrap">
+  <div class="code-editor-label">build_question4_50state_math_reading.py · lines 131–185</div>
+  <pre class="code-editor" aria-label="Python code block from build_question4_50state_math_reading.py, lines 131 to 185"><code>
+<span class="code-line"><span class="code-gutter">131</span><span class="code-text">    no_charter_states = [s for s in ALL_50_STATES if float(df.loc[df[&#x27;state&#x27;] == s, &#x27;charter_enroll_pct_2022_23&#x27;].iloc[0]) == 0.0]</span></span>
+<span class="code-line"><span class="code-gutter">132</span><span class="code-text">    nonzero = df[df[&#x27;charter_enroll_pct_2022_23&#x27;] &gt; 0].copy()</span></span>
+<span class="code-line"><span class="code-gutter">133</span><span class="code-text">    math_corr_nz = float(nonzero[&#x27;charter_enroll_pct_2022_23&#x27;].corr(nonzero[&#x27;naep_math_2024&#x27;]))</span></span>
+<span class="code-line"><span class="code-gutter">134</span><span class="code-text">    read_corr_nz = float(nonzero[&#x27;charter_enroll_pct_2022_23&#x27;].corr(nonzero[&#x27;naep_reading_2024&#x27;]))</span></span>
+<span class="code-line"><span class="code-gutter">135</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">136</span><span class="code-text">    MD_PATH.write_text(f&#x27;&#x27;&#x27;---</span></span>
+<span class="code-line"><span class="code-gutter">137</span><span class="code-text">type: analysis-note</span></span>
+<span class="code-line"><span class="code-gutter">138</span><span class="code-text">title: &quot;Question 4 — 50-State 2024 Charter Share vs. NAEP Scatterplots&quot;</span></span>
+<span class="code-line"><span class="code-gutter">139</span><span class="code-text">created: 2026-08-02</span></span>
+<span class="code-line"><span class="code-gutter">140</span><span class="code-text">question: &quot;What is the relationship between state-level charter school penetration and aggregate NAEP performance, controlling for demographic composition?&quot;</span></span>
+<span class="code-line"><span class="code-gutter">141</span><span class="code-text">source_1: &quot;NAEP Data Service API (2024 grade 8 math and reading state means)&quot;</span></span>
+<span class="code-line"><span class="code-gutter">142</span><span class="code-text">source_2: &quot;NCES Digest table 216.90 (2022–23 charter enrollment share by state)&quot;</span></span>
+<span class="code-line"><span class="code-gutter">143</span><span class="code-text">---</span></span>
+<span class="code-line"><span class="code-gutter">144</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">145</span><span class="code-text"># Question 4 — 50-State 2024 Scatterplots</span></span>
+<span class="code-line"><span class="code-gutter">146</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">147</span><span class="code-text">Files created:</span></span>
+<span class="code-line"><span class="code-gutter">148</span><span class="code-text">- CSV: `{CSV_PATH.name}`</span></span>
+<span class="code-line"><span class="code-gutter">149</span><span class="code-text">- Chart: `{PNG_PATH.name}`</span></span>
+<span class="code-line"><span class="code-gutter">150</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">151</span><span class="code-text">## Accuracy correction from the earlier draft</span></span>
+<span class="code-line"><span class="code-gutter">152</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">153</span><span class="code-text">The earlier exploratory pass used 44 states because five no-charter states were omitted as “not applicable,” and Wyoming was accidentally dropped by an Excel row-slice bug. This corrected version includes **all 50 states**.</span></span>
+<span class="code-line"><span class="code-gutter">154</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">155</span><span class="code-text">To make that possible, states reported by NCES as having **no charter share in 2022–23** were coded as **0% charter enrollment**. This includes both states with no charter legislation / no operating charter schools in the table and Kentucky, which is listed at 0.0%.</span></span>
+<span class="code-line"><span class="code-gutter">156</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">157</span><span class="code-text">States at 0% charter enrollment in this file:</span></span>
+<span class="code-line"><span class="code-gutter">158</span><span class="code-text">- {&#x27;, &#x27;.join(no_charter_states)}</span></span>
+<span class="code-line"><span class="code-gutter">159</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">160</span><span class="code-text">## Math (2024)</span></span>
+<span class="code-line"><span class="code-gutter">161</span><span class="code-text">- Correlation: **{math_corr:.2f}**</span></span>
+<span class="code-line"><span class="code-gutter">162</span><span class="code-text">- Slope: **{math_slope:.2f}** NAEP math points per 1 percentage-point increase in charter share</span></span>
+<span class="code-line"><span class="code-gutter">163</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">164</span><span class="code-text">Plain-language reading:</span></span>
+<span class="code-line"><span class="code-gutter">165</span><span class="code-text">- The raw relationship is **negative**, but weak.</span></span>
+<span class="code-line"><span class="code-gutter">166</span><span class="code-text">- Charter share alone shows only a **weak linear relationship** with state math performance.</span></span>
+<span class="code-line"><span class="code-gutter">167</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">168</span><span class="code-text">Sensitivity check:</span></span>
+<span class="code-line"><span class="code-gutter">169</span><span class="code-text">- Excluding the 0% charter-share states, the relationship stays negative but becomes smaller (**r = {math_corr_nz:.2f}**).</span></span>
+<span class="code-line"><span class="code-gutter">170</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">171</span><span class="code-text">## Reading (2024)</span></span>
+<span class="code-line"><span class="code-gutter">172</span><span class="code-text">- Correlation: **{read_corr:.2f}**</span></span>
+<span class="code-line"><span class="code-gutter">173</span><span class="code-text">- Slope: **{read_slope:.2f}** NAEP reading points per 1 percentage-point increase in charter share</span></span>
+<span class="code-line"><span class="code-gutter">174</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">175</span><span class="code-text">Plain-language reading:</span></span>
+<span class="code-line"><span class="code-gutter">176</span><span class="code-text">- The raw relationship is **negative**, but weak.</span></span>
+<span class="code-line"><span class="code-gutter">177</span><span class="code-text">- Charter share alone shows only a **weak linear relationship** with state reading performance.</span></span>
+<span class="code-line"><span class="code-gutter">178</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">179</span><span class="code-text">Sensitivity check:</span></span>
+<span class="code-line"><span class="code-gutter">180</span><span class="code-text">- Excluding the 0% charter-share states, the relationship stays negative but becomes smaller (**r = {read_corr_nz:.2f}**).</span></span>
+<span class="code-line"><span class="code-gutter">181</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">182</span><span class="code-text">## Interpretation</span></span>
+<span class="code-line"><span class="code-gutter">183</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">184</span><span class="code-text">These are exploratory, raw scatterplots. They show whether there is a visible relationship worth investigating, not whether charter schools cause better or worse scores. The next step is to add controls for poverty, race/ethnicity, disability, English-learner status, and possibly spending.</span></span>
+<span class="code-line"><span class="code-gutter">185</span><span class="code-text">&#x27;&#x27;&#x27;)</span></span>
+  </code></pre>
+</div>
 
 - **Line 131** builds a list of which states ended up at `0.0` charter share.
 - **Line 132** makes a filtered copy of the data that excludes those zero-share states.
-- **Line 133** calculates the mathematics correlation for the nonzero-only sensitivity check.
-- **Line 134** calculates the reading correlation for the same sensitivity check.
+- **Lines 133–134** calculate the sensitivity-check correlations for math and reading.
 - **Line 136** starts a long formatted string that will become a markdown file.
 - **Lines 137–143** write YAML frontmatter. **Frontmatter** is metadata at the top of a markdown file, such as title, type, or tags.
-- **Line 145** adds the visible markdown heading.
-- **Lines 147–149** list the output files that were created.
-- **Lines 151–158** explain the correction from the earlier flawed draft and list the states coded at 0%.
-- **Lines 160–169** summarize the mathematics results in both statistical and plain-language terms.
-- **Lines 171–180** do the same for reading.
-- **Lines 182–184** close with an interpretation paragraph that reminds the reader this is exploratory rather than causal.
-- **Line 185** finishes the long string and writes it to the markdown note path.
+- **Lines 145–185** write the human-readable note: file list, correction note, state list, statistical summaries, and final interpretation.
 
 Why this matters: a good analysis script does not stop at numbers. It also leaves behind a readable explanation. In education work, that is especially important because the audience is often mixed: teachers, administrators, students, and reviewers may all need to understand the output.
 
 ## Lines 187–197: printing the outputs and running the script
 
-```python
-187 |     print(f'CSV: {CSV_PATH}')
-188 |     print(f'PNG: {PNG_PATH}')
-189 |     print(f'MD:  {MD_PATH}')
-190 |     print(f'Math correlation: {math_corr:.4f}')
-191 |     print(f'Math slope: {math_slope:.4f}')
-192 |     print(f'Reading correlation: {read_corr:.4f}')
-193 |     print(f'Reading slope: {read_slope:.4f}')
-194 | 
-195 | 
-196 | if __name__ == '__main__':
-197 |     main()
-```
+<div class="code-editor-wrap">
+  <div class="code-editor-label">build_question4_50state_math_reading.py · lines 187–197</div>
+  <pre class="code-editor" aria-label="Python code block from build_question4_50state_math_reading.py, lines 187 to 197"><code>
+<span class="code-line"><span class="code-gutter">187</span><span class="code-text">    print(f&#x27;CSV: {CSV_PATH}&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">188</span><span class="code-text">    print(f&#x27;PNG: {PNG_PATH}&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">189</span><span class="code-text">    print(f&#x27;MD:  {MD_PATH}&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">190</span><span class="code-text">    print(f&#x27;Math correlation: {math_corr:.4f}&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">191</span><span class="code-text">    print(f&#x27;Math slope: {math_slope:.4f}&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">192</span><span class="code-text">    print(f&#x27;Reading correlation: {read_corr:.4f}&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">193</span><span class="code-text">    print(f&#x27;Reading slope: {read_slope:.4f}&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">194</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">195</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter">196</span><span class="code-text">if __name__ == &#x27;__main__&#x27;:</span></span>
+<span class="code-line"><span class="code-gutter">197</span><span class="code-text">    main()</span></span>
+  </code></pre>
+</div>
 
 - **Lines 187–193** print the file locations and the key numeric results to the terminal. This is a quick way to confirm that the script worked and to see the headline numbers immediately.
 - **Line 196** checks whether the script is being run directly.

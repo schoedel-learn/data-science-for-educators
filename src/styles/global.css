@@ -70,6 +70,65 @@ main img {
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
+main code:not(pre code) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: #eef3f8;
+  color: #1f3550;
+  padding: .08rem .3rem;
+  border-radius: 4px;
+}
+.code-editor-wrap {
+  margin: 1rem 0 1.5rem;
+}
+.code-editor-label {
+  display: inline-block;
+  margin-bottom: .35rem;
+  padding: .18rem .55rem;
+  border-radius: 999px;
+  background: #2d2d2d;
+  color: #d4d4d4;
+  font-size: .78rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.code-editor {
+  margin: 0;
+  padding: .8rem 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+  border-radius: 10px;
+  background: #1f1f1f;
+  color: #f8f8f2;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
+}
+.code-editor code {
+  display: block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .9rem;
+  line-height: 1.55;
+}
+.code-line {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  align-items: start;
+}
+.code-gutter {
+  display: block;
+  padding: 0 .7rem 0 0;
+  text-align: right;
+  color: #7f848e;
+  user-select: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+.code-text {
+  display: block;
+  min-width: 0;
+  padding: 0 .95rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: #f8f8f2;
+}
 @media (min-width: 768px) {
   main img {
     cursor: zoom-in;
@@ -116,6 +175,27 @@ main img {
   .container { padding: 1rem; }
   table { font-size: .78rem; }
   th, td { padding: .35rem .4rem; }
+  .code-editor-label {
+    font-size: .72rem;
+    max-width: 100%;
+    word-break: break-word;
+  }
+  .code-editor {
+    padding: .6rem 0;
+  }
+  .code-editor code {
+    font-size: .76rem;
+    line-height: 1.45;
+  }
+  .code-line {
+    grid-template-columns: 2.6rem minmax(0, 1fr);
+  }
+  .code-gutter {
+    padding: 0 .45rem 0 0;
+  }
+  .code-text {
+    padding: 0 .65rem;
+  }
   .image-lightbox { padding: 1rem; }
   .image-lightbox-img { max-width: 100%; max-height: 82vh; }
 }
