@@ -7,7 +7,7 @@ tags: [research-methods, descriptive, predictive, causal, comparative, stem-5328
 timestamp: "2026-08-02T00:00:00Z"
 ---
 
-This page explains the framework used throughout this website for classifying quantitative research questions. The argument comes from the STEM-5328 course materials in the Obsidian vault, but it is presented here as a public-facing reference for educators who want a clearer explanation of why the site uses **three aims** — descriptive, predictive, and causal — and treats **comparison** as a cross-cutting analytic approach rather than a fourth aim.
+This page explains the framework used throughout this website for classifying quantitative research questions. The argument comes from the STEM-5328 course materials and is presented here as a public-facing reference for educators who want a clearer explanation of why the site uses **three aims** — descriptive, predictive, and causal — and treats **comparison** as a cross-cutting analytic approach rather than a fourth aim.
 
 If you want the shorter practical version first, start with [How the Questions Are Classified](/classification/). This page goes one level deeper and explains the argument behind that shorter page.
 
@@ -67,7 +67,7 @@ This site classifies questions by **aim**, not by surface technique.
 - A question is **descriptive** when it asks what pattern exists.
 - A question is **predictive** when it asks whether one factor helps forecast another.
 - A question is **causal** when it asks whether changing one thing would change another.
-- A label like **Predictive (comparative)** means that the primary aim is predictive, and comparison is one of the analytic moves being used to pursue it.
+- A label like **Predictive (comparative)** means that the primary aim is predictive, and comparison is one of the approaches being used in the analysis.
 
 That is why the site does not treat comparison as a fourth top-level family alongside descriptive, predictive, and causal.
 

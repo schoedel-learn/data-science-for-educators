@@ -127,7 +127,7 @@ Because coding no-charter states at 0% is a real modeling choice, the page also 
 
 This page compares states. States differ in many ways besides charter enrollment: poverty, racial/ethnic composition, disability rates, English-learner rates, funding, policy history, and regional context. A raw scatterplot cannot separate charter share from those other influences. That is why the analysis is framed as descriptive/predictive rather than causal (Hernán et al., 2025; Shmueli, 2010).
 
-The next stronger step would be to add fairness controls such as poverty, race/ethnicity, special education rates, English-learner rates, and per-pupil spending. That would still not automatically make the analysis causal, but it would make the comparison more informative.
+The next stronger step would be to add [adjustment variables](/glossary/#g-adjustment) such as poverty, race/ethnicity, special education rates, English-learner rates, and per-pupil spending. That would still not automatically make the analysis causal, but it would make the comparison more informative.
 
 ## References
 

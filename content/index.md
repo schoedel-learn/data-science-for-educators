@@ -28,7 +28,7 @@ All questions can be answered using the NAEP Data Service API at `nationsreportc
 
 ## Contents
 
-Each label below says what kind of claim the question can honestly support — see [How the Questions Are Classified](classification) for the reasoning behind every label.
+Each label below says what kind of claim the question can support — see [How the Questions Are Classified](classification) for the reasoning behind every label.
 
 | # | Question | Classification |
 |---|----------|----------------|

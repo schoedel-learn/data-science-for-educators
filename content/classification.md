@@ -7,7 +7,7 @@ tags: [research-methods, classification, descriptive, comparative, predictive, c
 timestamp: "2026-08-01T00:00:00Z"
 ---
 
-Every question on this site carries a label: *descriptive*, *predictive*, or *causal*. Those labels are not decoration — they tell you what kind of claim the question can honestly support, and therefore what kind of evidence you would need to answer it. When a question works by **comparing groups**, that approach is noted in parentheses, e.g. *Predictive (comparative)* — comparison is a method used inside the three types, not a type of its own.
+Every question on this site carries a label: *descriptive*, *predictive*, or *causal*. Those labels are not decoration — they tell you what kind of claim the question can support, and therefore what kind of evidence you would need to answer it. When a question works by **comparing groups**, that approach is noted in parentheses, e.g. *Predictive (comparative)* — comparison is a method used inside the three types, not a type of its own.
 
 This page does two things. First, it defines the three question types in plain language, using the methods literature. Second, it explains — question by question — why each one is labeled the way it is. The single idea that runs through all of it: **a factor that travels with an outcome only lets you *predict* it. Saying that factor *causes* the outcome is a much stronger claim, and observational data rarely earns it.**
 

@@ -104,7 +104,7 @@ The part of data science that asks whether changing one thing would change anoth
 
 **<a id="g-comparison">comparison</a>**
 
-An analytic move in which groups, times, or places are contrasted. Comparison is a way of doing analysis, not automatically a separate research aim.
+An approach in which groups, times, or places are contrasted. Comparison is a way of doing analysis, not automatically a separate research aim.
 
 **<a id="g-association">association</a>**
 

@@ -18,7 +18,7 @@ Charter school enrollment varies enormously by state — from near zero in West 
 
 1. **Make a scatterplot.** Put charter enrollment percentage on the x-axis and NAEP math scores on the y-axis — each state is one dot. A visible upward or downward slope tells you there is a raw relationship worth investigating.
 
-2. **Add fairness controls.** Run an [OLS regression](/glossary/#g-ols): NAEP score = charter share + % Black + % Hispanic + % free lunch + % IEP + per-pupil spending + region. The regression answers: if two states had the same demographics and funding levels, would the one with more charter schools score higher?
+2. **Add [adjustment variables](/glossary/#g-adjustment).** Run an [OLS regression](/glossary/#g-ols): NAEP score = charter share + % Black + % Hispanic + % free lunch + % IEP + per-pupil spending + region. The regression answers: if two states had the same demographics and funding levels, would the one with more charter schools score higher?
 
 3. **Address the chicken-and-egg problem.** Did charters cause higher scores, or did low-scoring states adopt charters as a reform? Use an instrumental variable: the year a state passed its charter law affects charter penetration today but is not caused by current demographics. If charter penetration predicted by law passage year is associated with higher scores, the case for causation strengthens.
 
