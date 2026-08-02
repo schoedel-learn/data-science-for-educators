@@ -48,13 +48,13 @@ The code below is broken into sections. Each section shows the exact lines from 
   <pre class="code-editor" aria-label="Python code block from build_question4_50state_math_reading.py, lines 1 to 15"><code>
 <span class="code-line"><span class="code-gutter">1</span><span class="code-text">#!/usr/bin/env python3</span></span>
 <span class="code-line"><span class="code-gutter">2</span><span class="code-text">from __future__ import annotations</span></span>
-<span class="code-line"><span class="code-gutter">3</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">4</span><span class="code-text">import re</span></span>
 <span class="code-line"><span class="code-gutter">5</span><span class="code-text">import subprocess</span></span>
 <span class="code-line"><span class="code-gutter">6</span><span class="code-text">import urllib.request</span></span>
 <span class="code-line"><span class="code-gutter">7</span><span class="code-text">from io import BytesIO</span></span>
 <span class="code-line"><span class="code-gutter">8</span><span class="code-text">from pathlib import Path</span></span>
-<span class="code-line"><span class="code-gutter">9</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">10</span><span class="code-text">import matplotlib</span></span>
 <span class="code-line"><span class="code-gutter">11</span><span class="code-text">matplotlib.use(&#x27;Agg&#x27;)</span></span>
 <span class="code-line"><span class="code-gutter">12</span><span class="code-text">import matplotlib.pyplot as plt</span></span>
@@ -81,11 +81,11 @@ The code below is broken into sections. Each section shows the exact lines from 
   <pre class="code-editor" aria-label="Python code block from build_question4_50state_math_reading.py, lines 17 to 33"><code>
 <span class="code-line"><span class="code-gutter">17</span><span class="code-text">BASE = Path(&#x27;/home/barry-schoedel/Documents/Obsidian Vault/🎓 Education/STEM-5328/Question 4 Exploration&#x27;)</span></span>
 <span class="code-line"><span class="code-gutter">18</span><span class="code-text">BASE.mkdir(parents=True, exist_ok=True)</span></span>
-<span class="code-line"><span class="code-gutter">19</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">20</span><span class="code-text">CSV_PATH = BASE / &#x27;question-4-charter-share-vs-naep-2024-50states.csv&#x27;</span></span>
 <span class="code-line"><span class="code-gutter">21</span><span class="code-text">PNG_PATH = BASE / &#x27;question-4-charter-share-vs-naep-2024-50states.png&#x27;</span></span>
 <span class="code-line"><span class="code-gutter">22</span><span class="code-text">MD_PATH = BASE / &#x27;question-4-charter-share-vs-naep-2024-50states.md&#x27;</span></span>
-<span class="code-line"><span class="code-gutter">23</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">24</span><span class="code-text">CHARTER_XLSX = &#x27;https://nces.ed.gov/programs/digest/d23/tables/xls/tabn216.90.xlsx&#x27;</span></span>
 <span class="code-line"><span class="code-gutter">25</span><span class="code-text">STATE_CODES = &#x27;AL,AK,AZ,AR,CA,CO,CT,DE,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY&#x27;</span></span>
 <span class="code-line"><span class="code-gutter">26</span><span class="code-text">ALL_50_STATES = [</span></span>
@@ -120,7 +120,7 @@ Why this matters: the script is being explicit about the 50-state frame. That wa
 <span class="code-line"><span class="code-gutter">38</span><span class="code-text">        data = resp.read()</span></span>
 <span class="code-line"><span class="code-gutter">39</span><span class="code-text">    wb = load_workbook(filename=BytesIO(data), data_only=True)</span></span>
 <span class="code-line"><span class="code-gutter">40</span><span class="code-text">    ws = wb.active</span></span>
-<span class="code-line"><span class="code-gutter">41</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">42</span><span class="code-text">    charter = {}</span></span>
 <span class="code-line"><span class="code-gutter">43</span><span class="code-text">    for row in ws.iter_rows(min_row=5, max_row=56, values_only=True):</span></span>
 <span class="code-line"><span class="code-gutter">44</span><span class="code-text">        state = str(row[0]).replace(&#x27;\xa0&#x27;, &#x27; &#x27;).strip() if row[0] is not None else &#x27;&#x27;</span></span>
@@ -135,11 +135,11 @@ Why this matters: the script is being explicit about the 50-state frame. That wa
 <span class="code-line"><span class="code-gutter">53</span><span class="code-text">            charter[state] = 0.0</span></span>
 <span class="code-line"><span class="code-gutter">54</span><span class="code-text">        else:</span></span>
 <span class="code-line"><span class="code-gutter">55</span><span class="code-text">            charter[state] = float(raw)</span></span>
-<span class="code-line"><span class="code-gutter">56</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">57</span><span class="code-text">    # guarantee all 50 states present</span></span>
 <span class="code-line"><span class="code-gutter">58</span><span class="code-text">    for state in ALL_50_STATES:</span></span>
 <span class="code-line"><span class="code-gutter">59</span><span class="code-text">        charter.setdefault(state, 0.0)</span></span>
-<span class="code-line"><span class="code-gutter">60</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">61</span><span class="code-text">    return pd.DataFrame({&#x27;state&#x27;: ALL_50_STATES, &#x27;charter_enroll_pct_2022_23&#x27;: [charter[s] for s in ALL_50_STATES]})</span></span>
   </code></pre>
 </div>
@@ -216,7 +216,7 @@ Why this matters: sometimes the hardest part of data science is not the model. I
 <span class="code-line"><span class="code-gutter">93</span><span class="code-text">    corr = float(np.corrcoef(x, y)[0, 1])</span></span>
 <span class="code-line"><span class="code-gutter">94</span><span class="code-text">    slope, intercept = np.polyfit(x, y, 1)</span></span>
 <span class="code-line"><span class="code-gutter">95</span><span class="code-text">    xs = np.linspace(x.min(), x.max(), 200)</span></span>
-<span class="code-line"><span class="code-gutter">96</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">97</span><span class="code-text">    zero_mask = df[&#x27;charter_enroll_pct_2022_23&#x27;] == 0.0</span></span>
 <span class="code-line"><span class="code-gutter">98</span><span class="code-text">    ax.scatter(x[~zero_mask], y[~zero_mask], s=42, alpha=0.85, color=&#x27;#2563eb&#x27;, edgecolor=&#x27;white&#x27;, linewidth=0.5, label=&#x27;States with charter share &gt; 0%&#x27;)</span></span>
 <span class="code-line"><span class="code-gutter">99</span><span class="code-text">    ax.scatter(x[zero_mask], y[zero_mask], s=52, alpha=0.95, color=&#x27;#f59e0b&#x27;, marker=&#x27;s&#x27;, edgecolor=&#x27;white&#x27;, linewidth=0.6, label=&#x27;States coded at 0% charter share&#x27;)</span></span>
@@ -226,12 +226,12 @@ Why this matters: sometimes the hardest part of data science is not the model. I
 <span class="code-line"><span class="code-gutter">103</span><span class="code-text">    ax.set_ylabel(&#x27;NAEP grade 8 mean score (2024)&#x27;)</span></span>
 <span class="code-line"><span class="code-gutter">104</span><span class="code-text">    ax.grid(True, linestyle=&#x27;--&#x27;, alpha=0.25)</span></span>
 <span class="code-line"><span class="code-gutter">105</span><span class="code-text">    ax.legend(frameon=False, fontsize=8, loc=&#x27;best&#x27;)</span></span>
-<span class="code-line"><span class="code-gutter">106</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">107</span><span class="code-text">    for state in [&#x27;Arizona&#x27;, &#x27;Massachusetts&#x27;, &#x27;Texas&#x27;, &#x27;Colorado&#x27;, &#x27;New Mexico&#x27;, &#x27;Florida&#x27;]:</span></span>
 <span class="code-line"><span class="code-gutter">108</span><span class="code-text">        row = df[df[&#x27;state&#x27;] == state]</span></span>
 <span class="code-line"><span class="code-gutter">109</span><span class="code-text">        if not row.empty:</span></span>
 <span class="code-line"><span class="code-gutter">110</span><span class="code-text">            ax.annotate(state, (row.iloc[0][&#x27;charter_enroll_pct_2022_23&#x27;], row.iloc[0][ycol]), xytext=(4, 4), textcoords=&#x27;offset points&#x27;, fontsize=8)</span></span>
-<span class="code-line"><span class="code-gutter">111</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">112</span><span class="code-text">    return corr, slope</span></span>
   </code></pre>
 </div>
@@ -257,11 +257,11 @@ Why this matters: visualization code is not just about making a picture. It also
 <span class="code-line"><span class="code-gutter">116</span><span class="code-text">    charter = fetch_charter_share_all_50()</span></span>
 <span class="code-line"><span class="code-gutter">117</span><span class="code-text">    math_df = fetch_naep(&#x27;math&#x27;).drop(columns=[&#x27;state_code&#x27;])</span></span>
 <span class="code-line"><span class="code-gutter">118</span><span class="code-text">    reading_df = fetch_naep(&#x27;reading&#x27;).drop(columns=[&#x27;state_code&#x27;])</span></span>
-<span class="code-line"><span class="code-gutter">119</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">120</span><span class="code-text">    df = charter.merge(math_df, on=&#x27;state&#x27;, how=&#x27;left&#x27;).merge(reading_df, on=&#x27;state&#x27;, how=&#x27;left&#x27;)</span></span>
 <span class="code-line"><span class="code-gutter">121</span><span class="code-text">    df = df.sort_values(&#x27;charter_enroll_pct_2022_23&#x27;).reset_index(drop=True)</span></span>
 <span class="code-line"><span class="code-gutter">122</span><span class="code-text">    df.to_csv(CSV_PATH, index=False)</span></span>
-<span class="code-line"><span class="code-gutter">123</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">124</span><span class="code-text">    fig, axes = plt.subplots(1, 2, figsize=(14, 6), constrained_layout=True)</span></span>
 <span class="code-line"><span class="code-gutter">125</span><span class="code-text">    math_corr, math_slope = summarize(axes[0], df, &#x27;naep_math_2024&#x27;, &#x27;Charter Share vs. NAEP Math&#x27;)</span></span>
 <span class="code-line"><span class="code-gutter">126</span><span class="code-text">    read_corr, read_slope = summarize(axes[1], df, &#x27;naep_reading_2024&#x27;, &#x27;Charter Share vs. NAEP Reading&#x27;)</span></span>
@@ -291,7 +291,7 @@ Why this matters: once the three data sources are combined into one clean DataFr
 <span class="code-line"><span class="code-gutter">132</span><span class="code-text">    nonzero = df[df[&#x27;charter_enroll_pct_2022_23&#x27;] &gt; 0].copy()</span></span>
 <span class="code-line"><span class="code-gutter">133</span><span class="code-text">    math_corr_nz = float(nonzero[&#x27;charter_enroll_pct_2022_23&#x27;].corr(nonzero[&#x27;naep_math_2024&#x27;]))</span></span>
 <span class="code-line"><span class="code-gutter">134</span><span class="code-text">    read_corr_nz = float(nonzero[&#x27;charter_enroll_pct_2022_23&#x27;].corr(nonzero[&#x27;naep_reading_2024&#x27;]))</span></span>
-<span class="code-line"><span class="code-gutter">135</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">136</span><span class="code-text">    MD_PATH.write_text(f&#x27;&#x27;&#x27;---</span></span>
 <span class="code-line"><span class="code-gutter">137</span><span class="code-text">type: analysis-note</span></span>
 <span class="code-line"><span class="code-gutter">138</span><span class="code-text">title: &quot;Question 4 — 50-State 2024 Charter Share vs. NAEP Scatterplots&quot;</span></span>
@@ -300,46 +300,46 @@ Why this matters: once the three data sources are combined into one clean DataFr
 <span class="code-line"><span class="code-gutter">141</span><span class="code-text">source_1: &quot;NAEP Data Service API (2024 grade 8 math and reading state means)&quot;</span></span>
 <span class="code-line"><span class="code-gutter">142</span><span class="code-text">source_2: &quot;NCES Digest table 216.90 (2022–23 charter enrollment share by state)&quot;</span></span>
 <span class="code-line"><span class="code-gutter">143</span><span class="code-text">---</span></span>
-<span class="code-line"><span class="code-gutter">144</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">145</span><span class="code-text"># Question 4 — 50-State 2024 Scatterplots</span></span>
-<span class="code-line"><span class="code-gutter">146</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">147</span><span class="code-text">Files created:</span></span>
 <span class="code-line"><span class="code-gutter">148</span><span class="code-text">- CSV: `{CSV_PATH.name}`</span></span>
 <span class="code-line"><span class="code-gutter">149</span><span class="code-text">- Chart: `{PNG_PATH.name}`</span></span>
-<span class="code-line"><span class="code-gutter">150</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">151</span><span class="code-text">## Accuracy correction from the earlier draft</span></span>
-<span class="code-line"><span class="code-gutter">152</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">153</span><span class="code-text">The earlier exploratory pass used 44 states because five no-charter states were omitted as “not applicable,” and Wyoming was accidentally dropped by an Excel row-slice bug. This corrected version includes **all 50 states**.</span></span>
-<span class="code-line"><span class="code-gutter">154</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">155</span><span class="code-text">To make that possible, states reported by NCES as having **no charter share in 2022–23** were coded as **0% charter enrollment**. This includes both states with no charter legislation / no operating charter schools in the table and Kentucky, which is listed at 0.0%.</span></span>
-<span class="code-line"><span class="code-gutter">156</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">157</span><span class="code-text">States at 0% charter enrollment in this file:</span></span>
 <span class="code-line"><span class="code-gutter">158</span><span class="code-text">- {&#x27;, &#x27;.join(no_charter_states)}</span></span>
-<span class="code-line"><span class="code-gutter">159</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">160</span><span class="code-text">## Math (2024)</span></span>
 <span class="code-line"><span class="code-gutter">161</span><span class="code-text">- Correlation: **{math_corr:.2f}**</span></span>
 <span class="code-line"><span class="code-gutter">162</span><span class="code-text">- Slope: **{math_slope:.2f}** NAEP math points per 1 percentage-point increase in charter share</span></span>
-<span class="code-line"><span class="code-gutter">163</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">164</span><span class="code-text">Plain-language reading:</span></span>
 <span class="code-line"><span class="code-gutter">165</span><span class="code-text">- The raw relationship is **negative**, but weak.</span></span>
 <span class="code-line"><span class="code-gutter">166</span><span class="code-text">- Charter share alone shows only a **weak linear relationship** with state math performance.</span></span>
-<span class="code-line"><span class="code-gutter">167</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">168</span><span class="code-text">Sensitivity check:</span></span>
 <span class="code-line"><span class="code-gutter">169</span><span class="code-text">- Excluding the 0% charter-share states, the relationship stays negative but becomes smaller (**r = {math_corr_nz:.2f}**).</span></span>
-<span class="code-line"><span class="code-gutter">170</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">171</span><span class="code-text">## Reading (2024)</span></span>
 <span class="code-line"><span class="code-gutter">172</span><span class="code-text">- Correlation: **{read_corr:.2f}**</span></span>
 <span class="code-line"><span class="code-gutter">173</span><span class="code-text">- Slope: **{read_slope:.2f}** NAEP reading points per 1 percentage-point increase in charter share</span></span>
-<span class="code-line"><span class="code-gutter">174</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">175</span><span class="code-text">Plain-language reading:</span></span>
 <span class="code-line"><span class="code-gutter">176</span><span class="code-text">- The raw relationship is **negative**, but weak.</span></span>
 <span class="code-line"><span class="code-gutter">177</span><span class="code-text">- Charter share alone shows only a **weak linear relationship** with state reading performance.</span></span>
-<span class="code-line"><span class="code-gutter">178</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">179</span><span class="code-text">Sensitivity check:</span></span>
 <span class="code-line"><span class="code-gutter">180</span><span class="code-text">- Excluding the 0% charter-share states, the relationship stays negative but becomes smaller (**r = {read_corr_nz:.2f}**).</span></span>
-<span class="code-line"><span class="code-gutter">181</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">182</span><span class="code-text">## Interpretation</span></span>
-<span class="code-line"><span class="code-gutter">183</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">184</span><span class="code-text">These are exploratory, raw scatterplots. They show whether there is a visible relationship worth investigating, not whether charter schools cause better or worse scores. The next step is to add controls for poverty, race/ethnicity, disability, English-learner status, and possibly spending.</span></span>
 <span class="code-line"><span class="code-gutter">185</span><span class="code-text">&#x27;&#x27;&#x27;)</span></span>
   </code></pre>
@@ -366,8 +366,8 @@ Why this matters: a good analysis script does not stop at numbers. It also leave
 <span class="code-line"><span class="code-gutter">191</span><span class="code-text">    print(f&#x27;Math slope: {math_slope:.4f}&#x27;)</span></span>
 <span class="code-line"><span class="code-gutter">192</span><span class="code-text">    print(f&#x27;Reading correlation: {read_corr:.4f}&#x27;)</span></span>
 <span class="code-line"><span class="code-gutter">193</span><span class="code-text">    print(f&#x27;Reading slope: {read_slope:.4f}&#x27;)</span></span>
-<span class="code-line"><span class="code-gutter">194</span><span class="code-text"> </span></span>
-<span class="code-line"><span class="code-gutter">195</span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
+<span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">196</span><span class="code-text">if __name__ == &#x27;__main__&#x27;:</span></span>
 <span class="code-line"><span class="code-gutter">197</span><span class="code-text">    main()</span></span>
   </code></pre>

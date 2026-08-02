@@ -39,7 +39,7 @@ A causal question asks whether changing X would change Y — the effect of a wel
 
 ## Why each question is labeled the way it is
 
-All five questions use [NAEP](/glossary/#g-nces) data, which samples *different* students each cycle. That design is excellent for describing and comparing, workable for predicting, and only cautiously usable for causal claims — and then only with the extra structure described above (Hernán et al., 2025; Lopez Bernal et al., 2017).
+All five questions use [NAEP](/glossary/#g-naep) data, which samples *different* students each cycle. That design is excellent for describing and comparing, workable for predicting, and only cautiously usable for causal claims — and then only with the extra structure described above (Hernán et al., 2025; Lopez Bernal et al., 2017).
 
 ### [Question 1 — Math vs. reading recovery](/questions/question-1/) → Predictive (comparative)
 

@@ -8,13 +8,11 @@ tags: [education, data-science, naep, research-methods, stem-5328]
 timestamp: "2026-07-10T19:00:00Z"
 ---
 
-# Data Science for Educators
-
 A beginner-friendly walkthrough of five real research questions in education, drawn from the 2022–2024 NAEP (National Assessment of Educational Progress) data. Each question shows what you would investigate, how you would design the analysis, what data you would need, and — most importantly — *why* each step makes sense.
 
 If you are an educator curious about data science but new to the terminology, this is written for you.
 
-## New worked example for Question 4
+## New worked example for [Question 4](#home-question-4)
 
 A full public-facing worked example is now available for the charter-school question:
 
@@ -37,7 +35,7 @@ Each label below says what kind of claim the question can honestly support — s
 | 1 | [Math vs. reading recovery divergence](questions/question-1) | Predictive (comparative) |
 | 2 | [Hispanic decline and EL mediation](questions/question-2) | Predictive (mediational framing) |
 | 3 | [Digital assessment mode effects](questions/question-3) | Causal (measurement) |
-| 4 | [Charter penetration and NAEP scores](questions/question-4) | Predictive (comparative) |
+| 4 | <span id="home-question-4"></span>[Charter penetration and NAEP scores](questions/question-4) | Predictive (comparative) |
 | 5 | [IEP gap and state achievement](questions/question-5) | Descriptive (comparative) |
 
 ## Supporting pages

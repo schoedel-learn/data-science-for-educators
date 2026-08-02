@@ -6,9 +6,7 @@ tags: [glossary, reference, data-science]
 timestamp: "2026-07-10T19:00:00Z"
 ---
 
-# Glossary
-
-Every technical term introduced in the questions above, defined in plain language. Terms appear in the order you encounter them.
+Every technical term introduced across the question pages, worked examples, and methods explainers, defined in plain language. Terms appear in the order you encounter them.
 
 ## Concepts by Question
 
@@ -90,6 +88,76 @@ A variable created by multiplying two predictors together, included in a regress
 
 The number in a regression output that tells you how much the outcome changes when a predictor increases by one unit, holding all other predictors constant. In Question 5, the coefficient on state overall score tells you: for each additional point in a state's average NAEP score, how many points wider is its IEP gap?
 
+### Cross-Cutting Data Science Terms
+
+**<a id="g-descriptive">descriptive question</a>**
+
+A question focused on what is happening in the data — the level, pattern, or distribution of something — rather than why it happened or what would happen under an intervention.
+
+**<a id="g-predictive">predictive question</a>**
+
+A question focused on whether known information helps forecast an outcome. Predictive questions rely on useful associations, so a predictor does not have to be a proven cause.
+
+**<a id="g-causal-inference">causal inference</a>**
+
+The part of data science that asks whether changing one thing would change another. It is stronger than prediction because it tries to estimate the effect of an intervention rather than only describe or forecast a pattern.
+
+**<a id="g-comparison">comparison</a>**
+
+An analytic move in which groups, times, or places are contrasted. Comparison is a way of doing analysis, not automatically a separate research aim.
+
+**<a id="g-association">association</a>**
+
+A relationship in which two variables tend to move together. Association can support description or prediction, but by itself it does not prove that one variable causes the other.
+
+**<a id="g-observational">observational data</a>**
+
+Data collected without randomly assigning people, schools, or places to different conditions. Observational data are often useful for description and prediction but make causal claims harder because other differences may be mixed in.
+
+**<a id="g-counterfactual">counterfactual</a>**
+
+The unobserved “what would have happened instead” outcome under a different treatment, policy, or exposure. Causal inference tries to estimate this missing comparison.
+
+**<a id="g-target-trial">target trial framework</a>**
+
+A way of stating the ideal randomized study you wish you could run, then asking how closely an observational dataset can imitate it. The framework helps clarify what the treatment, comparison group, timing, and assumptions would need to be for a causal claim.
+
+**<a id="g-predictor">predictor</a>**
+
+An input variable used to help describe or forecast an outcome in a model. In the charter example, charter enrollment share is the main predictor.
+
+**<a id="g-outcome">outcome variable</a>**
+
+The result a model is trying to describe, predict, or explain. In Question 4, the NAEP mathematics and reading means are the outcomes.
+
+**<a id="g-adjustment">adjustment</a>**
+
+The act of adding background variables to a model so the main relationship is less distorted by measured differences between cases. Adjustment strengthens a comparison, but it does not guarantee a causal result.
+
+**<a id="g-scatterplot">scatterplot</a>**
+
+A graph that places one variable on the x-axis and another on the y-axis so each case appears as a point. It is useful for seeing direction, clustering, outliers, and whether a linear pattern might exist.
+
+**<a id="g-correlation-coefficient">correlation coefficient</a>**
+
+A number, often written as *r*, that summarizes the direction and strength of a linear relationship between two variables. Values near 1 or -1 indicate a stronger linear pattern; values near 0 indicate a weak one.
+
+**<a id="g-slope">slope</a>**
+
+In a straight-line model, the amount the outcome is expected to change when the predictor increases by one unit. A negative slope means the outcome tends to go down as the predictor goes up.
+
+**<a id="g-best-fit-line">best-fit line</a>**
+
+The straight line drawn through a scatterplot to summarize the overall linear trend in the data. In ordinary least squares regression, it is chosen to minimize the squared distances between the points and the line.
+
+**<a id="g-dataframe">DataFrame</a>**
+
+A table-like data structure used in `pandas`, where rows represent cases and columns represent variables. It is a common working format for cleaning, merging, and analyzing data in Python.
+
+**<a id="g-merge">merge</a>**
+
+A table operation that joins rows from two datasets using a shared key, such as a state name or ID number. Merging is how separate data sources are combined into one analytic file.
+
 ### General Terms
 
 **<a id="g-crosstab">crosstab (cross-tabulation)</a>**
@@ -106,4 +174,4 @@ The federal entity within the U.S. Department of Education that collects and ana
 
 ---
 
-*References:* Baron, R. M., & Kenny, D. A. (1986). The moderator–mediator variable distinction. *Journal of Personality and Social Psychology, 51*(6), 1173–1182. | Preacher, K. J., & Hayes, A. F. (2004). SPSS and SAS procedures for estimating indirect effects. *Behavior Research Methods, Instruments, & Computers, 36*(4), 717–731.
+*References:* Baron, R. M., & Kenny, D. A. (1986). The moderator–mediator variable distinction. *Journal of Personality and Social Psychology, 51*(6), 1173–1182. | Hernán, M. A., Dahabreh, I. J., Dickerman, B. A., & Swanson, S. A. (2025). The target trial framework for causal inference from observational data: Why and when is it helpful? *Annals of Internal Medicine, 178*(3), 402–407. | Ito, C., Al-Hassany, L., Kurth, T., & Glatz, T. (2025). Distinguishing description, prediction, and causal inference: A primer on improving congruence between research questions and methods. *Neurology, 104*(4), Article e210171. | Kamper, S. J. (2020). Types of research questions: Descriptive, predictive, or causal. *Journal of Orthopaedic & Sports Physical Therapy, 50*(8), 468–469. | Lopez Bernal, J., Cummins, S., & Gasparrini, A. (2017). Interrupted time series regression for the evaluation of public health interventions: A tutorial. *International Journal of Epidemiology, 46*(1), 348–355. | Preacher, K. J., & Hayes, A. F. (2004). SPSS and SAS procedures for estimating indirect effects. *Behavior Research Methods, Instruments, & Computers, 36*(4), 717–731. | Shmueli, G. (2010). To explain or to predict? *Statistical Science, 25*(3), 289–310.
