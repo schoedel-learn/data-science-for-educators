@@ -6,6 +6,7 @@
 4. [Charter School Penetration and NAEP Scores](question-4) — Predictive (comparative)
    - Worked example: [Charter Share and NAEP Scores](question-4-exploration)
    - Next step: [Controlled Analysis Plan](question-4-controlled-analysis)
+   - Code teaching page: [Python Walkthrough](question-4-python-walkthrough)
 5. [IEP Gap and State Achievement](question-5) — Descriptive (comparative)
 
 See [How the Questions Are Classified](../classification) for what each label means.

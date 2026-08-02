@@ -6,7 +6,7 @@ tags: [charter-schools, naep, regression, controls, professor-review, stem-5328,
 timestamp: "2026-08-02T00:00:00Z"
 ---
 
-This page explains the next stronger step after the [Question 4 worked example](/questions/question-4-exploration/). The worked example showed the raw state-level relationship between charter-school enrollment share and 2024 Grade 8 NAEP scores. This page explains how that analysis should be strengthened for professor review.
+This page explains the next stronger step after the [Question 4 worked example](/questions/question-4-exploration/). The worked example showed the raw state-level relationship between charter-school enrollment share and 2024 Grade 8 NAEP scores. This page explains how that analysis should be strengthened for professor review. If you want to see how the existing exploratory analysis is programmed, read the [Python Walkthrough](/questions/question-4-python-walkthrough/).
 
 ## Why a controlled analysis is needed
 

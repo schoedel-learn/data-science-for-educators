@@ -32,8 +32,9 @@ A full public-facing worked example for this question is now live at [Worked Exa
 - a two-panel scatterplot for 2024 Grade 8 math and reading,
 - grouped summary tables,
 - the full state-level data table,
-- downloadable CSV files, and
-- APA 7 references suitable for instructor review.
+- downloadable CSV files,
+- APA 7 references suitable for instructor review, and
+- a [Python Walkthrough](/questions/question-4-python-walkthrough/) that explains the actual scatterplot script line by line for educators who are learning how data science code works.
 
 That worked example is intentionally framed as a **first exploratory pass**. It shows the raw relationship, documents the data-cleaning choices, and explains why the result is not a causal claim.
 

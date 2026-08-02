@@ -13,3 +13,4 @@
 * **Methods**: Corrected the exploratory analysis to include all 50 states, distinguished zero-charter states, and added a sensitivity check excluding the 0% states.
 * **Navigation**: Linked the worked example from the homepage, research-questions index, and Question 4 page.
 * **Professor review**: Added a dedicated controlled-analysis planning page for Question 4 and elevated both Q4 follow-up pages on the homepage.
+* **Teaching**: Added a line-by-line Python walkthrough page for the main Question 4 scatterplot script, plus a downloadable copy of the script itself for educators learning how the code works.

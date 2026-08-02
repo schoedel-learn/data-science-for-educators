@@ -20,8 +20,9 @@ A full public-facing worked example is now available for the charter-school ques
 
 - [Question 4 Worked Example](questions/question-4-exploration) — the current 50-state exploratory analysis with scatterplots, grouped summary tables, downloadable CSV files, and APA 7 references.
 - [Question 4 Controlled Analysis Plan](questions/question-4-controlled-analysis) — the next stronger professor-facing design, showing which additional controls, variables, and model structure would be needed for a more defensible follow-up analysis.
+- [Python Walkthrough — How the Question 4 Scatterplot Script Works](questions/question-4-python-walkthrough) — a line-by-line explanation of the actual Python script for educators who want to understand how the analysis is programmed.
 
-If you want to see the raw comparison first, start with the worked example. If you want to see how the analysis should be strengthened for formal review, read the controlled-analysis plan next.
+If you want to see the raw comparison first, start with the worked example. If you want to see how the analysis should be strengthened for formal review, read the controlled-analysis plan next. If you want to learn how the code itself works, read the Python walkthrough.
 
 ## Where the data lives
 
@@ -44,5 +45,6 @@ Each label below says what kind of claim the question can honestly support — s
 - [How the Questions Are Classified](classification) — definitions of the three main research aims and why each question gets its label
 - [Question 4 Worked Example](questions/question-4-exploration) — a public-facing, assignment-ready exploratory analysis with charts, tables, downloadable data, and APA 7 references
 - [Question 4 Controlled Analysis Plan](questions/question-4-controlled-analysis) — the next stronger design for adding controls, explaining model structure, and preparing the analysis for professor review
+- [Python Walkthrough — How the Question 4 Scatterplot Script Works](questions/question-4-python-walkthrough) — a line-by-line, educator-friendly explanation of the real Python script behind the scatterplots
 - [Glossary](glossary) — every technical term defined in plain language
 - [Work Log](log) — creation and update history
