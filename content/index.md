@@ -19,10 +19,10 @@ If you are an educator curious about data science but new to the terminology, th
 A full public-facing worked example is now available for the charter-school question:
 
 - [Question 4 Worked Example](questions/question-4-exploration) — the current 50-state exploratory analysis with scatterplots, grouped summary tables, downloadable CSV files, and APA 7 references.
-- [Question 4 Controlled Analysis Plan](questions/question-4-controlled-analysis) — the next stronger professor-facing design, showing which additional controls, variables, and model structure would be needed for a more defensible follow-up analysis.
+- [Question 4 Controlled Analysis Plan](questions/question-4-controlled-analysis) — the next stronger follow-up design, showing which additional controls, variables, and model structure would be needed for a more defensible analysis.
 - [Python Walkthrough — How the Question 4 Scatterplot Script Works](questions/question-4-python-walkthrough) — a line-by-line explanation of the actual Python script for educators who want to understand how the analysis is programmed.
 
-If you want to see the raw comparison first, start with the worked example. If you want to see how the analysis should be strengthened for formal review, read the controlled-analysis plan next. If you want to learn how the code itself works, read the Python walkthrough.
+If you want to see the raw comparison first, start with the worked example. If you want to see how the analysis could be strengthened, read the controlled-analysis plan next. If you want to learn how the code itself works, read the Python walkthrough.
 
 ## Where the data lives
 
@@ -43,8 +43,9 @@ Each label below says what kind of claim the question can honestly support — s
 ## Supporting pages
 
 - [How the Questions Are Classified](classification) — definitions of the three main research aims and why each question gets its label
-- [Question 4 Worked Example](questions/question-4-exploration) — a public-facing, assignment-ready exploratory analysis with charts, tables, downloadable data, and APA 7 references
-- [Question 4 Controlled Analysis Plan](questions/question-4-controlled-analysis) — the next stronger design for adding controls, explaining model structure, and preparing the analysis for professor review
+- [The Three Aims of Data Analysis and the Cross-Cutting Role of Comparison](three-aims-and-comparison) — the fuller public explainer of why this site uses a three-aim framework and treats comparison as cross-cutting rather than as a fourth top-level type
+- [Question 4 Worked Example](questions/question-4-exploration) — a public-facing exploratory analysis with charts, tables, downloadable data, and APA 7 references
+- [Question 4 Controlled Analysis Plan](questions/question-4-controlled-analysis) — the next stronger design for adding controls and explaining model structure for a more defensible analysis
 - [Python Walkthrough — How the Question 4 Scatterplot Script Works](questions/question-4-python-walkthrough) — a line-by-line, educator-friendly explanation of the real Python script behind the scatterplots
 - [Glossary](glossary) — every technical term defined in plain language
 - [Work Log](log) — creation and update history

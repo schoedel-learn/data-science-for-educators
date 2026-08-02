@@ -1,12 +1,12 @@
 ---
 type: page
 title: "Worked Example — Question 4: Charter Share and NAEP Scores"
-description: "A public-facing, assignment-ready worked example for Question 4, combining state charter-enrollment share with 2024 NAEP Grade 8 math and reading scores."
+description: "A public-facing exploratory worked example for Question 4, combining state charter-enrollment share with 2024 NAEP Grade 8 math and reading scores."
 tags: [charter-schools, naep, worked-example, state-comparison, stem-5328, apa7]
 timestamp: "2026-08-02T00:00:00Z"
 ---
 
-This page presents the first full worked example for [Question 4](/questions/question-4/). It was prepared as part of a STEM-5328 assignment, but it is written for public readers as well as for instructor review. If you want the research-question framing first, start with [Question 4](/questions/question-4/). If you want the methods labels explained, see [How the Questions Are Classified](/classification/). If you want to see the next stronger follow-up design, read the [Question 4 Controlled Analysis Plan](/questions/question-4-controlled-analysis/). If you want to learn how the code itself works line by line, read the [Python Walkthrough](/questions/question-4-python-walkthrough/).
+This page presents the first full worked example for [Question 4](/questions/question-4/). It is written for public readers who want to see how the question can be explored with real data. If you want the research-question framing first, start with [Question 4](/questions/question-4/). If you want the methods labels explained, see [How the Questions Are Classified](/classification/). If you want to see the next stronger follow-up design, read the [Question 4 Controlled Analysis Plan](/questions/question-4-controlled-analysis/). If you want to learn how the code itself works line by line, read the [Python Walkthrough](/questions/question-4-python-walkthrough/).
 
 ## The question
 

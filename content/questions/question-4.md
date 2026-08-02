@@ -12,7 +12,7 @@ timestamp: "2026-07-10T19:00:00Z"
 
 Charter school enrollment varies enormously by state — from near zero in West Virginia to over 15% in Arizona. The question is whether higher charter penetration is associated with better state-level NAEP scores *after accounting for differences in poverty, race, and special education rates*. Without those adjustments, you might credit (or blame) charter schools for differences that are really about which students live in which states.
 
-> **Why classification matters.** The primary aim is *predictive*: charter share is used to model expected NAEP scores, worked through a *comparison* across states. It is not automatically causal — states with lots of charters might differ in other ways that drive scores. A causal claim would require additional design, like an [instrumental variable](/glossary/#g-instrument). See [How the Questions Are Classified](/classification/) for the full reasoning.
+> **Why classification matters.** The primary aim is *predictive*: charter share is used to model expected NAEP scores, worked through a *comparison* across states. It is not automatically causal — states with lots of charters might differ in other ways that drive scores. A causal claim would require additional design, like an [instrumental variable](/glossary/#g-instrument). See [How the Questions Are Classified](/classification/) for the short version or [The Three Aims of Data Analysis and the Cross-Cutting Role of Comparison](/three-aims-and-comparison/) for the fuller methods argument.
 
 ## How you would investigate it
 
@@ -33,12 +33,12 @@ A full public-facing worked example for this question is now live at [Worked Exa
 - grouped summary tables,
 - the full state-level data table,
 - downloadable CSV files,
-- APA 7 references suitable for instructor review, and
+- APA 7 references, and
 - a [Python Walkthrough](/questions/question-4-python-walkthrough/) that explains the actual scatterplot script line by line for educators who are learning how data science code works.
 
 That worked example is intentionally framed as a **first exploratory pass**. It shows the raw relationship, documents the data-cleaning choices, and explains why the result is not a causal claim.
 
-If you want the next stronger design, see [Question 4 Controlled Analysis Plan](/questions/question-4-controlled-analysis/). That page explains which additional controls, data sources, and modeling choices would be needed before the analysis could be defended more seriously under professor review.
+If you want the next stronger design, see [Question 4 Controlled Analysis Plan](/questions/question-4-controlled-analysis/). That page explains which additional controls, data sources, and modeling choices would be needed before stronger claims could be made.
 
 ## Data you would need
 

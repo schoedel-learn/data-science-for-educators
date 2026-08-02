@@ -1,12 +1,12 @@
 ---
 type: page
 title: "Question 4 Controlled Analysis Plan"
-description: "The next stronger follow-up design for Question 4: which controls, variables, and modeling choices would be needed to move from a raw scatterplot to a more defensible professor-review analysis."
-tags: [charter-schools, naep, regression, controls, professor-review, stem-5328, apa7]
+description: "The next stronger follow-up design for Question 4: which controls, variables, and modeling choices would be needed to move from a raw scatterplot to a more defensible analysis."
+tags: [charter-schools, naep, regression, controls, stem-5328, apa7]
 timestamp: "2026-08-02T00:00:00Z"
 ---
 
-This page explains the next stronger step after the [Question 4 worked example](/questions/question-4-exploration/). The worked example showed the raw state-level relationship between charter-school enrollment share and 2024 Grade 8 NAEP scores. This page explains how that analysis should be strengthened for professor review. If you want to see how the existing exploratory analysis is programmed, read the [Python Walkthrough](/questions/question-4-python-walkthrough/).
+This page explains the next stronger step after the [Question 4 worked example](/questions/question-4-exploration/). The worked example showed the raw state-level relationship between charter-school enrollment share and 2024 Grade 8 NAEP scores. This page explains how that analysis could be strengthened. If you want to see how the existing exploratory analysis is programmed, read the [Python Walkthrough](/questions/question-4-python-walkthrough/).
 
 ## Why a controlled analysis is needed
 
@@ -57,7 +57,7 @@ That model should be run twice: once for mathematics and once for reading. If mu
 
 A controlled model improves the analysis in three important ways.
 
-First, it reduces the chance that charter share is merely acting as a proxy for another measured state characteristic. Second, it gives a clearer estimate of the direction and size of the adjusted association. Third, it creates a more credible professor-facing bridge between a raw descriptive visual and a more serious predictive analysis (Ito et al., 2025; Shmueli, 2010).
+First, it reduces the chance that charter share is merely acting as a proxy for another measured state characteristic. Second, it gives a clearer estimate of the direction and size of the adjusted association. Third, it creates a more credible bridge between a raw descriptive visual and a more serious predictive analysis (Ito et al., 2025; Shmueli, 2010).
 
 ## What it still would not prove
 
@@ -75,7 +75,7 @@ If the goal later shifts from prediction to causation, the design would have to 
 
 Those designs require additional assumptions and external policy-history data. They are conceptually different from a raw scatterplot or an adjusted OLS model (Hernán et al., 2025).
 
-## How a professor could read the current sequence
+## How to read the current sequence
 
 The current website now supports a transparent progression:
 
@@ -83,7 +83,7 @@ The current website now supports a transparent progression:
 2. [Worked Example — Question 4: Charter Share and NAEP Scores](/questions/question-4-exploration/) shows the actual exploratory 50-state analysis, including the scatterplots, summary table, full data table, and data-cleaning corrections.
 3. This page explains how the analysis should be strengthened before stronger conclusions are attempted.
 
-That sequence is important because it makes the reasoning visible. It shows that the public-facing result is not being oversold, and it gives an instructor a clear audit trail from question framing to exploratory evidence to the next more defensible model.
+That sequence is important because it makes the reasoning visible. It shows that the public-facing result is not being oversold, and it gives readers a clear trail from question framing to exploratory evidence to the next more defensible model.
 
 ## References
 

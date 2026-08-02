@@ -11,6 +11,8 @@ Every question on this site carries a label: *descriptive*, *predictive*, or *ca
 
 This page does two things. First, it defines the three question types in plain language, using the methods literature. Second, it explains — question by question — why each one is labeled the way it is. The single idea that runs through all of it: **a factor that travels with an outcome only lets you *predict* it. Saying that factor *causes* the outcome is a much stronger claim, and observational data rarely earns it.**
 
+If you want the longer methods argument behind this page, see [The Three Aims of Data Analysis and the Cross-Cutting Role of Comparison](/three-aims-and-comparison/).
+
 ## The three types
 
 Most methodologists sort research questions into three families — description, prediction, and causal inference — and treat *comparison* as an approach that shows up inside all three (Ito et al., 2025; Kamper, 2020; Shmueli, 2010).

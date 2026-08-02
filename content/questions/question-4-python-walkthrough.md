@@ -423,4 +423,4 @@ That habit helps bridge the gap between “I can read the code” and “I under
 
 - [Question 4](/questions/question-4/) — the research-question framing page
 - [Worked Example — Question 4: Charter Share and NAEP Scores](/questions/question-4-exploration/) — the actual exploratory results
-- [Question 4 Controlled Analysis Plan](/questions/question-4-controlled-analysis/) — the next stronger model for professor review
+- [Question 4 Controlled Analysis Plan](/questions/question-4-controlled-analysis/) — the next stronger model for a more defensible follow-up analysis
