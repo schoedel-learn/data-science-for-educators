@@ -79,7 +79,7 @@ The code below is broken into sections. Each section shows the exact lines from 
 <div class="code-editor-wrap">
   <div class="code-editor-label">build_question4_50state_math_reading.py · lines 17–33</div>
   <pre class="code-editor" aria-label="Python code block from build_question4_50state_math_reading.py, lines 17 to 33"><code>
-<span class="code-line"><span class="code-gutter">17</span><span class="code-text">BASE = Path(&#x27;/home/barry-schoedel/Documents/Obsidian Vault/🎓 Education/STEM-5328/Question 4 Exploration&#x27;)</span></span>
+<span class="code-line"><span class="code-gutter">17</span><span class="code-text">BASE = Path(__file__).resolve().parent  # this script&#x27;s own directory</span></span>
 <span class="code-line"><span class="code-gutter">18</span><span class="code-text">BASE.mkdir(parents=True, exist_ok=True)</span></span>
 <span class="code-line"><span class="code-gutter"></span><span class="code-text"> </span></span>
 <span class="code-line"><span class="code-gutter">20</span><span class="code-text">CSV_PATH = BASE / &#x27;question-4-charter-share-vs-naep-2024-50states.csv&#x27;</span></span>
@@ -99,7 +99,7 @@ The code below is broken into sections. Each section shows the exact lines from 
   </code></pre>
 </div>
 
-- **Line 17** creates a base folder path called `BASE`. This is where the output files will be written.
+- **Line 17** sets `BASE` to the folder this script lives in, using `Path(__file__).resolve().parent`. ``__file__`` is the script's own path, and `.resolve()` turns it into an absolute path. Writing next to the script keeps the outputs with the code no matter where the project lives.
 - **Line 18** makes sure that folder exists. `parents=True` means Python should create any missing parent folders too. `exist_ok=True` means it should not crash if the folder already exists.
 - **Lines 20–22** define the three output files: a CSV, a PNG chart, and a markdown note.
 - **Line 24** stores the URL of the NCES Excel file that contains charter-school enrollment share by state.
