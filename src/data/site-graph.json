@@ -122,7 +122,7 @@
     },
     {
       "id": "mean-score",
-      "name": "Mean scale score",
+      "name": "Mean scale score (0–500)",
       "group": "concept",
       "route": "/dataset/"
     },
@@ -146,27 +146,31 @@
     },
     {
       "id": "g8-math",
-      "name": "Grade 8 math ↓8.8",
+      "name": "Grade 8 math: 281 → 272 (−8.8)",
       "group": "finding",
-      "route": "/findings/"
+      "route": "/findings/",
+      "val": 8
     },
     {
       "id": "g8-reading",
-      "name": "Grade 8 reading ↓5.3",
+      "name": "Grade 8 reading: 262 → 257 (−5.3)",
       "group": "finding",
-      "route": "/findings/"
+      "route": "/findings/",
+      "val": 6
     },
     {
       "id": "g4-math",
-      "name": "Grade 4 math ↓2.7",
+      "name": "Grade 4 math: 240 → 237 (−2.7)",
       "group": "finding",
-      "route": "/findings/"
+      "route": "/findings/",
+      "val": 5
     },
     {
       "id": "g4-reading",
-      "name": "Grade 4 reading ↓5.2",
+      "name": "Grade 4 reading: 219 → 214 (−5.2)",
       "group": "finding",
-      "route": "/findings/"
+      "route": "/findings/",
+      "val": 6
     },
     {
       "id": "observational",

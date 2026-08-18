@@ -27,15 +27,15 @@ const nodes = [
   { id: "texas", name: "Texas", group: "concept", route: "/comparison/" },
   { id: "pre-covid", name: "Pre-COVID baseline (2015–2019)", group: "concept", route: "/analysis/" },
   { id: "post-covid", name: "Post-COVID period (2022–2024)", group: "concept", route: "/analysis/" },
-  { id: "mean-score", name: "Mean scale score", group: "concept", route: "/dataset/" },
+  { id: "mean-score", name: "Mean scale score (0–500)", group: "concept", route: "/dataset/" },
   { id: "math", name: "Mathematics", group: "concept", route: "/findings/" },
   { id: "reading", name: "Reading", group: "concept", route: "/findings/" },
   { id: "descriptive", name: "Descriptive question", group: "concept", route: "/research-question/" },
-  // findings
-  { id: "g8-math", name: "Grade 8 math ↓8.8", group: "finding", route: "/findings/" },
-  { id: "g8-reading", name: "Grade 8 reading ↓5.3", group: "finding", route: "/findings/" },
-  { id: "g4-math", name: "Grade 4 math ↓2.7", group: "finding", route: "/findings/" },
-  { id: "g4-reading", name: "Grade 4 reading ↓5.2", group: "finding", route: "/findings/" },
+  // findings (named with the actual pre→post scores and the drop, sized by drop magnitude)
+  { id: "g8-math", name: "Grade 8 math: 281 → 272 (−8.8)", group: "finding", route: "/findings/", val: 8.0 },
+  { id: "g8-reading", name: "Grade 8 reading: 262 → 257 (−5.3)", group: "finding", route: "/findings/", val: 6.0 },
+  { id: "g4-math", name: "Grade 4 math: 240 → 237 (−2.7)", group: "finding", route: "/findings/", val: 5.0 },
+  { id: "g4-reading", name: "Grade 4 reading: 219 → 214 (−5.2)", group: "finding", route: "/findings/", val: 6.0 },
   // terms
   { id: "observational", name: "Observational data", group: "term", route: "/limitations/" },
   { id: "confound", name: "Confound", group: "term", route: "/limitations/" },

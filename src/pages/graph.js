@@ -53,15 +53,17 @@ export default function GraphPage() {
           .graphData(graphData)
           .nodeId("id")
           .nodeLabel("name")
-          .nodeVal((n) => Math.max(2, Math.sqrt(deg[n.id] || 1) * 1.5))
+          .nodeVal((n) =>
+            n.val != null ? n.val : Math.max(2, Math.sqrt(deg[n.id] || 1) * 1.5)
+          )
           .nodeColor((n) => GROUPS[n.group].color)
           .nodeOpacity(1)
-          .nodeRelSize(4)
+          .nodeRelSize(5)
           .nodeThreeObjectExtend(true)
           .nodeThreeObject((n) => {
             const sprite = new SpriteText(n.name);
             sprite.color = GROUPS[n.group].color;
-            sprite.textHeight = 7;
+            sprite.textHeight = 8;
             sprite.padding = 2;
             sprite.position.y = -9;
             return sprite;
@@ -69,7 +71,7 @@ export default function GraphPage() {
           .linkColor(() => "rgba(110,120,140,0.35)")
           .linkOpacity(0.5)
           .linkWidth(0.6)
-          .backgroundColor("rgba(0,0,0,0)")
+          .backgroundColor("#fafaf8")
           .onNodeClick((n) => {
             if (n.route) navigate(n.route);
           })
@@ -78,6 +80,12 @@ export default function GraphPage() {
               containerRef.current.style.cursor = n ? "pointer" : "grab";
             }
           });
+
+        // Configure the force layout (these return the d3 force objects,
+        // not the graph, so they must be separate statements).
+        graph.d3Force("link").distance(120);
+        graph.d3Force("charge").strength(-300);
+        graph.d3Force("center").strength(0.05);
 
         const size = () => {
           if (!containerRef.current || !graph) return;
@@ -89,6 +97,15 @@ export default function GraphPage() {
           ro = new ResizeObserver(size);
           ro.observe(containerRef.current);
         }
+
+        // Fit the camera to the spread-out nodes once the simulation settles.
+        setTimeout(() => {
+          if (!disposed && graph) {
+            try {
+              graph.zoomToFit(500, 80);
+            } catch (e) {}
+          }
+        }, 3000);
       }
     );
 
