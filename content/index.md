@@ -1,24 +1,93 @@
 ---
 type: page
 title: "After COVID, U.S. Test Scores Fell — and Reading Kept Falling"
-description: "A descriptive analysis of NAEP mathematics and reading scores for grades 4 and 8, U.S. national and Texas, before and after the COVID-19 pandemic."
+description: "A descriptive analysis of NAEP math and reading scores (grades 4 and 8), U.S. national and Texas, 2015–2024."
 ---
 
-**The question:** Were average NAEP scores in mathematics and reading (grades 4 and 8) lower after COVID than before COVID?
-
-**The answer is yes — and the story is sharper than a single number suggests.** Before COVID, national scores were roughly flat. They fell sharply in every subject and grade during the pandemic, and since then mathematics has stabilized or partly recovered while reading has kept falling.
+<div class="hero">
+  <p class="eyebrow">Data Science for Educators · Final Project</p>
+  <p class="hero-question">Were average NAEP math and reading scores lower after COVID than before?</p>
+  <p class="hero-answer">Yes — in every subject and grade. Math is recovering; reading is still falling.</p>
+</div>
 
 ![Centerpiece visualization: mean NAEP scores, U.S. national (solid) and Texas (dashed), 2015–2024](/images/centerpiece.png)
 
-*The centerpiece chart. Each panel is one subject and grade. The shaded band marks the pandemic (2019–2022).*
+## The findings at a glance
 
-## Key findings
+<div class="stat-grid">
+  <div class="stat-card">
+    <div class="stat-num">↓ 8.8<small> pts</small></div>
+    <div class="stat-label">Grade 8 math</div>
+    <div class="stat-note">The largest drop of the four tests.</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">↓ 5.3<small> pts</small></div>
+    <div class="stat-label">Grade 8 reading</div>
+    <div class="stat-note">Reading kept falling — a decade low in 2024.</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">↓ 2.7<small> pts</small></div>
+    <div class="stat-label">Grade 4 math</div>
+    <div class="stat-note">The smallest drop — and it is recovering.</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">↓ 5.2<small> pts</small></div>
+    <div class="stat-label">Grade 4 reading</div>
+    <div class="stat-note">Still falling at both grades.</div>
+  </div>
+</div>
 
-1. **Scores fell in every subject and grade.** From 2019 to 2024, grade 8 math fell 8.8 points, grade 4 math 2.7, grade 8 reading 5.3, and grade 4 reading 5.2.
-2. **Reading is still falling.** Reading reached its lowest score of the whole 2015–2024 series at both grades in 2024 — it has not recovered.
-3. **Mathematics is coming back.** Grade 4 math recovered 2.4 points from 2022 to 2024; grade 8 math has at least stopped falling.
-4. **Texas tells a different story.** Texas was above the national average in grade 8 math in 2015 and is now below it, and its decline began earlier.
+<p class="stat-footnote">Mean scale-score change, 2019–2024, U.S. national public schools. Texas tells a slightly different story — see the <a href="/comparison/">comparison</a>.</p>
 
-## Read the project
+## Explore the project
 
-[Research question](/research-question/) · [Dataset](/dataset/) · [Analysis](/analysis/) · [Findings](/findings/) · [Comparison](/comparison/) · [Visualization](/visualization/) · [Limitations](/limitations/) · [Research & evidence](/research/) · [Responsible use](/responsible-use/) · [Recommendations](/recommendations/) · [AI use](/ai-use/) · [References](/references/)
+<div class="nav-grid">
+  <a class="nav-card" href="/research-question/">
+    <span class="nav-title">Research question</span>
+    <span class="nav-desc">The one question this project answers.</span>
+  </a>
+  <a class="nav-card" href="/dataset/">
+    <span class="nav-title">Dataset</span>
+    <span class="nav-desc">What NAEP is, and what I used.</span>
+  </a>
+  <a class="nav-card" href="/analysis/">
+    <span class="nav-title">Analysis</span>
+    <span class="nav-desc">How the before/after comparison was built.</span>
+  </a>
+  <a class="nav-card" href="/findings/">
+    <span class="nav-title">Findings</span>
+    <span class="nav-desc">The full results, grade by grade.</span>
+  </a>
+  <a class="nav-card" href="/comparison/">
+    <span class="nav-title">Comparison</span>
+    <span class="nav-desc">U.S. national vs. Texas.</span>
+  </a>
+  <a class="nav-card" href="/visualization/">
+    <span class="nav-title">Visualization</span>
+    <span class="nav-desc">How the charts were designed to be honest.</span>
+  </a>
+  <a class="nav-card" href="/limitations/">
+    <span class="nav-title">Limitations</span>
+    <span class="nav-desc">What this data can — and cannot — show.</span>
+  </a>
+  <a class="nav-card" href="/research/">
+    <span class="nav-title">Research &amp; evidence</span>
+    <span class="nav-desc">How the findings fit published work.</span>
+  </a>
+  <a class="nav-card" href="/responsible-use/">
+    <span class="nav-title">Responsible use</span>
+    <span class="nav-desc">Reading the results without overclaiming.</span>
+  </a>
+  <a class="nav-card" href="/recommendations/">
+    <span class="nav-title">Recommendations</span>
+    <span class="nav-desc">What educators might do next.</span>
+  </a>
+  <a class="nav-card" href="/ai-use/">
+    <span class="nav-title">AI use</span>
+    <span class="nav-desc">How AI-assisted tools were used and checked.</span>
+  </a>
+  <a class="nav-card" href="/references/">
+    <span class="nav-title">References</span>
+    <span class="nav-desc">Sources and citations.</span>
+  </a>
+</div>

@@ -39,9 +39,10 @@ export default function Layout({ children, title, description }) {
 
   return (
     <div className="container">
-      <header style={{ marginBottom: "1.5rem" }}>
-        <a href="/" style={{ fontSize: ".85rem", color: "var(--muted)", textDecoration: "none" }}>
-          ← Portfolio home
+      <header className="site-header">
+        <a href="/" className="wordmark" aria-label="NAEP Data Portfolio — home">
+          <span className="wordmark-mark">DS</span>
+          <span>NAEP Data Portfolio</span>
         </a>
       </header>
       <main onClick={handleMainClick}>
@@ -50,10 +51,12 @@ export default function Layout({ children, title, description }) {
         {children}
       </main>
       <footer className="footer">
-        <p>
-          <a href="/">Home</a> · <a href="/research-question/">Question</a> · <a href="/dataset/">Dataset</a> · <a href="/analysis/">Analysis</a> · <a href="/findings/">Findings</a> · <a href="/comparison/">Comparison</a> · <a href="/visualization/">Visualization</a> · <a href="/limitations/">Limitations</a> · <a href="/research/">Research</a> · <a href="/responsible-use/">Responsible use</a> · <a href="/recommendations/">Recommendations</a> · <a href="/ai-use/">AI use</a> · <a href="/references/">References</a> · <a href="/glossary/">Glossary</a>
+        <p className="footer-nav">
+          <a href="/findings/">Findings</a> · <a href="/visualization/">Visualization</a> · <a href="/comparison/">Comparison</a> · <a href="/limitations/">Limitations</a> · <a href="/research/">Research</a> · <a href="/references/">References</a> · <a href="/glossary/">Glossary</a>
         </p>
-        <p>STEM-5328 · Data Science for Educators · UTEP</p>
+        <p className="footer-meta">STEM-5328 · Data Science for Educators · UTEP</p>
+        <p className="footer-author">Barry Schoedel</p>
+        <p className="footer-credit">© 2026 <a href="https://schoedeldesign.ai" rel="noopener">Schoedel Design AI</a></p>
       </footer>
       {expandedImage && (
         <div className="image-lightbox" role="dialog" aria-modal="true" aria-label={expandedImage.alt} onClick={closeExpandedImage}>
