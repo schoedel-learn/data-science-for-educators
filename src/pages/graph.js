@@ -83,9 +83,9 @@ export default function GraphPage() {
 
         // Configure the force layout (these return the d3 force objects,
         // not the graph, so they must be separate statements).
-        graph.d3Force("link").distance(120);
-        graph.d3Force("charge").strength(-300);
-        graph.d3Force("center").strength(0.05);
+        graph.d3Force("link").distance(80);
+        graph.d3Force("charge").strength(-160);
+        graph.d3Force("center").strength(0.08);
 
         const size = () => {
           if (!containerRef.current || !graph) return;
@@ -132,7 +132,7 @@ export default function GraphPage() {
           if (disposed) return;
           fitted = true;
           fitView();
-        }, 3000);
+        }, 1500);
       }
     );
 
