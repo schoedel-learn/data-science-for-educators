@@ -2,9 +2,9 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    title: "Data Science for Educators",
-    description: "Five research questions, their methods, and the data behind them — explained from the ground up. An Open Knowledge Format (OKF v0.1) knowledge bundle.",
-    author: "STEM-5328, UTEP",
+    title: "After COVID, U.S. Test Scores Fell — and Reading Kept Falling",
+    description: "A descriptive analysis of NAEP mathematics and reading scores for grades 4 and 8, U.S. national and Texas, before and after the COVID-19 pandemic.",
+    author: "Barry Schoedel",
     siteUrl: "https://data.educatebarry.co",
   },
   plugins: [
@@ -25,8 +25,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Data Science for Educators",
-        short_name: "DS4Edu",
+        name: "NAEP Data Portfolio",
+        short_name: "NAEP",
         start_url: "/",
         background_color: "#fafaf8",
         theme_color: "#2b5c8f",

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="The next stronger follow-up design for Question 4: which controls, variables, and modeling choices would be needed to move from a raw scatterplot to a more defensible analysis." />
+  <title>questions · question-4-controlled-analysis (archived)</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style>
+body{max-width:48rem;margin:2rem auto;padding:0 1rem;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.65;color:#1b1b1b}
+h1,h2,h3{line-height:1.25;margin-top:1.6em} code{background:#f2f2f2;padding:.1rem .35rem;border-radius:3px;font-size:.9em}
+pre{background:#f2f2f2;padding:1rem;overflow-x:auto;border-radius:5px;font-size:.85em}
+img{max-width:100%;height:auto} table{border-collapse:collapse;width:100%;margin:1em 0} th,td{border:1px solid #ccc;padding:.45rem .6rem;text-align:left}
+th{background:#f7f7f7} blockquote{border-left:3px solid #ccc;margin-left:0;padding-left:1rem;color:#555} a{color:#205493}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">questions · question-4-controlled-analysis
+(archived)</h1>
+</header>
+<p>This page explains the next stronger step after the <a href="/questions/question-4-exploration/">Question 4 worked example</a>.
+The worked example showed the raw state-level relationship between
+charter-school enrollment share and 2024 Grade 8 NAEP scores. This page
+explains how that analysis could be strengthened. If you want to see how
+the existing exploratory analysis is programmed, read the <a href="/questions/question-4-python-walkthrough/">Python
+Walkthrough</a>.</p>
+<h2 id="why-a-controlled-analysis-is-needed">Why a controlled analysis
+is needed</h2>
+<p>The exploratory scatterplots answer an important first question: is
+there any visible relationship worth investigating? For Question 4, the
+answer was yes, but only weakly. States with larger charter sectors
+tended, on average, to have slightly lower 2024 NAEP mathematics and
+reading scores in the raw comparison. However, a raw cross-state
+comparison cannot tell whether charter share itself is doing the work or
+whether it is standing in for other state characteristics (Hernán et
+al., 2025; Shmueli, 2010).</p>
+<p>That is the reason for moving to a controlled analysis. The goal is
+not to “prove” a charter effect. The goal is to ask a narrower and more
+defensible question: after accounting for major differences in student
+composition, funding, and geography, is charter-share still associated
+with state NAEP performance?</p>
+<h2 id="what-the-stronger-follow-up-question-looks-like">What the
+stronger follow-up question looks like</h2>
+<p>A stronger version of Question 4 is:</p>
+<p>How is state charter-school enrollment share associated with Grade 8
+NAEP mathematics and reading performance after adjusting for demographic
+composition, disability status, English-learner status, and school
+funding?</p>
+<p>That wording matters. It still asks about
+<strong>association</strong>, not <strong>causation</strong>. Predictive
+modeling focuses on how variables travel together, whereas causal claims
+require a design that identifies what would have happened under a
+different intervention or exposure level (Hernán et al., 2025; Shmueli,
+2010).</p>
+<h2 id="recommended-variables-for-the-controlled-follow-up">Recommended
+variables for the controlled follow-up</h2>
+<h2 id="table-1">Table 1</h2>
+<p><strong>Variables for a More Defensible Controlled Analysis of
+Question 4</strong></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable role</th>
+<th>Example variable</th>
+<th>Why it matters</th>
+<th>Likely source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Outcome</td>
+<td>2024 Grade 8 NAEP mathematics mean</td>
+<td>Main academic outcome</td>
+<td>NAEP Data Service API (NCES, 2024b)</td>
+</tr>
+<tr class="even">
+<td>Outcome</td>
+<td>2024 Grade 8 NAEP reading mean</td>
+<td>Second academic outcome</td>
+<td>NAEP Data Service API (NCES, 2024b)</td>
+</tr>
+<tr class="odd">
+<td>Main predictor</td>
+<td>Charter-school enrollment share (%)</td>
+<td>Structural predictor of interest</td>
+<td>NCES Digest Table 216.90 (NCES, 2024a)</td>
+</tr>
+<tr class="even">
+<td>Demographic control</td>
+<td>% Hispanic students</td>
+<td>State composition can affect score patterns and overlaps with
+charter geography</td>
+<td>NAEP Data Service API (NCES, 2024b)</td>
+</tr>
+<tr class="odd">
+<td>Demographic control</td>
+<td>% Black students</td>
+<td>Same reason: composition differences can confound raw cross-state
+comparisons</td>
+<td>NAEP Data Service API (NCES, 2024b)</td>
+</tr>
+<tr class="even">
+<td>Support-needs control</td>
+<td>% IEP / special education</td>
+<td>Disability composition is related to assessment averages and
+services</td>
+<td>NAEP Data Service API (NCES, 2024b)</td>
+</tr>
+<tr class="odd">
+<td>Support-needs control</td>
+<td>% English learners</td>
+<td>Language status can shape reading and mathematics performance
+patterns</td>
+<td>NAEP Data Service API (NCES, 2024b)</td>
+</tr>
+<tr class="even">
+<td>Economic control</td>
+<td>% eligible for subsidized lunch or similar poverty proxy</td>
+<td>Poverty is one of the strongest likely confounders in state
+achievement comparisons</td>
+<td>NAEP Data Service API (NCES, 2024b)</td>
+</tr>
+<tr class="odd">
+<td>Resource control</td>
+<td>Per-pupil expenditure</td>
+<td>Funding differences can travel with achievement and state policy
+choices</td>
+<td>External state finance source</td>
+</tr>
+<tr class="even">
+<td>Geographic control</td>
+<td>Region or region fixed effects</td>
+<td>Regional policy clusters and cost structures can distort simple
+comparisons</td>
+<td>Derived / Census-style regional grouping</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note.</em> The exact final variable set depends on what is
+available in a common state-level frame. The purpose of the table is to
+show the logic of adjustment, not to claim that every control has
+already been merged into one finished file.</p>
+<h2 id="what-model-would-be-run">What model would be run</h2>
+<p>The most direct next step is an <a href="/glossary/#g-ols">ordinary
+least squares</a> regression. In plain language, this asks whether
+states with higher charter share still tend to have higher or lower
+scores after the model accounts for other measured differences among
+states.</p>
+<p>A simple version would be:</p>
+<p>NAEP score = charter share + race/ethnicity controls + poverty
+control + IEP control + English-learner control + per-pupil spending +
+region</p>
+<p>That model should be run twice: once for mathematics and once for
+reading. If multiple years are pooled later, year indicators should be
+added so the model does not confuse time trends with state
+differences.</p>
+<h2 id="what-this-stronger-model-would-improve">What this stronger model
+would improve</h2>
+<p>A controlled model improves the analysis in three important ways.</p>
+<p>First, it reduces the chance that charter share is merely acting as a
+proxy for another measured state characteristic. Second, it gives a
+clearer estimate of the direction and size of the adjusted association.
+Third, it creates a more credible bridge between a raw descriptive
+visual and a more serious predictive analysis (Ito et al., 2025;
+Shmueli, 2010).</p>
+<h2 id="what-it-still-would-not-prove">What it still would not
+prove</h2>
+<p>Even after adding controls, the result would still not automatically
+become causal. Cross-state observational data do not randomize charter
+exposure, and they do not guarantee that all relevant confounders have
+been measured. Unmeasured state features — for example, local policy
+climate, urban concentration, family migration patterns, or differences
+in how charter sectors grew over time — could still shape the result
+(Hernán et al., 2025).</p>
+<p>That means a controlled regression would support a stronger
+<strong>predictive</strong> claim than the scatterplot alone, but not a
+clean causal claim.</p>
+<h2 id="what-would-be-needed-for-a-stronger-causal-design">What would be
+needed for a stronger causal design</h2>
+<p>If the goal later shifts from prediction to causation, the design
+would have to change, not just the number of controls. Stronger causal
+strategies could include:</p>
+<ul>
+<li>a policy-timing design based on a clearly dated charter-law
+change,</li>
+<li>a difference-in-differences design using states that changed charter
+caps versus states that did not, or</li>
+<li>an instrumental-variable strategy based on a defensible policy
+exposure that predicts charter penetration without directly reflecting
+current test-score conditions.</li>
+</ul>
+<p>Those designs require additional assumptions and external
+policy-history data. They are conceptually different from a raw
+scatterplot or an adjusted OLS model (Hernán et al., 2025).</p>
+<h2 id="how-to-read-the-current-sequence">How to read the current
+sequence</h2>
+<p>The current website now supports a transparent progression:</p>
+<ol type="1">
+<li><a href="/questions/question-4/">Question 4</a> explains what the
+research question is and why it is classified as predictive rather than
+causal.</li>
+<li><a href="/questions/question-4-exploration/">Worked Example —
+Question 4: Charter Share and NAEP Scores</a> shows the actual
+exploratory 50-state analysis, including the scatterplots, summary
+table, full data table, and data-cleaning corrections.</li>
+<li>This page explains how the analysis should be strengthened before
+stronger conclusions are attempted.</li>
+</ol>
+<p>That sequence is important because it makes the reasoning visible. It
+shows that the public-facing result is not being oversold, and it gives
+readers a clear trail from question framing to exploratory evidence to
+the next more defensible model.</p>
+<h2 id="references">References</h2>
+<p>Hernán, M. A., Dahabreh, I. J., Dickerman, B. A., &amp; Swanson, S.
+A. (2025). The target trial framework for causal inference from
+observational data: Why and when is it helpful? <em>Annals of Internal
+Medicine, 178</em>(3), 402–407.
+https://doi.org/10.7326/ANNALS-24-01871</p>
+<p>Ito, C., Al-Hassany, L., Kurth, T., &amp; Glatz, T. (2025).
+Distinguishing description, prediction, and causal inference: A primer
+on improving congruence between research questions and methods.
+<em>Neurology, 104</em>(4), Article e210171.
+https://doi.org/10.1212/WNL.0000000000210171</p>
+<p>National Center for Education Statistics. (2024a). <em>Digest of
+Education Statistics 2023, Table 216.90: Public elementary and secondary
+charter schools and enrollment, and charter schools and enrollment as a
+percentage of total public schools and total enrollment in public
+schools, by state or jurisdiction: Selected school years, 2012-13
+through 2022-23</em> [Data set]. U.S. Department of Education, Institute
+of Education Sciences.
+https://nces.ed.gov/programs/digest/d23/tables/dt23_216.90.asp</p>
+<p>National Center for Education Statistics. (2024b). <em>National
+Assessment of Educational Progress (NAEP), Grade 8 mathematics and
+reading state assessments</em> [Data set]. U.S. Department of Education,
+Institute of Education Sciences. Retrieved August 2, 2026, from
+https://www.nationsreportcard.gov/DataService/GetAdhocData.aspx</p>
+<p>Shmueli, G. (2010). To explain or to predict? <em>Statistical
+Science, 25</em>(3), 289–310. https://doi.org/10.1214/10-STS330</p>
+</body>
+</html>

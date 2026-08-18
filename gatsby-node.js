@@ -13,8 +13,6 @@ exports.createPages = async ({ graphql, actions }) => {
             frontmatter {
               title
               type
-              number
-              classification
               description
               tags
             }
@@ -43,12 +41,8 @@ exports.createPages = async ({ graphql, actions }) => {
 
     // Determine template
     let template;
-    if (type === "question") {
-      template = path.resolve("src/templates/question.js");
-    } else if (type === "glossary") {
+    if (type === "glossary") {
       template = path.resolve("src/templates/glossary.js");
-    } else if (route === "log") {
-      template = path.resolve("src/templates/log.js");
     } else {
       template = path.resolve("src/templates/page.js");
     }
@@ -60,7 +54,6 @@ exports.createPages = async ({ graphql, actions }) => {
         relativePath,
         title: fm.title || "",
         type: fm.type || "",
-        classification: fm.classification || "",
         description: fm.description || "",
         tags: fm.tags || [],
       },

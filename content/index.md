@@ -1,49 +1,24 @@
 ---
-okf_version: "0.1"
-type: index
-title: "Data Science for Educators"
-description: "A beginner-friendly knowledge bundle covering five education research questions, their methods, and the data behind them — built on NAEP 2022–2024 data."
-resource: "https://data.educatebarry.co"
-tags: [education, data-science, naep, research-methods, stem-5328]
-timestamp: "2026-07-10T19:00:00Z"
+type: page
+title: "After COVID, U.S. Test Scores Fell — and Reading Kept Falling"
+description: "A descriptive analysis of NAEP mathematics and reading scores for grades 4 and 8, U.S. national and Texas, before and after the COVID-19 pandemic."
 ---
 
-A beginner-friendly walkthrough of five real research questions in education, drawn from the 2022–2024 NAEP (National Assessment of Educational Progress) data. Each question shows what you would investigate, how you would design the analysis, what data you would need, and — most importantly — *why* each step makes sense.
+**The question:** Were average NAEP scores in mathematics and reading (grades 4 and 8) lower after COVID than before COVID?
 
-If you are an educator curious about data science but new to the terminology, this is written for you.
+**The answer is yes — and the story is sharper than a single number suggests.** Before COVID, national scores were roughly flat. They fell sharply in every subject and grade during the pandemic, and since then mathematics has stabilized or partly recovered while reading has kept falling.
 
-## New worked example for [Question 4](#home-question-4)
+![Centerpiece visualization: mean NAEP scores, U.S. national (solid) and Texas (dashed), 2015–2024](/images/centerpiece.png)
 
-A full public-facing worked example is now available for the charter-school question:
+*The centerpiece chart. Each panel is one subject and grade. The shaded band marks the pandemic (2019–2022).*
 
-- [Question 4 Worked Example](questions/question-4-exploration) — the current 50-state exploratory analysis with scatterplots, grouped summary tables, downloadable CSV files, and APA 7 references.
-- [Question 4 Controlled Analysis Plan](questions/question-4-controlled-analysis) — the next stronger follow-up design, showing which additional controls, variables, and model structure would be needed for a more defensible analysis.
-- [Python Walkthrough — How the Question 4 Scatterplot Script Works](questions/question-4-python-walkthrough) — a line-by-line explanation of the actual Python script for educators who want to understand how the analysis is programmed.
+## Key findings
 
-If you want to see the raw comparison first, start with the worked example. If you want to see how the analysis could be strengthened, read the controlled-analysis plan next. If you want to learn how the code itself works, read the Python walkthrough.
+1. **Scores fell in every subject and grade.** From 2019 to 2024, grade 8 math fell 8.8 points, grade 4 math 2.7, grade 8 reading 5.3, and grade 4 reading 5.2.
+2. **Reading is still falling.** Reading reached its lowest score of the whole 2015–2024 series at both grades in 2024 — it has not recovered.
+3. **Mathematics is coming back.** Grade 4 math recovered 2.4 points from 2022 to 2024; grade 8 math has at least stopped falling.
+4. **Texas tells a different story.** Texas was above the national average in grade 8 math in 2015 and is now below it, and its decline began earlier.
 
-## Where the data lives
+## Read the project
 
-All questions can be answered using the NAEP Data Service API at `nationsreportcard.gov` — a free, public source of U.S. student assessment data — plus a handful of external sources noted in each section.
-
-## Contents
-
-Each label below says what kind of claim the question can support — see [How the Questions Are Classified](classification) for the reasoning behind every label.
-
-| # | Question | Classification |
-|---|----------|----------------|
-| 1 | [Math vs. reading recovery divergence](questions/question-1) | Predictive (comparative) |
-| 2 | [Hispanic decline and EL mediation](questions/question-2) | Predictive (mediational framing) |
-| 3 | [Digital assessment mode effects](questions/question-3) | Causal (measurement) |
-| 4 | <span id="home-question-4"></span>[Charter penetration and NAEP scores](questions/question-4) | Predictive (comparative) |
-| 5 | [IEP gap and state achievement](questions/question-5) | Descriptive (comparative) |
-
-## Supporting pages
-
-- [How the Questions Are Classified](classification) — definitions of the three main research aims and why each question gets its label
-- [The Three Aims of Data Analysis and the Cross-Cutting Role of Comparison](three-aims-and-comparison) — the fuller public explainer of why this site uses a three-aim framework and treats comparison as cross-cutting rather than as a fourth top-level type
-- [Question 4 Worked Example](questions/question-4-exploration) — a public-facing exploratory analysis with charts, tables, downloadable data, and APA 7 references
-- [Question 4 Controlled Analysis Plan](questions/question-4-controlled-analysis) — the next stronger design for adding controls and explaining model structure for a more defensible analysis
-- [Python Walkthrough — How the Question 4 Scatterplot Script Works](questions/question-4-python-walkthrough) — a line-by-line, educator-friendly explanation of the real Python script behind the scatterplots
-- [Glossary](glossary) — every technical term defined in plain language
-- [Work Log](log) — creation and update history
+[Research question](/research-question/) · [Dataset](/dataset/) · [Analysis](/analysis/) · [Findings](/findings/) · [Comparison](/comparison/) · [Visualization](/visualization/) · [Limitations](/limitations/) · [Research & evidence](/research/) · [Responsible use](/responsible-use/) · [Recommendations](/recommendations/) · [AI use](/ai-use/) · [References](/references/)

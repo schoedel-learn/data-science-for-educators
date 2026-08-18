@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="A public-facing exploratory worked example for Question 4, combining state charter-enrollment share with 2024 NAEP Grade 8 math and reading scores." />
+  <title>questions · question-4-exploration (archived)</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style>
+body{max-width:48rem;margin:2rem auto;padding:0 1rem;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.65;color:#1b1b1b}
+h1,h2,h3{line-height:1.25;margin-top:1.6em} code{background:#f2f2f2;padding:.1rem .35rem;border-radius:3px;font-size:.9em}
+pre{background:#f2f2f2;padding:1rem;overflow-x:auto;border-radius:5px;font-size:.85em}
+img{max-width:100%;height:auto} table{border-collapse:collapse;width:100%;margin:1em 0} th,td{border:1px solid #ccc;padding:.45rem .6rem;text-align:left}
+th{background:#f7f7f7} blockquote{border-left:3px solid #ccc;margin-left:0;padding-left:1rem;color:#555} a{color:#205493}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">questions · question-4-exploration (archived)</h1>
+</header>
+<p>This page presents the first full worked example for <a href="/questions/question-4/">Question 4</a>. It is written for public
+readers who want to see how the question can be explored with real data.
+If you want the research-question framing first, start with <a href="/questions/question-4/">Question 4</a>. If you want the methods
+labels explained, see <a href="/classification/">How the Questions Are
+Classified</a>. If you want to see the next stronger follow-up design,
+read the <a href="/questions/question-4-controlled-analysis/">Question 4
+Controlled Analysis Plan</a>. If you want to learn how the code itself
+works line by line, read the <a href="/questions/question-4-python-walkthrough/">Python
+Walkthrough</a>.</p>
+<h2 id="the-question">The question</h2>
+<p>How does state charter-school enrollment share relate to Grade 8 <a href="/glossary/#g-naep">NAEP</a> performance in mathematics and
+reading?</p>
+<p>This is a <strong>predictive (comparative)</strong> question, not a
+causal one. The page looks at whether charter share helps describe or
+forecast score patterns across states. It does <strong>not</strong> show
+that charter schools cause scores to rise or fall (Hernán et al., 2025;
+Shmueli, 2010).</p>
+<h2 id="what-the-analysis-did">What the analysis did</h2>
+<ol type="1">
+<li>Took one state-level predictor: charter-school enrollment share from
+the NCES <em>Digest of Education Statistics</em> Table 216.90 for
+2022–23.</li>
+<li>Paired it with two outcome measures from the NAEP Data Service API:
+2024 Grade 8 state mean scores in mathematics and reading.</li>
+<li>Built two scatterplots, one for math and one for reading, with each
+state represented by one point.</li>
+<li>Added a fitted line to summarize the overall direction of the raw
+relationship.</li>
+<li>Grouped states into three charter-share bands (0–5%, &gt;5–10%, and
+&gt;10%) and calculated average mathematics and reading scores within
+each band.</li>
+<li>Re-ran the analysis without the 0% charter-share states as a
+sensitivity check.</li>
+</ol>
+<h2 id="download-the-files">Download the files</h2>
+<ul>
+<li><a href="../analysis/question-4/question-4-charter-share-vs-naep-2024-50states.png">Figure
+1 PNG</a></li>
+<li><a href="../analysis/question-4/question-4-charter-share-vs-naep-2024-50states.csv">Full
+50-state CSV</a></li>
+<li><a href="../analysis/question-4/question-4-charter-band-summary-2024.csv">Grouped
+summary CSV</a></li>
+</ul>
+<h2 id="key-findings">Key findings</h2>
+<ul>
+<li>Across all 50 states, charter share had a <strong>weak
+negative</strong> raw relationship with Grade 8 mathematics scores in
+2024 (<em>r</em> = -.26; slope = -0.34).</li>
+<li>The reading relationship was also <strong>negative but
+weaker</strong> (<em>r</em> = -.17; slope = -0.16).</li>
+<li>The grouped averages moved downward as charter-share bands
+increased, but the spread of scores within each band remained
+substantial.</li>
+<li>When the 0% charter-share states were excluded, the pattern stayed
+negative but became smaller (math <em>r</em> = -.16; reading <em>r</em>
+= -.14).</li>
+</ul>
+<p>Plain-language takeaway: states with larger charter sectors tended,
+on average, to have slightly lower 2024 NAEP scores in this raw
+comparison, but the relationship was weak and should not be treated as
+causal.</p>
+<h2 id="accuracy-and-sensitivity-notes">Accuracy and sensitivity
+notes</h2>
+<p>An earlier exploratory draft accidentally dropped Wyoming and also
+omitted several states with no charter share. This corrected version
+includes <strong>all 50 states</strong>.</p>
+<p>States reported at 0% charter share in this version are Kentucky,
+Montana, Nebraska, North Dakota, South Dakota, and Vermont. Five of
+those reflect no-charter conditions in the NCES source table; Kentucky
+is listed directly at 0.0% in the table.</p>
+<p>Because coding no-charter states at 0% is a real modeling choice, the
+page also reports a sensitivity check excluding them. That makes the
+observed negative pattern smaller, which is exactly why the results are
+presented as exploratory rather than definitive.</p>
+<h2 id="figure-1">Figure 1</h2>
+<p><strong>State Charter Enrollment Share and Grade 8 NAEP Mathematics
+and Reading Scores, 2024</strong></p>
+<figure>
+<img src="../analysis/question-4/question-4-charter-share-vs-naep-2024-50states.png" alt="Figure 1. State charter enrollment share and Grade 8 NAEP mathematics and reading scores, 2024." />
+<figcaption aria-hidden="true">Figure 1. State charter enrollment share
+and Grade 8 NAEP mathematics and reading scores, 2024.</figcaption>
+</figure>
+<p><em>Note.</em> Blue circles represent states with charter enrollment
+above 0%. Gold squares represent states coded at 0% charter enrollment.
+Red lines show the fitted linear trend in each panel. The figure
+displays raw, unadjusted state-level associations and should not be
+interpreted causally (Hernán et al., 2025; Shmueli, 2010).</p>
+<h2 id="table-1">Table 1</h2>
+<p><strong>Average 2024 Grade 8 NAEP Mathematics and Reading Scores by
+Charter-Enrollment Band</strong></p>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Charter-enrollment band</th>
+<th style="text-align: right;"><em>n</em> states</th>
+<th style="text-align: right;">Mean charter share (%)</th>
+<th style="text-align: right;">Mean math score</th>
+<th style="text-align: right;">Mean reading score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0–5%</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">1.56</td>
+<td style="text-align: right;">274.31</td>
+<td style="text-align: right;">258.11</td>
+</tr>
+<tr class="even">
+<td>&gt;5–10%</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">7.71</td>
+<td style="text-align: right;">272.00</td>
+<td style="text-align: right;">255.95</td>
+</tr>
+<tr class="odd">
+<td>&gt;10%</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">13.72</td>
+<td style="text-align: right;">270.06</td>
+<td style="text-align: right;">255.74</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note.</em> Charter-enrollment bands were created from the 2022–23
+NCES state charter-enrollment percentages. Scores are 2024 state mean
+scores from the NAEP Grade 8 mathematics and reading assessments (NCES,
+2024a, 2024b).</p>
+<h2 id="table-2">Table 2</h2>
+<p><strong>State-Level Data Used in the 50-State Exploratory
+Analysis</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>State</th>
+<th style="text-align: right;">Charter share (%)</th>
+<th style="text-align: right;">NAEP math (2024)</th>
+<th style="text-align: right;">NAEP reading (2024)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Vermont</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">275.62</td>
+<td style="text-align: right;">257.28</td>
+</tr>
+<tr class="even">
+<td>South Dakota</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">281.10</td>
+<td style="text-align: right;">259.89</td>
+</tr>
+<tr class="odd">
+<td>North Dakota</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">279.77</td>
+<td style="text-align: right;">257.39</td>
+</tr>
+<tr class="even">
+<td>Nebraska</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">279.88</td>
+<td style="text-align: right;">256.13</td>
+</tr>
+<tr class="odd">
+<td>Montana</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">279.08</td>
+<td style="text-align: right;">260.53</td>
+</tr>
+<tr class="even">
+<td>Kentucky</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">270.81</td>
+<td style="text-align: right;">258.00</td>
+</tr>
+<tr class="odd">
+<td>Iowa</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">274.82</td>
+<td style="text-align: right;">260.70</td>
+</tr>
+<tr class="even">
+<td>Virginia</td>
+<td style="text-align: right;">0.10</td>
+<td style="text-align: right;">274.99</td>
+<td style="text-align: right;">256.26</td>
+</tr>
+<tr class="odd">
+<td>Washington</td>
+<td style="text-align: right;">0.43</td>
+<td style="text-align: right;">273.67</td>
+<td style="text-align: right;">259.27</td>
+</tr>
+<tr class="even">
+<td>West Virginia</td>
+<td style="text-align: right;">0.50</td>
+<td style="text-align: right;">260.77</td>
+<td style="text-align: right;">247.36</td>
+</tr>
+<tr class="odd">
+<td>Kansas</td>
+<td style="text-align: right;">0.52</td>
+<td style="text-align: right;">274.14</td>
+<td style="text-align: right;">255.49</td>
+</tr>
+<tr class="even">
+<td>Wyoming</td>
+<td style="text-align: right;">0.73</td>
+<td style="text-align: right;">278.32</td>
+<td style="text-align: right;">259.97</td>
+</tr>
+<tr class="odd">
+<td>Mississippi</td>
+<td style="text-align: right;">0.74</td>
+<td style="text-align: right;">269.06</td>
+<td style="text-align: right;">253.47</td>
+</tr>
+<tr class="even">
+<td>Alabama</td>
+<td style="text-align: right;">0.77</td>
+<td style="text-align: right;">261.77</td>
+<td style="text-align: right;">249.60</td>
+</tr>
+<tr class="odd">
+<td>Maine</td>
+<td style="text-align: right;">1.61</td>
+<td style="text-align: right;">272.62</td>
+<td style="text-align: right;">255.04</td>
+</tr>
+<tr class="even">
+<td>Connecticut</td>
+<td style="text-align: right;">2.19</td>
+<td style="text-align: right;">276.67</td>
+<td style="text-align: right;">263.10</td>
+</tr>
+<tr class="odd">
+<td>Maryland</td>
+<td style="text-align: right;">2.69</td>
+<td style="text-align: right;">268.21</td>
+<td style="text-align: right;">258.32</td>
+</tr>
+<tr class="even">
+<td>Missouri</td>
+<td style="text-align: right;">2.84</td>
+<td style="text-align: right;">270.36</td>
+<td style="text-align: right;">255.28</td>
+</tr>
+<tr class="odd">
+<td>Illinois</td>
+<td style="text-align: right;">3.25</td>
+<td style="text-align: right;">277.42</td>
+<td style="text-align: right;">261.62</td>
+</tr>
+<tr class="even">
+<td>New Hampshire</td>
+<td style="text-align: right;">3.30</td>
+<td style="text-align: right;">279.74</td>
+<td style="text-align: right;">263.91</td>
+</tr>
+<tr class="odd">
+<td>Georgia</td>
+<td style="text-align: right;">3.99</td>
+<td style="text-align: right;">268.66</td>
+<td style="text-align: right;">259.33</td>
+</tr>
+<tr class="even">
+<td>New Jersey</td>
+<td style="text-align: right;">4.34</td>
+<td style="text-align: right;">281.68</td>
+<td style="text-align: right;">265.96</td>
+</tr>
+<tr class="odd">
+<td>Tennessee</td>
+<td style="text-align: right;">4.42</td>
+<td style="text-align: right;">275.98</td>
+<td style="text-align: right;">258.97</td>
+</tr>
+<tr class="even">
+<td>Indiana</td>
+<td style="text-align: right;">4.93</td>
+<td style="text-align: right;">278.19</td>
+<td style="text-align: right;">261.66</td>
+</tr>
+<tr class="odd">
+<td>Massachusetts</td>
+<td style="text-align: right;">5.26</td>
+<td style="text-align: right;">283.47</td>
+<td style="text-align: right;">268.01</td>
+</tr>
+<tr class="even">
+<td>Wisconsin</td>
+<td style="text-align: right;">5.95</td>
+<td style="text-align: right;">282.65</td>
+<td style="text-align: right;">260.09</td>
+</tr>
+<tr class="odd">
+<td>South Carolina</td>
+<td style="text-align: right;">6.27</td>
+<td style="text-align: right;">268.01</td>
+<td style="text-align: right;">253.69</td>
+</tr>
+<tr class="even">
+<td>Alaska</td>
+<td style="text-align: right;">6.40</td>
+<td style="text-align: right;">263.96</td>
+<td style="text-align: right;">246.45</td>
+</tr>
+<tr class="odd">
+<td>Ohio</td>
+<td style="text-align: right;">6.88</td>
+<td style="text-align: right;">278.81</td>
+<td style="text-align: right;">260.42</td>
+</tr>
+<tr class="even">
+<td>New York</td>
+<td style="text-align: right;">7.02</td>
+<td style="text-align: right;">270.85</td>
+<td style="text-align: right;">256.87</td>
+</tr>
+<tr class="odd">
+<td>Hawaii</td>
+<td style="text-align: right;">7.13</td>
+<td style="text-align: right;">270.04</td>
+<td style="text-align: right;">257.28</td>
+</tr>
+<tr class="even">
+<td>Oklahoma</td>
+<td style="text-align: right;">7.23</td>
+<td style="text-align: right;">264.45</td>
+<td style="text-align: right;">248.79</td>
+</tr>
+<tr class="odd">
+<td>Oregon</td>
+<td style="text-align: right;">7.61</td>
+<td style="text-align: right;">267.94</td>
+<td style="text-align: right;">254.83</td>
+</tr>
+<tr class="even">
+<td>Minnesota</td>
+<td style="text-align: right;">7.80</td>
+<td style="text-align: right;">282.09</td>
+<td style="text-align: right;">260.07</td>
+</tr>
+<tr class="odd">
+<td>Arkansas</td>
+<td style="text-align: right;">8.45</td>
+<td style="text-align: right;">266.19</td>
+<td style="text-align: right;">254.77</td>
+</tr>
+<tr class="even">
+<td>Texas</td>
+<td style="text-align: right;">8.50</td>
+<td style="text-align: right;">269.39</td>
+<td style="text-align: right;">252.27</td>
+</tr>
+<tr class="odd">
+<td>Rhode Island</td>
+<td style="text-align: right;">8.94</td>
+<td style="text-align: right;">269.83</td>
+<td style="text-align: right;">257.77</td>
+</tr>
+<tr class="even">
+<td>Idaho</td>
+<td style="text-align: right;">9.01</td>
+<td style="text-align: right;">278.10</td>
+<td style="text-align: right;">260.73</td>
+</tr>
+<tr class="odd">
+<td>North Carolina</td>
+<td style="text-align: right;">9.05</td>
+<td style="text-align: right;">275.82</td>
+<td style="text-align: right;">254.90</td>
+</tr>
+<tr class="even">
+<td>Pennsylvania</td>
+<td style="text-align: right;">9.66</td>
+<td style="text-align: right;">276.25</td>
+<td style="text-align: right;">259.15</td>
+</tr>
+<tr class="odd">
+<td>New Mexico</td>
+<td style="text-align: right;">9.87</td>
+<td style="text-align: right;">256.21</td>
+<td style="text-align: right;">245.06</td>
+</tr>
+<tr class="even">
+<td>Michigan</td>
+<td style="text-align: right;">10.83</td>
+<td style="text-align: right;">269.98</td>
+<td style="text-align: right;">255.06</td>
+</tr>
+<tr class="odd">
+<td>Utah</td>
+<td style="text-align: right;">11.36</td>
+<td style="text-align: right;">281.79</td>
+<td style="text-align: right;">261.19</td>
+</tr>
+<tr class="even">
+<td>California</td>
+<td style="text-align: right;">11.94</td>
+<td style="text-align: right;">268.78</td>
+<td style="text-align: right;">254.37</td>
+</tr>
+<tr class="odd">
+<td>Delaware</td>
+<td style="text-align: right;">12.88</td>
+<td style="text-align: right;">263.06</td>
+<td style="text-align: right;">249.45</td>
+</tr>
+<tr class="even">
+<td>Louisiana</td>
+<td style="text-align: right;">13.24</td>
+<td style="text-align: right;">266.78</td>
+<td style="text-align: right;">256.53</td>
+</tr>
+<tr class="odd">
+<td>Florida</td>
+<td style="text-align: right;">13.32</td>
+<td style="text-align: right;">267.24</td>
+<td style="text-align: right;">252.86</td>
+</tr>
+<tr class="even">
+<td>Nevada</td>
+<td style="text-align: right;">14.20</td>
+<td style="text-align: right;">265.18</td>
+<td style="text-align: right;">253.29</td>
+</tr>
+<tr class="odd">
+<td>Colorado</td>
+<td style="text-align: right;">15.14</td>
+<td style="text-align: right;">278.11</td>
+<td style="text-align: right;">264.54</td>
+</tr>
+<tr class="even">
+<td>Arizona</td>
+<td style="text-align: right;">20.53</td>
+<td style="text-align: right;">269.66</td>
+<td style="text-align: right;">254.34</td>
+</tr>
+</tbody>
+</table>
+<h2 id="why-this-is-not-a-causal-claim">Why this is not a causal
+claim</h2>
+<p>This page compares states. States differ in many ways besides charter
+enrollment: poverty, racial/ethnic composition, disability rates,
+English-learner rates, funding, policy history, and regional context. A
+raw scatterplot cannot separate charter share from those other
+influences. That is why the analysis is framed as descriptive/predictive
+rather than causal (Hernán et al., 2025; Shmueli, 2010).</p>
+<p>The next stronger step would be to add <a href="/glossary/#g-adjustment">adjustment variables</a> such as poverty,
+race/ethnicity, special education rates, English-learner rates, and
+per-pupil spending. That would still not automatically make the analysis
+causal, but it would make the comparison more informative.</p>
+<h2 id="references">References</h2>
+<p>Hernán, M. A., Dahabreh, I. J., Dickerman, B. A., &amp; Swanson, S.
+A. (2025). The target trial framework for causal inference from
+observational data: Why and when is it helpful? <em>Annals of Internal
+Medicine, 178</em>(3), 402–407.
+https://doi.org/10.7326/ANNALS-24-01871</p>
+<p>National Center for Education Statistics. (2024a). <em>Digest of
+Education Statistics 2023, Table 216.90: Public elementary and secondary
+charter schools and enrollment, and charter schools and enrollment as a
+percentage of total public schools and total enrollment in public
+schools, by state or jurisdiction: Selected school years, 2012-13
+through 2022-23</em> [Data set]. U.S. Department of Education, Institute
+of Education Sciences.
+https://nces.ed.gov/programs/digest/d23/tables/dt23_216.90.asp</p>
+<p>National Center for Education Statistics. (2024b). <em>National
+Assessment of Educational Progress (NAEP), Grade 8 mathematics and
+reading state assessments</em> [Data set]. U.S. Department of Education,
+Institute of Education Sciences. Retrieved August 2, 2026, from
+https://www.nationsreportcard.gov/DataService/GetAdhocData.aspx</p>
+<p>Shmueli, G. (2010). To explain or to predict? <em>Statistical
+Science, 25</em>(3), 289–310. https://doi.org/10.1214/10-STS330</p>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="A public explainer of the three-aim framework used on this site: descriptive, predictive, and causal, with comparison treated as a cross-cutting analytic approach rather than a fourth aim." />
+  <title>three-aims-and-comparison (archived)</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style>
+body{max-width:48rem;margin:2rem auto;padding:0 1rem;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.65;color:#1b1b1b}
+h1,h2,h3{line-height:1.25;margin-top:1.6em} code{background:#f2f2f2;padding:.1rem .35rem;border-radius:3px;font-size:.9em}
+pre{background:#f2f2f2;padding:1rem;overflow-x:auto;border-radius:5px;font-size:.85em}
+img{max-width:100%;height:auto} table{border-collapse:collapse;width:100%;margin:1em 0} th,td{border:1px solid #ccc;padding:.45rem .6rem;text-align:left}
+th{background:#f7f7f7} blockquote{border-left:3px solid #ccc;margin-left:0;padding-left:1rem;color:#555} a{color:#205493}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">three-aims-and-comparison (archived)</h1>
+</header>
+<p>This page explains the framework used throughout this website for
+classifying quantitative research questions. The argument comes from the
+STEM-5328 course materials and is presented here as a public-facing
+reference for educators who want a clearer explanation of why the site
+uses <strong>three aims</strong> — descriptive, predictive, and causal —
+and treats <strong>comparison</strong> as a cross-cutting analytic
+approach rather than a fourth aim.</p>
+<p>If you want the shorter practical version first, start with <a href="/classification/">How the Questions Are Classified</a>. This page
+goes one level deeper and explains the argument behind that shorter
+page.</p>
+<h2 id="why-this-framework-matters">Why this framework matters</h2>
+<p>When people first learn data analysis, it is easy to mix up a method
+with an aim. A scatterplot, a regression, or a group comparison tells
+you <strong>how</strong> an analysis is done, but it does not by itself
+tell you <strong>what kind of claim</strong> the analysis can support.
+This site uses the three-aim framework because it helps educators
+separate those two questions:</p>
+<ul>
+<li>What is the goal of the analysis?</li>
+<li>What technique is being used to pursue that goal?</li>
+</ul>
+<p>That distinction matters because the same technique can support
+different kinds of claims depending on the surrounding design and
+assumptions.</p>
+<h2 id="the-three-aims">The three aims</h2>
+<p>Methodologists commonly sort quantitative questions into three
+families: <strong>description</strong>, <strong>prediction</strong>, and
+<strong>causal inference</strong> (Ito et al., 2025; Kamper, 2020;
+Shmueli, 2010). The course argument preserved here adopts that three-aim
+scheme.</p>
+<h3 id="descriptive">Descriptive</h3>
+<p>A <strong>descriptive</strong> question asks what is happening — the
+frequency, level, or distribution of a characteristic in a population
+(Ito et al., 2025; Newton et al., 2004). Descriptive work answers
+questions such as who is affected, where a pattern appears, when it
+appears, and how large it is.</p>
+<h3 id="predictive">Predictive</h3>
+<p>A <strong>predictive</strong> question asks whether known inputs help
+forecast an outcome. The model uses association between predictors and
+outcomes rather than requiring a proven causal relationship, so a useful
+predictor does not have to be a cause (Shmueli, 2010).</p>
+<h3 id="causal">Causal</h3>
+<p>A <strong>causal</strong> question asks whether changing something
+would change the outcome (Kamper, 2020). Because association alone does
+not establish that relationship, causal inference from observational
+data has to be built deliberately, ideally by approximating the
+experiment one would have run and stating its assumptions clearly
+(Hernán et al., 2025).</p>
+<h2 id="why-comparison-is-cross-cutting-not-a-fourth-type">Why
+comparison is cross-cutting, not a fourth type</h2>
+<p>Some teaching schemes list <strong>comparison</strong> as its own
+question type. The argument in the course note is that comparison is
+better understood as an <strong>operation</strong> than as an
+<strong>aim</strong>.</p>
+<p>Comparison tells you that two groups, times, or places are being
+contrasted. It does not, by itself, tell you whether the goal is to
+describe a difference, use that difference to predict an outcome, or
+estimate a causal effect. In other words, comparison describes the
+<em>form</em> of the analysis, while description, prediction, and causal
+inference describe the <em>goal</em> of the analysis.</p>
+<h2 id="how-the-same-comparison-can-serve-different-aims">How the same
+comparison can serve different aims</h2>
+<p>The same comparison can be used in three different ways.</p>
+<h3 id="comparison-used-descriptively">Comparison used
+descriptively</h3>
+<p>Used <strong>descriptively</strong>, a comparison documents that two
+groups differ. It records that a difference exists without claiming to
+explain why it exists.</p>
+<h3 id="comparison-used-predictively">Comparison used predictively</h3>
+<p>Used <strong>predictively</strong>, the variable that defines the
+groups becomes an input that helps forecast the outcome. The grouping
+may be informative even if it is not causal.</p>
+<h3 id="comparison-used-causally">Comparison used causally</h3>
+<p>Used <strong>causally</strong>, comparison becomes part of a design
+that tries to estimate what would have happened under a different
+intervention or exposure. For example, an interrupted time series
+compares outcomes before and after a clearly defined event while
+reasoning about the counterfactual trend that would have been expected
+otherwise (Lopez Bernal et al., 2017).</p>
+<p>Across all three cases, the comparison may look similar on the
+surface, but the aim and the assumptions are different.</p>
+<h2 id="what-this-means-for-this-website">What this means for this
+website</h2>
+<p>This site classifies questions by <strong>aim</strong>, not by
+surface technique.</p>
+<ul>
+<li>A question is <strong>descriptive</strong> when it asks what pattern
+exists.</li>
+<li>A question is <strong>predictive</strong> when it asks whether one
+factor helps forecast another.</li>
+<li>A question is <strong>causal</strong> when it asks whether changing
+one thing would change another.</li>
+<li>A label like <strong>Predictive (comparative)</strong> means that
+the primary aim is predictive, and comparison is one of the approaches
+being used in the analysis.</li>
+</ul>
+<p>That is why the site does not treat comparison as a fourth top-level
+family alongside descriptive, predictive, and causal.</p>
+<h2 id="how-this-applies-to-the-question-4-work">How this applies to the
+Question 4 work</h2>
+<p>The current Question 4 analysis compares states with different levels
+of charter-school enrollment share and asks whether charter share helps
+describe or forecast state NAEP score patterns. That makes it
+<strong>predictive (comparative)</strong> rather than causal. The
+comparison across states is real, but the goal is still
+prediction/association unless a stronger causal design is added.</p>
+<p>For that reason, the site presents the Question 4 materials as a
+three-step sequence:</p>
+<ol type="1">
+<li><a href="/questions/question-4/">Question 4</a> — the
+research-question framing page.</li>
+<li><a href="/questions/question-4-exploration/">Worked Example —
+Question 4: Charter Share and NAEP Scores</a> — the exploratory
+evidence.</li>
+<li><a href="/questions/question-4-controlled-analysis/">Question 4
+Controlled Analysis Plan</a> — the stronger next-step design.</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>Because these categories are defined by the aim of the analysis
+rather than by its technique (Ito et al., 2025; Kamper, 2020; Shmueli,
+2010), and because comparison takes its meaning from whichever aim it
+serves, comparison is most accurately treated as an approach that can
+attach to any of the three aims — descriptive, predictive, or causal —
+rather than as a category of its own.</p>
+<h2 id="references">References</h2>
+<p>Hernán, M. A., Dahabreh, I. J., Dickerman, B. A., &amp; Swanson, S.
+A. (2025). The target trial framework for causal inference from
+observational data: Why and when is it helpful? <em>Annals of Internal
+Medicine, 178</em>(3), 402–407.
+https://doi.org/10.7326/ANNALS-24-01871</p>
+<p>Ito, C., Al-Hassany, L., Kurth, T., &amp; Glatz, T. (2025).
+Distinguishing description, prediction, and causal inference: A primer
+on improving congruence between research questions and methods.
+<em>Neurology, 104</em>(4), Article e210171.
+https://doi.org/10.1212/WNL.0000000000210171</p>
+<p>Kamper, S. J. (2020). Types of research questions: Descriptive,
+predictive, or causal. <em>Journal of Orthopaedic &amp; Sports Physical
+Therapy, 50</em>(8), 468–469.
+https://doi.org/10.2519/jospt.2020.0703</p>
+<p>Lopez Bernal, J., Cummins, S., &amp; Gasparrini, A. (2017).
+Interrupted time series regression for the evaluation of public health
+interventions: A tutorial. <em>International Journal of Epidemiology,
+46</em>(1), 348–355. https://doi.org/10.1093/ije/dyw098</p>
+<p>Newton, J. T., Bower, E. J., &amp; Williams, A. C. (2004). Research
+in primary dental care. Part 2: Developing a research question.
+<em>British Dental Journal, 196</em>(10), 605–608.
+https://doi.org/10.1038/sj.bdj.4811285</p>
+<p>Shmueli, G. (2010). To explain or to predict? <em>Statistical
+Science, 25</em>(3), 289–310. https://doi.org/10.1214/10-STS330</p>
+</body>
+</html>

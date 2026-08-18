@@ -10,6 +10,10 @@ export default function GlossaryTemplate({ data }) {
   );
 }
 
+export function Head() {
+  return <title>{"Glossary \u2014 NAEP Data Portfolio"}</title>;
+}
+
 export const query = graphql`
   query GlossaryQuery($relativePath: String!) {
     file(relativePath: { eq: $relativePath }) {

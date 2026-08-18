@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="Why each of the five research questions is labeled descriptive, predictive, or causal — with definitions drawn from peer-reviewed methods literature." />
+  <title>classification (archived)</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style>
+body{max-width:48rem;margin:2rem auto;padding:0 1rem;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.65;color:#1b1b1b}
+h1,h2,h3{line-height:1.25;margin-top:1.6em} code{background:#f2f2f2;padding:.1rem .35rem;border-radius:3px;font-size:.9em}
+pre{background:#f2f2f2;padding:1rem;overflow-x:auto;border-radius:5px;font-size:.85em}
+img{max-width:100%;height:auto} table{border-collapse:collapse;width:100%;margin:1em 0} th,td{border:1px solid #ccc;padding:.45rem .6rem;text-align:left}
+th{background:#f7f7f7} blockquote{border-left:3px solid #ccc;margin-left:0;padding-left:1rem;color:#555} a{color:#205493}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">classification (archived)</h1>
+</header>
+<p>Every question on this site carries a label: <em>descriptive</em>,
+<em>predictive</em>, or <em>causal</em>. Those labels are not decoration
+— they tell you what kind of claim the question can support, and
+therefore what kind of evidence you would need to answer it. When a
+question works by <strong>comparing groups</strong>, that approach is
+noted in parentheses, e.g. <em>Predictive (comparative)</em> —
+comparison is a method used inside the three types, not a type of its
+own.</p>
+<p>This page does two things. First, it defines the three question types
+in plain language, using the methods literature. Second, it explains —
+question by question — why each one is labeled the way it is. The single
+idea that runs through all of it: <strong>a factor that travels with an
+outcome only lets you <em>predict</em> it. Saying that factor
+<em>causes</em> the outcome is a much stronger claim, and observational
+data rarely earns it.</strong></p>
+<p>If you want the longer methods argument behind this page, see <a href="/three-aims-and-comparison/">The Three Aims of Data Analysis and
+the Cross-Cutting Role of Comparison</a>.</p>
+<h2 id="the-three-types">The three types</h2>
+<p>Most methodologists sort research questions into three families —
+description, prediction, and causal inference — and treat
+<em>comparison</em> as an approach that shows up inside all three (Ito
+et al., 2025; Kamper, 2020; Shmueli, 2010).</p>
+<h3 id="descriptive">Descriptive</h3>
+<p>A descriptive question asks <em>what is happening</em> — the level,
+frequency, or distribution of something. It answers <em>who, where,
+when,</em> and <em>how much</em> (Newton et al., 2004). Comparing groups
+is often how a descriptive question is answered: showing that two groups
+differ documents <em>that</em> a gap exists, but not <em>why</em>,
+because when people are not randomly sorted into groups any difference
+is tangled up with everything else that differs between them (Shmueli,
+2010). Example: “Do students with IEPs score differently from students
+without IEPs?”</p>
+<h3 id="predictive">Predictive</h3>
+<p>A predictive question asks whether knowing X helps you
+<strong>forecast</strong> Y. Prediction is about association, not
+intervention. As Shmueli (2010) puts it, “In predictive modeling
+<em>f</em> captures the association between <em>X</em> and <em>Y</em>”
+(p. 293) — X does not have to <em>cause</em> Y to be a useful predictor.
+In fact, predictive strength and causal truth can come apart: “While
+explanatory power provides information about the strength of an
+underlying causal relationship, it does not imply its predictive power”
+(Shmueli, 2010, p. 290).</p>
+<p><strong>This is the “predictive of” versus “cause of”
+line:</strong></p>
+<ul>
+<li><strong>Predictive of</strong> — X and Y are associated, so X helps
+you <em>guess</em> Y. The link may run either direction, or come from
+some third factor.</li>
+<li><strong>Cause of</strong> — changing X would <em>change</em> Y. This
+is a stronger, counterfactual claim that, with observational data, means
+ruling out other explanations first (Hernán et al., 2025).</li>
+</ul>
+<h3 id="causal">Causal</h3>
+<p>A causal question asks whether changing X would change Y — the effect
+of a well-defined intervention (Kamper, 2020). The cleanest way to
+answer it is a randomized experiment, because randomization breaks the
+link between the treatment and everything else (Ito et al., 2025).
+Without randomization, a causal claim from observational data has to be
+built deliberately, imitating the experiment you <em>would</em> have run
+and stating its assumptions out loud (Hernán et al., 2025). Two such
+designs matter here:</p>
+<ul>
+<li><strong><a href="/glossary/#g-interrupted-time-series">Interrupted
+time series</a></strong> — Lopez Bernal et al. (2017) describe this as a
+design “for evaluating the effectiveness of population-level health
+interventions that have been implemented at a clearly defined point in
+time” (p. 348). It works only when there is “a clear differentiation of
+the pre-intervention period and the post-intervention period” (p. 349) —
+that is, a discrete event with a known date.</li>
+<li><strong><a href="/glossary/#g-mediation">Mediation
+analysis</a></strong> — asks whether X affects Y <em>through</em> a
+middle variable. To read the result as causal, it needs the “sequential
+ignorability” assumption, which Imai et al. (2010) note “may be too
+strong for the typical situations in which causal mediation analysis is
+employed” and “cannot be directly tested even in randomized experiments”
+(pp. 52–53).</li>
+</ul>
+<h2 id="why-each-question-is-labeled-the-way-it-is">Why each question is
+labeled the way it is</h2>
+<p>All five questions use <a href="/glossary/#g-naep">NAEP</a> data,
+which samples <em>different</em> students each cycle. That design is
+excellent for describing and comparing, workable for predicting, and
+only cautiously usable for causal claims — and then only with the extra
+structure described above (Hernán et al., 2025; Lopez Bernal et al.,
+2017).</p>
+<h3 id="question-1-math-vs.-reading-recovery-predictive-comparative"><a href="/questions/question-1/">Question 1 — Math vs. reading recovery</a>
+→ Predictive (comparative)</h3>
+<p>Showing that math and reading trajectories split after 2022 is a
+comparison. The next step — linking the split to state policies like
+recovery spending or reading laws — runs into a wall: states
+<em>chose</em> those policies, so the association is tangled with
+everything else that differs between states (Shmueli, 2010). The policy
+factors <em>accompany</em> and help <em>forecast</em> the divergence;
+they are not shown to have <em>caused</em> it. That makes this
+predictive, worked through a comparison of state groups.</p>
+<h3 id="question-2-hispanic-decline-and-el-status-predictive-mediational-framing"><a href="/questions/question-2/">Question 2 — Hispanic decline and EL
+status</a> → Predictive (mediational framing)</h3>
+<p>This asks whether English-learner status is the <em>pathway</em>
+behind a decline — a mediation question. But mediation only carries a
+causal meaning when nothing unmeasured confounds the relationships
+involved, and that assumption “cannot be directly tested” (Imai et al.,
+2010, pp. 52–53). With NAEP’s snapshot data and unmeasured factors like
+family income and immigration history, the honest version forecasts
+which factors are <em>associated</em> with the decline — it does not
+prove a mechanism.</p>
+<h3 id="question-3-digital-assessment-mode-effects-causal-measurement"><a href="/questions/question-3/">Question 3 — Digital assessment mode
+effects</a> → Causal (measurement)</h3>
+<p>This is the one genuinely causal question, and the reason is timing:
+NAEP switched from paper to tablet at a single, dated moment in 2017.
+That discrete event is exactly what an <a href="/glossary/#g-interrupted-time-series">interrupted time series</a>
+needs (Lopez Bernal et al., 2017). Comparing scores before and after —
+and checking whether students with less device access dropped more —
+approximates a real causal test. The label stays causal, sharpened to
+<em>measurement</em> because the question is about whether the testing
+instrument itself shifted the scores.</p>
+<h3 id="question-4-charter-penetration-and-scores-predictive-comparative"><a href="/questions/question-4/">Question 4 — Charter penetration and
+scores</a> → Predictive (comparative)</h3>
+<p>Regressing state scores on charter-enrollment share measures how well
+charter share <em>forecasts</em> scores, not whether charters
+<em>cause</em> them (Shmueli, 2010). The question already says so, and
+flags the extra design work a causal claim would require. Predictive is
+the right call, worked through a comparison across states.</p>
+<h3 id="question-5-iep-gap-and-state-achievement-descriptive-comparative"><a href="/questions/question-5/">Question 5 — IEP gap and state
+achievement</a> → Descriptive (comparative)</h3>
+<p>This compares the size of the IEP/non-IEP gap across states. It
+documents whether the gap varies — not why (Newton et al., 2004). A
+straightforward description, built from a comparison.</p>
+<h2 id="references">References</h2>
+<p>Gelfand, L. A., Mensinger, J. L., &amp; TenHave, T. (2009). Mediation
+analysis: A retrospective snapshot of practice and more recent
+directions. <em>The Journal of General Psychology, 136</em>(2), 153–178.
+https://doi.org/10.3200/GENP.136.2.153-178</p>
+<p>Hernán, M. A., Dahabreh, I. J., Dickerman, B. A., &amp; Swanson, S.
+A. (2025). The target trial framework for causal inference from
+observational data: Why and when is it helpful? <em>Annals of Internal
+Medicine, 178</em>(3), 402–407.
+https://doi.org/10.7326/ANNALS-24-01871</p>
+<p>Imai, K., Keele, L., &amp; Yamamoto, T. (2010). Identification,
+inference and sensitivity analysis for causal mediation effects.
+<em>Statistical Science, 25</em>(1), 51–71.
+https://doi.org/10.1214/10-STS321</p>
+<p>Ito, C., Al-Hassany, L., Kurth, T., &amp; Glatz, T. (2025).
+Distinguishing description, prediction, and causal inference: A primer
+on improving congruence between research questions and methods.
+<em>Neurology, 104</em>(4), Article e210171.
+https://doi.org/10.1212/WNL.0000000000210171</p>
+<p>Kamper, S. J. (2020). Types of research questions: Descriptive,
+predictive, or causal. <em>Journal of Orthopaedic &amp; Sports Physical
+Therapy, 50</em>(8), 468–469.
+https://doi.org/10.2519/jospt.2020.0703</p>
+<p>Lopez Bernal, J., Cummins, S., &amp; Gasparrini, A. (2017).
+Interrupted time series regression for the evaluation of public health
+interventions: A tutorial. <em>International Journal of Epidemiology,
+46</em>(1), 348–355. https://doi.org/10.1093/ije/dyw098</p>
+<p>Newton, J. T., Bower, E. J., &amp; Williams, A. C. (2004). Research
+in primary dental care. Part 2: Developing a research question.
+<em>British Dental Journal, 196</em>(10), 605–608.
+https://doi.org/10.1038/sj.bdj.4811285</p>
+<p>Shmueli, G. (2010). To explain or to predict? <em>Statistical
+Science, 25</em>(3), 289–310. https://doi.org/10.1214/10-STS330</p>
+</body>
+</html>

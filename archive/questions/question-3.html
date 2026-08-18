@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="Did switching NAEP from paper to computer tests in 2017 distort the scores, and does this confound pre-post COVID comparisons?" />
+  <title>questions · question-3 (archived)</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style>
+body{max-width:48rem;margin:2rem auto;padding:0 1rem;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.65;color:#1b1b1b}
+h1,h2,h3{line-height:1.25;margin-top:1.6em} code{background:#f2f2f2;padding:.1rem .35rem;border-radius:3px;font-size:.9em}
+pre{background:#f2f2f2;padding:1rem;overflow-x:auto;border-radius:5px;font-size:.85em}
+img{max-width:100%;height:auto} table{border-collapse:collapse;width:100%;margin:1em 0} th,td{border:1px solid #ccc;padding:.45rem .6rem;text-align:left}
+th{background:#f7f7f7} blockquote{border-left:3px solid #ccc;margin-left:0;padding-left:1rem;color:#555} a{color:#205493}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">questions · question-3 (archived)</h1>
+</header>
+<h2 id="what-is-this-question-really-asking">What is this question
+really asking?</h2>
+<p>In 2017, NAEP moved from paper booklets to tablets. If students who
+rarely used computers at home suddenly took a high-stakes test on a
+screen, their scores might have dropped — not because they knew less,
+but because the format was unfamiliar. This is called a <a href="/glossary/#g-mode-effect">mode effect</a>. The concern: if the
+format change artificially lowered scores right before COVID, then some
+portion of the “COVID learning loss” might actually be a measurement
+artifact — the testing instrument changed, not the students.</p>
+<blockquote>
+<p><strong>Why classification matters.</strong> This is the one
+genuinely <em>causal</em> question — but about the measuring instrument,
+not a policy. Because the paper-to-tablet switch happened at a single,
+dated moment in 2017, a before-and-after <a href="/glossary/#g-interrupted-time-series">comparison</a> can test
+whether the format change itself moved scores. That makes it an
+<em>instrumentation</em> concern for <a href="/glossary/#g-internal-validity">internal validity</a>: the worry
+that the measuring tool changed between measurements. See <a href="/classification/">How the Questions Are Classified</a> for the
+full reasoning.</p>
+</blockquote>
+<h2 id="how-you-would-investigate-it">How you would investigate it</h2>
+<ol type="1">
+<li><p><strong>Compare 2015 (paper) to 2017 (digital).</strong> Look at
+the score change for all students at the transition. If there was a
+sharp, one-time drop in 2017 that did not continue in 2019, that pattern
+suggests a mode effect rather than a real decline.</p></li>
+<li><p><strong>Split by technology access.</strong> Group students by
+whether they had a computer at home, internet access, and experience
+with tablets at school. If students without home devices showed larger
+drops in 2017, the effect is <a href="/glossary/#g-differential">differential</a> — it hits some groups
+harder than others — which is strong evidence of a mode effect.</p></li>
+<li><p><strong>Estimate the magnitude.</strong> If the mode effect was
+roughly 2 points, then the “true” COVID-era decline was 7.9 minus 2 =
+5.9 points. Still a serious drop, but not historically unprecedented.
+This is a <a href="/glossary/#g-sensitivity">sensitivity analysis</a>:
+you recalculate your main finding under different plausible assumptions
+to see if it holds up.</p></li>
+<li><p><strong>Check if the effect was temporary.</strong> By 2019,
+students had more device experience. If the 2017 drop partially reversed
+by 2019, the mode effect was transient and does not affect COVID-era
+comparisons much.</p></li>
+</ol>
+<h2 id="data-you-would-need">Data you would need</h2>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 34%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>What</th>
+<th>Source</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Scores for 2015, 2017, 2019</td>
+<td>NAEP Data API</td>
+<td>2015: paper; 2017: first digital; 2019: second digital</td>
+</tr>
+<tr class="even">
+<td>Student device access</td>
+<td>NAEP student survey (B034405–B034407)</td>
+<td>Desktop/laptop, tablet, smartphone at home</td>
+</tr>
+<tr class="odd">
+<td>Teacher technology training</td>
+<td>NAEP teacher survey (T131851)</td>
+<td>“Have you had training on classroom tech?”</td>
+</tr>
+<tr class="even">
+<td>School device availability</td>
+<td>NAEP school survey (TECHAVS)</td>
+<td>Device types available for student use</td>
+</tr>
+<tr class="odd">
+<td>NCES mode-effect study</td>
+<td>2017 technical documentation</td>
+<td>Official analysis of DBA transition</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NAEP API variables:</strong> B034405–B034407, B034401,
+B034801, T131851, T132101–T132103, TECHAVS</p>
+<p><strong>Analytic method:</strong> Interrupted time series design with
+2017 as the interruption point. Device access as an interaction term.
+Sensitivity analysis recalculates COVID-era declines excluding the
+estimated mode effect. Note: the API <code>sample</code> field (R2 =
+accommodations not permitted, R3 = accommodations permitted) tracks
+accommodation policy, not assessment mode. Mode effects must be inferred
+from score trajectories rather than a direct mode flag.</p>
+</body>
+</html>

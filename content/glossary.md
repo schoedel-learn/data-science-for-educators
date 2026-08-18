@@ -1,16 +1,16 @@
 ---
 type: glossary
 title: "Glossary"
-description: "Every technical term introduced in the five research questions, defined in plain language."
+description: "Plain-language definitions of the data-science terms used in this project."
 tags: [glossary, reference, data-science]
 timestamp: "2026-07-10T19:00:00Z"
 ---
 
-Every technical term introduced across the question pages, worked examples, and methods explainers, defined in plain language. Terms appear in the order you encounter them.
+Plain-language definitions of the data-science terms used across this project's analysis and methods, grouped by topic.
 
-## Concepts by Question
+## Key concepts
 
-### Question 1 Terms
+### Research design
 
 **<a id="g-interrupted-time-series">interrupted time series</a>**
 
@@ -24,7 +24,7 @@ A background variable you measure and include in your analysis so it does not di
 
 A federal funding program that distributed roughly $190 billion to U.S. schools in three waves between 2020 and 2024 to address pandemic-related needs. ESSER funds could be spent on tutoring, technology, facilities, summer programs, and mental health services.
 
-### Question 2 Terms
+### Methods
 
 **<a id="g-mediation">mediation analysis</a>**
 
@@ -42,7 +42,7 @@ A variable that is correlated with *both* the predictor and the outcome, creatin
 
 A computational method that repeatedly resamples your data (taking random samples *with replacement* from your original dataset thousands of times) to estimate how much a statistic — like a mediation effect — would vary if you collected new data.
 
-### Question 3 Terms
+### Measurement
 
 **<a id="g-mode-effect">mode effect</a>**
 
@@ -60,7 +60,7 @@ A check on your main finding: you rerun the analysis under different plausible a
 
 An effect that is larger for some groups than for others. If the mode effect was larger for students without home computers than for students with them, it is a differential mode effect — the measurement problem systematically disadvantages certain groups.
 
-### Question 4 Terms
+### Modeling
 
 **<a id="g-ols">OLS regression (ordinary least squares)</a>**
 
@@ -74,7 +74,7 @@ A variable that affects the predictor but has no direct effect on the outcome, u
 
 A design that compares the change over time in a treated group to the change over time in an untreated group. In Question 4, when a state lifts its charter school cap, you compare the before-and-after score change in that state to the before-and-after change in states that did *not* lift their caps.
 
-### Question 5 Terms
+### Regression
 
 **<a id="g-iep">IEP (Individualized Education Program)</a>**
 

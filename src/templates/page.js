@@ -11,6 +11,16 @@ export default function PageTemplate({ data }) {
   );
 }
 
+export function Head({ data }) {
+  const fm = data.file.childMarkdownRemark.frontmatter || {};
+  return (
+    <>
+      <title>{fm.title ? `${fm.title} \u2014 NAEP Data Portfolio` : "NAEP Data Portfolio"}</title>
+      {fm.description && <meta name="description" content={fm.description} />}
+    </>
+  );
+}
+
 export const query = graphql`
   query PageQuery($relativePath: String!) {
     file(relativePath: { eq: $relativePath }) {

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="Do states with more charter schools have higher or lower NAEP scores, after controlling for demographic composition?" />
+  <title>questions · question-4 (archived)</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style>
+body{max-width:48rem;margin:2rem auto;padding:0 1rem;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.65;color:#1b1b1b}
+h1,h2,h3{line-height:1.25;margin-top:1.6em} code{background:#f2f2f2;padding:.1rem .35rem;border-radius:3px;font-size:.9em}
+pre{background:#f2f2f2;padding:1rem;overflow-x:auto;border-radius:5px;font-size:.85em}
+img{max-width:100%;height:auto} table{border-collapse:collapse;width:100%;margin:1em 0} th,td{border:1px solid #ccc;padding:.45rem .6rem;text-align:left}
+th{background:#f7f7f7} blockquote{border-left:3px solid #ccc;margin-left:0;padding-left:1rem;color:#555} a{color:#205493}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">questions · question-4 (archived)</h1>
+</header>
+<h2 id="what-is-this-question-really-asking">What is this question
+really asking?</h2>
+<p>Charter school enrollment varies enormously by state — from near zero
+in West Virginia to over 15% in Arizona. The question is whether higher
+charter penetration is associated with better state-level NAEP scores
+<em>after accounting for differences in poverty, race, and special
+education rates</em>. Without those adjustments, you might credit (or
+blame) charter schools for differences that are really about which
+students live in which states.</p>
+<blockquote>
+<p><strong>Why classification matters.</strong> The primary aim is
+<em>predictive</em>: charter share is used to model expected NAEP
+scores, worked through a <em>comparison</em> across states. It is not
+automatically causal — states with lots of charters might differ in
+other ways that drive scores. A causal claim would require additional
+design, like an <a href="/glossary/#g-instrument">instrumental
+variable</a>. See <a href="/classification/">How the Questions Are
+Classified</a> for the short version or <a href="/three-aims-and-comparison/">The Three Aims of Data Analysis and
+the Cross-Cutting Role of Comparison</a> for the fuller methods
+argument.</p>
+</blockquote>
+<h2 id="how-you-would-investigate-it">How you would investigate it</h2>
+<ol type="1">
+<li><p><strong>Make a scatterplot.</strong> Put charter enrollment
+percentage on the x-axis and NAEP math scores on the y-axis — each state
+is one dot. A visible upward or downward slope tells you there is a raw
+relationship worth investigating.</p></li>
+<li><p><strong>Add <a href="/glossary/#g-adjustment">adjustment
+variables</a>.</strong> Run an <a href="/glossary/#g-ols">OLS
+regression</a>: NAEP score = charter share + % Black + % Hispanic + %
+free lunch + % IEP + per-pupil spending + region. The regression
+answers: if two states had the same demographics and funding levels,
+would the one with more charter schools score higher?</p></li>
+<li><p><strong>Address the chicken-and-egg problem.</strong> Did
+charters cause higher scores, or did low-scoring states adopt charters
+as a reform? Use an instrumental variable: the year a state passed its
+charter law affects charter penetration today but is not caused by
+current demographics. If charter penetration predicted by law passage
+year is associated with higher scores, the case for causation
+strengthens.</p></li>
+<li><p><strong>Look for natural experiments.</strong> When a state lifts
+its charter school cap, compare before-and-after score changes to states
+that did not lift their caps. This <a href="/glossary/#g-did">difference-in-differences</a> design isolates
+the policy effect.</p></li>
+</ol>
+<h2 id="worked-example-now-available">Worked example now available</h2>
+<p>A full public-facing worked example for this question is now live at
+<a href="/questions/question-4-exploration/">Worked Example — Question
+4: Charter Share and NAEP Scores</a>. It includes:</p>
+<ul>
+<li>a 50-state exploratory analysis page,</li>
+<li>a two-panel scatterplot for 2024 Grade 8 math and reading,</li>
+<li>grouped summary tables,</li>
+<li>the full state-level data table,</li>
+<li>downloadable CSV files,</li>
+<li>APA 7 references, and</li>
+<li>a <a href="/questions/question-4-python-walkthrough/">Python
+Walkthrough</a> that explains the actual scatterplot script line by line
+for educators who are learning how data science code works.</li>
+</ul>
+<p>That worked example is intentionally framed as a <strong>first
+exploratory pass</strong>. It shows the raw relationship, documents the
+data-cleaning choices, and explains why the result is not a causal
+claim.</p>
+<p>If you want the next stronger design, see <a href="/questions/question-4-controlled-analysis/">Question 4 Controlled
+Analysis Plan</a>. That page explains which additional controls, data
+sources, and modeling choices would be needed before stronger claims
+could be made.</p>
+<h2 id="data-you-would-need">Data you would need</h2>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 34%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>What</th>
+<th>Source</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>State NAEP scores, 2019/2022/2024</td>
+<td>NAEP Data API</td>
+<td>MA: 283, AZ: 270</td>
+</tr>
+<tr class="even">
+<td>State demographics</td>
+<td>NAEP Data API</td>
+<td>% Black, % Hispanic, % free lunch, % IEP</td>
+</tr>
+<tr class="odd">
+<td>Charter enrollment % by state</td>
+<td><a href="/glossary/#g-nces">NCES</a> Common Core of Data</td>
+<td>AZ: 18%, WV: 0%</td>
+</tr>
+<tr class="even">
+<td>Charter quality ratings</td>
+<td>CREDO (Stanford)</td>
+<td>Ohio charters: above avg. reading</td>
+</tr>
+<tr class="odd">
+<td>State charter law history</td>
+<td>Education Commission of the States</td>
+<td>MN: first law, 1991</td>
+</tr>
+<tr class="even">
+<td>Per-pupil expenditure</td>
+<td>U.S. Census Bureau</td>
+<td>NY: $25K/student; UT: $9K/student</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NAEP API variables:</strong> TOTAL, MN:MN, SDRACE, SLUNCH3,
+IEP, CHRTRPT, C0863A1–C0863I1</p>
+<p><strong>Analytic method:</strong> State-level OLS regression with
+region fixed effects. Multiple years pooled. Robustness: instrumental
+variable using charter law passage year; difference-in-differences
+exploiting state-level charter cap changes.</p>
+</body>
+</html>
