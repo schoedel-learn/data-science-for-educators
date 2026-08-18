@@ -92,25 +92,53 @@ export default function GraphPage() {
           const r = containerRef.current.getBoundingClientRect();
           graph.width(r.width).height(r.height);
         };
+
+        const fitView = () => {
+          if (!graph || !containerRef.current) return;
+          const r = containerRef.current.getBoundingClientRect();
+          if (!r.width || !r.height) return;
+          // Padding scales with the container so the graph keeps a balanced
+          // margin at any window size.
+          const pad = Math.max(
+            50,
+            Math.min(160, Math.round(Math.min(r.width, r.height) * 0.15))
+          );
+          try {
+            graph.zoomToFit(300, pad);
+          } catch (e) {}
+        };
+
+        let fitted = false;
+        let fitTimer = null;
+        const refit = () => {
+          if (fitTimer) clearTimeout(fitTimer);
+          fitTimer = setTimeout(() => {
+            if (!disposed && fitted) fitView();
+          }, 200);
+        };
+
         size();
         if (typeof ResizeObserver !== "undefined") {
-          ro = new ResizeObserver(size);
+          ro = new ResizeObserver(() => {
+            size();
+            refit();
+          });
           ro.observe(containerRef.current);
         }
 
-        // Fit the camera to the spread-out nodes once the simulation settles.
+        // Fit the camera to the spread-out nodes once the simulation settles,
+        // then keep it sized to the container on resize.
         setTimeout(() => {
-          if (!disposed && graph) {
-            try {
-              graph.zoomToFit(500, 80);
-            } catch (e) {}
-          }
+          if (disposed) return;
+          fitted = true;
+          fitView();
         }, 3000);
       }
     );
 
     return () => {
       disposed = true;
+      if (fitTimer) clearTimeout(fitTimer);
       if (ro) ro.disconnect();
       if (graph) {
         try {
