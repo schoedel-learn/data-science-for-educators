@@ -73,7 +73,7 @@ ssh "$REMOTE" "sudo rsync -a --delete ${STAGE}/ ${VOLUME}/ && sudo chown -R root
 # (a bare `curl` can fail when the script runs from a non-interactive shell).
 CURL=$(command -v curl || echo /usr/bin/curl)
 echo "▶ Verifying live endpoints…"
-for path in "" research-question dataset analysis findings comparison visualization limitations research responsible-use recommendations ai-use references glossary; do
+for path in "" research-question dataset analysis findings comparison visualization limitations research responsible-use recommendations ai-use references glossary graph; do
   code=$("$CURL" -s -o /dev/null -w "%{http_code}" "https://${SITE_HOST}/${path}/")
   printf "   /%s/ -> %s\n" "$path" "$code"
 done

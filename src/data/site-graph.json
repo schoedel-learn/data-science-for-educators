@@ -1,0 +1,524 @@
+{
+  "nodes": [
+    {
+      "id": "home",
+      "name": "Home",
+      "group": "page",
+      "route": "/"
+    },
+    {
+      "id": "research-question",
+      "name": "Research question",
+      "group": "page",
+      "route": "/research-question/"
+    },
+    {
+      "id": "dataset",
+      "name": "Dataset",
+      "group": "page",
+      "route": "/dataset/"
+    },
+    {
+      "id": "analysis",
+      "name": "Analysis",
+      "group": "page",
+      "route": "/analysis/"
+    },
+    {
+      "id": "findings",
+      "name": "Findings",
+      "group": "page",
+      "route": "/findings/"
+    },
+    {
+      "id": "comparison",
+      "name": "Comparison",
+      "group": "page",
+      "route": "/comparison/"
+    },
+    {
+      "id": "visualization",
+      "name": "Visualization",
+      "group": "page",
+      "route": "/visualization/"
+    },
+    {
+      "id": "limitations",
+      "name": "Limitations",
+      "group": "page",
+      "route": "/limitations/"
+    },
+    {
+      "id": "research",
+      "name": "Research & evidence",
+      "group": "page",
+      "route": "/research/"
+    },
+    {
+      "id": "responsible-use",
+      "name": "Responsible use",
+      "group": "page",
+      "route": "/responsible-use/"
+    },
+    {
+      "id": "recommendations",
+      "name": "Recommendations",
+      "group": "page",
+      "route": "/recommendations/"
+    },
+    {
+      "id": "ai-use",
+      "name": "AI use",
+      "group": "page",
+      "route": "/ai-use/"
+    },
+    {
+      "id": "references",
+      "name": "References",
+      "group": "page",
+      "route": "/references/"
+    },
+    {
+      "id": "glossary",
+      "name": "Glossary",
+      "group": "page",
+      "route": "/glossary/"
+    },
+    {
+      "id": "naep",
+      "name": "NAEP",
+      "group": "concept",
+      "route": "/dataset/"
+    },
+    {
+      "id": "covid",
+      "name": "COVID-19 pandemic",
+      "group": "concept",
+      "route": "/research-question/"
+    },
+    {
+      "id": "national",
+      "name": "U.S. national public",
+      "group": "concept",
+      "route": "/comparison/"
+    },
+    {
+      "id": "texas",
+      "name": "Texas",
+      "group": "concept",
+      "route": "/comparison/"
+    },
+    {
+      "id": "pre-covid",
+      "name": "Pre-COVID baseline (2015–2019)",
+      "group": "concept",
+      "route": "/analysis/"
+    },
+    {
+      "id": "post-covid",
+      "name": "Post-COVID period (2022–2024)",
+      "group": "concept",
+      "route": "/analysis/"
+    },
+    {
+      "id": "mean-score",
+      "name": "Mean scale score",
+      "group": "concept",
+      "route": "/dataset/"
+    },
+    {
+      "id": "math",
+      "name": "Mathematics",
+      "group": "concept",
+      "route": "/findings/"
+    },
+    {
+      "id": "reading",
+      "name": "Reading",
+      "group": "concept",
+      "route": "/findings/"
+    },
+    {
+      "id": "descriptive",
+      "name": "Descriptive question",
+      "group": "concept",
+      "route": "/research-question/"
+    },
+    {
+      "id": "g8-math",
+      "name": "Grade 8 math ↓8.8",
+      "group": "finding",
+      "route": "/findings/"
+    },
+    {
+      "id": "g8-reading",
+      "name": "Grade 8 reading ↓5.3",
+      "group": "finding",
+      "route": "/findings/"
+    },
+    {
+      "id": "g4-math",
+      "name": "Grade 4 math ↓2.7",
+      "group": "finding",
+      "route": "/findings/"
+    },
+    {
+      "id": "g4-reading",
+      "name": "Grade 4 reading ↓5.2",
+      "group": "finding",
+      "route": "/findings/"
+    },
+    {
+      "id": "observational",
+      "name": "Observational data",
+      "group": "term",
+      "route": "/limitations/"
+    },
+    {
+      "id": "confound",
+      "name": "Confound",
+      "group": "term",
+      "route": "/limitations/"
+    },
+    {
+      "id": "correlation",
+      "name": "Correlation ≠ causation",
+      "group": "term",
+      "route": "/responsible-use/"
+    },
+    {
+      "id": "significance",
+      "name": "Statistical significance",
+      "group": "term",
+      "route": "/responsible-use/"
+    },
+    {
+      "id": "mode-effect",
+      "name": "Mode effect",
+      "group": "term",
+      "route": "/limitations/"
+    },
+    {
+      "id": "triangulation",
+      "name": "Triangulation",
+      "group": "term",
+      "route": "/research/"
+    },
+    {
+      "id": "sample",
+      "name": "Sample",
+      "group": "term",
+      "route": "/dataset/"
+    }
+  ],
+  "links": [
+    {
+      "source": "home",
+      "target": "research-question"
+    },
+    {
+      "source": "home",
+      "target": "dataset"
+    },
+    {
+      "source": "home",
+      "target": "analysis"
+    },
+    {
+      "source": "home",
+      "target": "findings"
+    },
+    {
+      "source": "home",
+      "target": "comparison"
+    },
+    {
+      "source": "home",
+      "target": "visualization"
+    },
+    {
+      "source": "home",
+      "target": "limitations"
+    },
+    {
+      "source": "home",
+      "target": "research"
+    },
+    {
+      "source": "home",
+      "target": "responsible-use"
+    },
+    {
+      "source": "home",
+      "target": "recommendations"
+    },
+    {
+      "source": "home",
+      "target": "ai-use"
+    },
+    {
+      "source": "home",
+      "target": "references"
+    },
+    {
+      "source": "home",
+      "target": "glossary"
+    },
+    {
+      "source": "research-question",
+      "target": "descriptive"
+    },
+    {
+      "source": "research-question",
+      "target": "covid"
+    },
+    {
+      "source": "dataset",
+      "target": "naep"
+    },
+    {
+      "source": "dataset",
+      "target": "national"
+    },
+    {
+      "source": "dataset",
+      "target": "texas"
+    },
+    {
+      "source": "dataset",
+      "target": "mean-score"
+    },
+    {
+      "source": "dataset",
+      "target": "sample"
+    },
+    {
+      "source": "analysis",
+      "target": "pre-covid"
+    },
+    {
+      "source": "analysis",
+      "target": "post-covid"
+    },
+    {
+      "source": "analysis",
+      "target": "mean-score"
+    },
+    {
+      "source": "findings",
+      "target": "g8-math"
+    },
+    {
+      "source": "findings",
+      "target": "g8-reading"
+    },
+    {
+      "source": "findings",
+      "target": "g4-math"
+    },
+    {
+      "source": "findings",
+      "target": "g4-reading"
+    },
+    {
+      "source": "comparison",
+      "target": "national"
+    },
+    {
+      "source": "comparison",
+      "target": "texas"
+    },
+    {
+      "source": "comparison",
+      "target": "descriptive"
+    },
+    {
+      "source": "visualization",
+      "target": "mean-score"
+    },
+    {
+      "source": "visualization",
+      "target": "g8-math"
+    },
+    {
+      "source": "visualization",
+      "target": "g4-reading"
+    },
+    {
+      "source": "limitations",
+      "target": "observational"
+    },
+    {
+      "source": "limitations",
+      "target": "confound"
+    },
+    {
+      "source": "limitations",
+      "target": "mode-effect"
+    },
+    {
+      "source": "research",
+      "target": "triangulation"
+    },
+    {
+      "source": "research",
+      "target": "covid"
+    },
+    {
+      "source": "responsible-use",
+      "target": "descriptive"
+    },
+    {
+      "source": "responsible-use",
+      "target": "correlation"
+    },
+    {
+      "source": "responsible-use",
+      "target": "significance"
+    },
+    {
+      "source": "recommendations",
+      "target": "post-covid"
+    },
+    {
+      "source": "recommendations",
+      "target": "g8-reading"
+    },
+    {
+      "source": "ai-use",
+      "target": "analysis"
+    },
+    {
+      "source": "ai-use",
+      "target": "naep"
+    },
+    {
+      "source": "references",
+      "target": "research"
+    },
+    {
+      "source": "glossary",
+      "target": "observational"
+    },
+    {
+      "source": "glossary",
+      "target": "confound"
+    },
+    {
+      "source": "glossary",
+      "target": "correlation"
+    },
+    {
+      "source": "glossary",
+      "target": "significance"
+    },
+    {
+      "source": "glossary",
+      "target": "mode-effect"
+    },
+    {
+      "source": "glossary",
+      "target": "triangulation"
+    },
+    {
+      "source": "glossary",
+      "target": "sample"
+    },
+    {
+      "source": "glossary",
+      "target": "mean-score"
+    },
+    {
+      "source": "glossary",
+      "target": "naep"
+    },
+    {
+      "source": "glossary",
+      "target": "descriptive"
+    },
+    {
+      "source": "naep",
+      "target": "mean-score"
+    },
+    {
+      "source": "naep",
+      "target": "national"
+    },
+    {
+      "source": "naep",
+      "target": "texas"
+    },
+    {
+      "source": "covid",
+      "target": "pre-covid"
+    },
+    {
+      "source": "covid",
+      "target": "post-covid"
+    },
+    {
+      "source": "pre-covid",
+      "target": "post-covid"
+    },
+    {
+      "source": "national",
+      "target": "texas"
+    },
+    {
+      "source": "math",
+      "target": "reading"
+    },
+    {
+      "source": "descriptive",
+      "target": "observational"
+    },
+    {
+      "source": "observational",
+      "target": "confound"
+    },
+    {
+      "source": "correlation",
+      "target": "confound"
+    },
+    {
+      "source": "significance",
+      "target": "sample"
+    },
+    {
+      "source": "g8-math",
+      "target": "math"
+    },
+    {
+      "source": "g8-math",
+      "target": "post-covid"
+    },
+    {
+      "source": "g8-math",
+      "target": "mean-score"
+    },
+    {
+      "source": "g8-reading",
+      "target": "reading"
+    },
+    {
+      "source": "g8-reading",
+      "target": "post-covid"
+    },
+    {
+      "source": "g4-math",
+      "target": "math"
+    },
+    {
+      "source": "g4-math",
+      "target": "post-covid"
+    },
+    {
+      "source": "g4-reading",
+      "target": "reading"
+    },
+    {
+      "source": "g4-reading",
+      "target": "post-covid"
+    }
+  ]
+}

@@ -91,3 +91,12 @@ description: "A descriptive analysis of NAEP math and reading scores (grades 4 a
     <span class="nav-desc">Sources and citations.</span>
   </a>
 </div>
+
+<a class="graph-banner" href="/graph/">
+  <span class="graph-banner-mark">🧭</span>
+  <span class="graph-banner-text">
+    <span class="graph-banner-title">Explore the knowledge graph</span>
+    <span class="graph-banner-desc">Every page, concept, and finding in one interactive 3D map — drag, zoom, and click any node.</span>
+  </span>
+  <span class="graph-banner-cta">Open the 3D graph →</span>
+</a>

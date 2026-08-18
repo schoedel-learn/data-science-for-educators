@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import "../styles/global.css";
 
-export default function Layout({ children, title, description }) {
+export default function Layout({ children, title, description, wide }) {
   const [expandedImage, setExpandedImage] = useState(null);
 
   const closeExpandedImage = useCallback(() => {
@@ -38,7 +38,7 @@ export default function Layout({ children, title, description }) {
   }, []);
 
   return (
-    <div className="container">
+    <div className={wide ? "container container--wide" : "container"}>
       <header className="site-header">
         <a href="/" className="wordmark" aria-label="NAEP Data Portfolio — home">
           <span className="wordmark-mark">DS</span>
@@ -52,7 +52,7 @@ export default function Layout({ children, title, description }) {
       </main>
       <footer className="footer">
         <p className="footer-nav">
-          <a href="/findings/">Findings</a> · <a href="/visualization/">Visualization</a> · <a href="/comparison/">Comparison</a> · <a href="/limitations/">Limitations</a> · <a href="/research/">Research</a> · <a href="/references/">References</a> · <a href="/glossary/">Glossary</a>
+          <a href="/findings/">Findings</a> · <a href="/visualization/">Visualization</a> · <a href="/comparison/">Comparison</a> · <a href="/limitations/">Limitations</a> · <a href="/research/">Research</a> · <a href="/references/">References</a> · <a href="/glossary/">Glossary</a> · <a href="/graph/">Knowledge graph</a>
         </p>
         <p className="footer-meta">STEM-5328 · Data Science for Educators · UTEP</p>
         <p className="footer-author">Barry Schoedel</p>
