@@ -93,27 +93,24 @@ export default function GraphPage() {
           graph.width(r.width).height(r.height);
         };
 
-        const fitView = () => {
+        const maybeFit = () => {
           if (!graph || !containerRef.current) return;
           const r = containerRef.current.getBoundingClientRect();
           if (!r.width || !r.height) return;
-          // Padding scales with the container so the graph keeps a balanced
-          // margin at any window size.
-          const pad = Math.max(
-            50,
-            Math.min(160, Math.round(Math.min(r.width, r.height) * 0.15))
-          );
+          // Leave the library's auto-camera on wide screens; only pull back to
+          // fit when the container is narrow enough to clip the graph.
+          if (r.width / r.height >= 0.85) return;
+          const pad = Math.max(30, Math.round(Math.min(r.width, r.height) * 0.08));
           try {
             graph.zoomToFit(300, pad);
           } catch (e) {}
         };
 
-        let fitted = false;
         let fitTimer = null;
         const refit = () => {
           if (fitTimer) clearTimeout(fitTimer);
           fitTimer = setTimeout(() => {
-            if (!disposed && fitted) fitView();
+            if (!disposed) maybeFit();
           }, 200);
         };
 
@@ -126,12 +123,9 @@ export default function GraphPage() {
           ro.observe(containerRef.current);
         }
 
-        // Fit the camera to the spread-out nodes once the simulation settles,
-        // then keep it sized to the container on resize.
+        // On narrow screens, fit once the simulation has spread the nodes.
         setTimeout(() => {
-          if (disposed) return;
-          fitted = true;
-          fitView();
+          if (!disposed) maybeFit();
         }, 1500);
       }
     );
