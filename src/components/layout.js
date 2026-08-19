@@ -52,7 +52,7 @@ export default function Layout({ children, title, description, wide }) {
       </main>
       <footer className="footer">
         <p className="footer-nav">
-          <a href="/findings/">Findings</a> · <a href="/visualization/">Visualization</a> · <a href="/comparison/">Comparison</a> · <a href="/limitations/">Limitations</a> · <a href="/research/">Research</a> · <a href="/references/">References</a> · <a href="/glossary/">Glossary</a> · <a href="/graph/">Knowledge graph</a>
+          <a href="/findings/">Findings</a> · <a href="/visualization/">Visualization</a> · <a href="/comparison/">Comparison</a> · <a href="/limitations/">Limitations</a> · <a href="/research/">Research</a> · <a href="/references/">References</a> · <a href="/glossary/">Glossary</a> · <a href="/graph/">Knowledge Graph</a>
         </p>
         <p className="footer-meta">STEM-5328 · Data Science for Educators</p>
         <p className="footer-author">Barry Schoedel, MTS</p>
