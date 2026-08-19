@@ -55,7 +55,8 @@ export default function Layout({ children, title, description, wide }) {
           <a href="/findings/">Findings</a> · <a href="/visualization/">Visualization</a> · <a href="/comparison/">Comparison</a> · <a href="/limitations/">Limitations</a> · <a href="/research/">Research</a> · <a href="/references/">References</a> · <a href="/glossary/">Glossary</a> · <a href="/graph/">Knowledge graph</a>
         </p>
         <p className="footer-meta">STEM-5328 · Data Science for Educators · UTEP</p>
-        <p className="footer-author">Barry Schoedel</p>
+        <p className="footer-professor">Ivan Gris, PhD</p>
+        <p className="footer-author">Barry Schoedel, MTS</p>
         <p className="footer-credit">© 2026 <a href="https://schoedeldesign.ai" rel="noopener">Schoedel Design AI</a></p>
       </footer>
       {expandedImage && (

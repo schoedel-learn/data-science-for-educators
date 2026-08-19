@@ -1,14 +1,29 @@
 import React, { useEffect, useRef, useState } from "react";
-import { navigate } from "gatsby";
 import Layout from "../components/layout";
 import graphData from "../data/site-graph.json";
 
 const GROUPS = {
-  page: { label: "Site pages", color: "#2b5c8f" },
-  concept: { label: "Core concepts", color: "#d97706" },
-  finding: { label: "Key findings", color: "#16a34a" },
-  term: { label: "Technical terms", color: "#7c3aed" },
+  page: { label: "Topic", color: "#2b5c8f" },
+  concept: { label: "Concept", color: "#d97706" },
+  finding: { label: "Finding", color: "#16a34a" },
+  term: { label: "Term", color: "#7c3aed" },
 };
+
+const nodeById = {};
+graphData.nodes.forEach((n) => {
+  nodeById[n.id] = n;
+});
+
+const neighborsByNode = {};
+graphData.nodes.forEach((n) => {
+  neighborsByNode[n.id] = [];
+});
+graphData.links.forEach((l) => {
+  const s = typeof l.source === "string" ? l.source : l.source.id;
+  const t = typeof l.target === "string" ? l.target : l.target.id;
+  neighborsByNode[s].push({ nodeId: t, label: l.label, dir: "out" });
+  neighborsByNode[t].push({ nodeId: s, label: l.label, dir: "in" });
+});
 
 function supportsWebGL() {
   try {
@@ -26,6 +41,8 @@ function supportsWebGL() {
 export default function GraphPage() {
   const containerRef = useRef(null);
   const [webglOk, setWebglOk] = useState(true);
+  const [selectedId, setSelectedId] = useState(null);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if (!supportsWebGL()) {
@@ -36,11 +53,14 @@ export default function GraphPage() {
     let disposed = false;
     let graph = null;
     let ro = null;
+    let fitTimer = null;
 
     const deg = {};
     graphData.links.forEach((l) => {
-      deg[l.source] = (deg[l.source] || 0) + 1;
-      deg[l.target] = (deg[l.target] || 0) + 1;
+      const s = typeof l.source === "string" ? l.source : l.source.id;
+      const t = typeof l.target === "string" ? l.target : l.target.id;
+      deg[s] = (deg[s] || 0) + 1;
+      deg[t] = (deg[t] || 0) + 1;
     });
 
     Promise.all([import("3d-force-graph"), import("three-spritetext")]).then(
@@ -71,9 +91,13 @@ export default function GraphPage() {
           .linkColor(() => "rgba(110,120,140,0.35)")
           .linkOpacity(0.5)
           .linkWidth(0.6)
+          .linkLabel((l) => l.label)
           .backgroundColor("#fafaf8")
           .onNodeClick((n) => {
-            if (n.route) navigate(n.route);
+            setSelectedId(n && n.id ? n.id : null);
+          })
+          .onBackgroundClick(() => {
+            setSelectedId(null);
           })
           .onNodeHover((n) => {
             if (containerRef.current) {
@@ -106,7 +130,6 @@ export default function GraphPage() {
           } catch (e) {}
         };
 
-        let fitTimer = null;
         const refit = () => {
           if (fitTimer) clearTimeout(fitTimer);
           fitTimer = setTimeout(() => {
@@ -148,14 +171,52 @@ export default function GraphPage() {
     };
   }, []);
 
+  const selected = selectedId ? nodeById[selectedId] : null;
+  const neighbors = selectedId ? neighborsByNode[selectedId] : [];
+
+  const copyContext = () => {
+    if (!selected) return;
+    const lines = [
+      selected.name,
+      `${GROUPS[selected.group].label} — NAEP Data Portfolio`,
+      "",
+      selected.summary,
+    ];
+    if (selected.facts && selected.facts.length) {
+      lines.push("", "Facts:");
+      selected.facts.forEach((f) => lines.push(`- ${f}`));
+    }
+    if (neighbors.length) {
+      lines.push("", "Related:");
+      neighbors.forEach((n) => {
+        const other = nodeById[n.nodeId];
+        const rel =
+          n.dir === "out"
+            ? `→ ${n.label} → ${other.name}`
+            : `← ${n.label} ← ${other.name}`;
+        lines.push(`- ${rel}`);
+      });
+    }
+    const text = lines.join("\n");
+    try {
+      navigator.clipboard.writeText(text).then(
+        () => {
+          setCopied(true);
+          setTimeout(() => setCopied(false), 2000);
+        },
+        () => {}
+      );
+    } catch (e) {}
+  };
+
   return (
     <Layout
       wide
       title="Knowledge graph"
-      description="An interactive 3D map of this project — its pages, concepts, findings, and terms."
+      description="An interactive knowledge graph of this project — every node is a unit of context with its facts and relationships."
     >
       <div className="graph-hint">
-        Drag to rotate · scroll to zoom · drag a node to rearrange · click any node to open its page
+        Click any node to reveal its context and how it connects — the graph is built the way an AI reads it. Drag to rotate · scroll to zoom.
       </div>
       <div className="graph-legend">
         {Object.entries(GROUPS).map(([key, g]) => (
@@ -172,6 +233,71 @@ export default function GraphPage() {
             This 3D graph needs WebGL, which your browser doesn't have available. Try a current version of Chrome, Edge, Firefox, or Safari.
           </div>
         )}
+        {selected && (
+          <div className="graph-panel" role="dialog" aria-label={selected.name}>
+            <button
+              type="button"
+              className="graph-panel-close"
+              onClick={() => setSelectedId(null)}
+              aria-label="Close"
+            >
+              ×
+            </button>
+            <span
+              className="graph-panel-badge"
+              style={{ background: GROUPS[selected.group].color }}
+            >
+              {GROUPS[selected.group].label}
+            </span>
+            <h2 className="graph-panel-title">{selected.name}</h2>
+            <p className="graph-panel-summary">{selected.summary}</p>
+            {selected.facts && selected.facts.length > 0 && (
+              <ul className="graph-panel-facts">
+                {selected.facts.map((f, i) => (
+                  <li key={i}>{f}</li>
+                ))}
+              </ul>
+            )}
+            {neighbors.length > 0 && (
+              <div className="graph-panel-rel">
+                <span className="graph-panel-rel-heading">Connected to</span>
+                {neighbors.map((n, i) => {
+                  const other = nodeById[n.nodeId];
+                  return (
+                    <button
+                      type="button"
+                      key={i}
+                      className="graph-panel-rel-item"
+                      onClick={() => setSelectedId(other.id)}
+                    >
+                      <span className="graph-panel-rel-label">
+                        {n.dir === "out" ? "→ " : "← "}
+                        {n.label}
+                        {n.dir === "out" ? " →" : " ←"}
+                      </span>
+                      <span className="graph-panel-rel-name">{other.name}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+            <div className="graph-panel-actions">
+              {selected.route && (
+                <a
+                  className="graph-panel-btn graph-panel-btn-primary"
+                  href={selected.route}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open full page ↗
+                </a>
+              )}
+              <button type="button" className="graph-panel-btn" onClick={copyContext}>
+                {copied ? "Copied ✓" : "Copy context"}
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </Layout>
   );
@@ -183,7 +309,7 @@ export function Head() {
       <title>{"Knowledge graph — NAEP Data Portfolio"}</title>
       <meta
         name="description"
-        content="An interactive 3D map of the NAEP data portfolio: pages, concepts, findings, and technical terms."
+        content="An interactive knowledge graph of the NAEP data portfolio: pages, concepts, findings, and technical terms, each with its facts and relationships."
       />
     </>
   );

@@ -4,525 +4,758 @@
       "id": "home",
       "name": "Home",
       "group": "page",
-      "route": "/"
+      "route": "/",
+      "summary": "The portfolio's entry point and overview of the whole project.",
+      "facts": [
+        "Question: were NAEP math and reading scores lower after COVID than before?",
+        "Answer: yes — in every subject and grade."
+      ]
     },
     {
       "id": "research-question",
       "name": "Research question",
       "group": "page",
-      "route": "/research-question/"
+      "route": "/research-question/",
+      "summary": "Defines the single descriptive question the project answers.",
+      "facts": [
+        "Descriptive, not causal.",
+        "Pre-COVID (2015–2019) vs post-COVID (2022–2024)."
+      ]
     },
     {
       "id": "dataset",
       "name": "Dataset",
       "group": "page",
-      "route": "/dataset/"
+      "route": "/dataset/",
+      "summary": "Describes the NAEP data used for the analysis.",
+      "facts": [
+        "NAEP = the Nation's Report Card, 0–500 scale.",
+        "Grades 4 and 8, math and reading, national public and Texas."
+      ]
     },
     {
       "id": "analysis",
       "name": "Analysis",
       "group": "page",
-      "route": "/analysis/"
+      "route": "/analysis/",
+      "summary": "How the before/after comparison was constructed.",
+      "facts": [
+        "Compares mean scale scores across years.",
+        "Baseline 2015–2019 vs post 2022–2024."
+      ]
     },
     {
       "id": "findings",
       "name": "Findings",
       "group": "page",
-      "route": "/findings/"
+      "route": "/findings/",
+      "summary": "The results, grade by grade and subject by subject.",
+      "facts": [
+        "All four tests fell from 2019 to 2024.",
+        "Math is recovering; reading is still falling."
+      ]
     },
     {
       "id": "comparison",
       "name": "Comparison",
       "group": "page",
-      "route": "/comparison/"
+      "route": "/comparison/",
+      "summary": "The U.S. national public average compared with Texas.",
+      "facts": [
+        "Texas was above national in grade 8 math in 2015, below by 2024."
+      ]
     },
     {
       "id": "visualization",
       "name": "Visualization",
       "group": "page",
-      "route": "/visualization/"
+      "route": "/visualization/",
+      "summary": "The centerpiece chart and how to read it.",
+      "facts": [
+        "2×2 panels; national solid, Texas dashed.",
+        "Shaded band marks the pandemic gap (2019–2022)."
+      ]
     },
     {
       "id": "limitations",
       "name": "Limitations",
       "group": "page",
-      "route": "/limitations/"
+      "route": "/limitations/",
+      "summary": "What the data can and cannot support.",
+      "facts": [
+        "Descriptive only — no causal claim.",
+        "NAEP is sample-based; no individual or school scores."
+      ]
     },
     {
       "id": "research",
       "name": "Research & evidence",
       "group": "page",
-      "route": "/research/"
+      "route": "/research/",
+      "summary": "How the findings fit published work.",
+      "facts": [
+        "Kuhfeld et al. (2022); NCES (2024); Education Recovery Scorecard.",
+        "Triangulated across three independent sources."
+      ]
     },
     {
       "id": "responsible-use",
       "name": "Responsible use",
       "group": "page",
-      "route": "/responsible-use/"
+      "route": "/responsible-use/",
+      "summary": "Reading the results without overclaiming.",
+      "facts": [
+        "Correlation is not causation.",
+        "Statistical significance is not importance."
+      ]
     },
     {
       "id": "recommendations",
       "name": "Recommendations",
       "group": "page",
-      "route": "/recommendations/"
+      "route": "/recommendations/",
+      "summary": "What educators might do next.",
+      "facts": [
+        "Focus recovery effort on reading, especially grade 8.",
+        "Monitor post-2024 trends."
+      ]
     },
     {
       "id": "ai-use",
       "name": "AI use",
       "group": "page",
-      "route": "/ai-use/"
+      "route": "/ai-use/",
+      "summary": "How AI tools were used and verified.",
+      "facts": [
+        "Hermes assisted the analysis; every number and source was re-verified by hand."
+      ]
     },
     {
       "id": "references",
       "name": "References",
       "group": "page",
-      "route": "/references/"
+      "route": "/references/",
+      "summary": "The sources and citations behind the project.",
+      "facts": [
+        "Kuhfeld, Soland & Lewis (2022); NCES; Education Recovery Scorecard."
+      ]
     },
     {
       "id": "glossary",
       "name": "Glossary",
       "group": "page",
-      "route": "/glossary/"
+      "route": "/glossary/",
+      "summary": "A–Z definitions of the data-science terms used.",
+      "facts": [
+        "91 plain-language technical definitions."
+      ]
     },
     {
       "id": "naep",
       "name": "NAEP",
       "group": "concept",
-      "route": "/dataset/"
+      "route": "/dataset/",
+      "summary": "The Nation's Report Card — the assessment whose scores this project analyzes.",
+      "facts": [
+        "Nationally representative, administered since 1969.",
+        "Reported on a 0–500 scale."
+      ]
     },
     {
       "id": "covid",
       "name": "COVID-19 pandemic",
       "group": "concept",
-      "route": "/research-question/"
+      "route": "/research-question/",
+      "summary": "The event that separates the pre-COVID baseline from the post-COVID period.",
+      "facts": [
+        "School disruptions 2020–2021.",
+        "The interruption this analysis centers on."
+      ]
     },
     {
       "id": "national",
       "name": "U.S. national public",
       "group": "concept",
-      "route": "/comparison/"
+      "route": "/comparison/",
+      "summary": "The reference population — U.S. national public schools.",
+      "facts": [
+        "Abbreviated NP in NAEP reporting."
+      ]
     },
     {
       "id": "texas",
       "name": "Texas",
       "group": "concept",
-      "route": "/comparison/"
+      "route": "/comparison/",
+      "summary": "The comparison state.",
+      "facts": [
+        "Above national grade 8 math in 2015; below by 2024."
+      ]
     },
     {
       "id": "pre-covid",
       "name": "Pre-COVID baseline (2015–2019)",
       "group": "concept",
-      "route": "/analysis/"
+      "route": "/analysis/",
+      "summary": "The pre-pandemic reference period.",
+      "facts": [
+        "Scores were roughly flat before COVID."
+      ]
     },
     {
       "id": "post-covid",
       "name": "Post-COVID period (2022–2024)",
       "group": "concept",
-      "route": "/analysis/"
+      "route": "/analysis/",
+      "summary": "The post-pandemic period under comparison.",
+      "facts": [
+        "Scores fell; reading kept falling through 2024."
+      ]
     },
     {
       "id": "mean-score",
       "name": "Mean scale score (0–500)",
       "group": "concept",
-      "route": "/dataset/"
+      "route": "/dataset/",
+      "summary": "The metric — the average score on NAEP's 0–500 scale.",
+      "facts": [
+        "The unit used for every before/after comparison."
+      ]
     },
     {
       "id": "math",
       "name": "Mathematics",
       "group": "concept",
-      "route": "/findings/"
+      "route": "/findings/",
+      "summary": "One of the two subjects analyzed.",
+      "facts": [
+        "Fell sharply, then stabilized or recovered."
+      ]
     },
     {
       "id": "reading",
       "name": "Reading",
       "group": "concept",
-      "route": "/findings/"
+      "route": "/findings/",
+      "summary": "One of the two subjects analyzed.",
+      "facts": [
+        "Fell and kept falling to decade lows."
+      ]
     },
     {
       "id": "descriptive",
       "name": "Descriptive question",
       "group": "concept",
-      "route": "/research-question/"
+      "route": "/research-question/",
+      "summary": "The question type this project uses — asks what happened, not why.",
+      "facts": [
+        "Describes change; does not establish cause."
+      ]
     },
     {
       "id": "g8-math",
       "name": "Grade 8 math: 281 → 272 (−8.8)",
       "group": "finding",
       "route": "/findings/",
-      "val": 8
+      "val": 8,
+      "summary": "Grade 8 math fell 8.8 points from 2019 to 2024 — the largest drop of the four tests.",
+      "facts": [
+        "2019: 281.0 → 2024: 272.2.",
+        "Largest decline of the four tests."
+      ]
     },
     {
       "id": "g8-reading",
       "name": "Grade 8 reading: 262 → 257 (−5.3)",
       "group": "finding",
       "route": "/findings/",
-      "val": 6
+      "val": 6,
+      "summary": "Grade 8 reading fell 5.3 points from 2019 to 2024, reaching a decade low.",
+      "facts": [
+        "2019: 262.0 → 2024: 256.7.",
+        "Lowest score of the 2015–2024 series."
+      ]
     },
     {
       "id": "g4-math",
       "name": "Grade 4 math: 240 → 237 (−2.7)",
       "group": "finding",
       "route": "/findings/",
-      "val": 5
+      "val": 5,
+      "summary": "Grade 4 math fell 2.7 points from 2019 to 2024 — the smallest drop, and it has partly recovered.",
+      "facts": [
+        "2019: 240.0 → 2024: 237.3.",
+        "Recovered 2.4 points since 2022."
+      ]
     },
     {
       "id": "g4-reading",
       "name": "Grade 4 reading: 219 → 214 (−5.2)",
       "group": "finding",
       "route": "/findings/",
-      "val": 6
+      "val": 6,
+      "summary": "Grade 4 reading fell 5.2 points from 2019 to 2024 and is still falling.",
+      "facts": [
+        "2019: 219.4 → 2024: 214.3.",
+        "Still declining in the most recent assessment."
+      ]
     },
     {
       "id": "observational",
       "name": "Observational data",
       "group": "term",
-      "route": "/limitations/"
+      "route": "/limitations/",
+      "summary": "Data collected without random assignment.",
+      "facts": [
+        "Supports description, not causation."
+      ]
     },
     {
       "id": "confound",
       "name": "Confound",
       "group": "term",
-      "route": "/limitations/"
+      "route": "/limitations/",
+      "summary": "A variable tied to both the predictor and the outcome, creating a false causal impression.",
+      "facts": [
+        "Poverty is a classic confound in education data."
+      ]
     },
     {
       "id": "correlation",
       "name": "Correlation ≠ causation",
       "group": "term",
-      "route": "/responsible-use/"
+      "route": "/responsible-use/",
+      "summary": "Two variables moving together does not mean one causes the other.",
+      "facts": [
+        "Co-movement is not causation."
+      ]
     },
     {
       "id": "significance",
       "name": "Statistical significance",
       "group": "term",
-      "route": "/responsible-use/"
+      "route": "/responsible-use/",
+      "summary": "A result unlikely to be due to chance (usually p < 0.05).",
+      "facts": [
+        "Not the same as practical importance."
+      ]
     },
     {
       "id": "mode-effect",
       "name": "Mode effect",
       "group": "term",
-      "route": "/limitations/"
+      "route": "/limitations/",
+      "summary": "A score change caused by the test's format rather than what students know.",
+      "facts": [
+        "NAEP moved from paper to digital in 2017."
+      ]
     },
     {
       "id": "triangulation",
       "name": "Triangulation",
       "group": "term",
-      "route": "/research/"
+      "route": "/research/",
+      "summary": "Confirming a finding by checking it against multiple independent sources.",
+      "facts": [
+        "This project used three independent sources."
+      ]
     },
     {
       "id": "sample",
       "name": "Sample",
       "group": "term",
-      "route": "/dataset/"
+      "route": "/dataset/",
+      "summary": "A subset of a population, drawn to make claims about the whole.",
+      "facts": [
+        "NAEP samples different students each cycle."
+      ]
     }
   ],
   "links": [
     {
       "source": "home",
-      "target": "research-question"
+      "target": "research-question",
+      "label": "links to"
     },
     {
       "source": "home",
-      "target": "dataset"
+      "target": "dataset",
+      "label": "links to"
     },
     {
       "source": "home",
-      "target": "analysis"
+      "target": "analysis",
+      "label": "links to"
     },
     {
       "source": "home",
-      "target": "findings"
+      "target": "findings",
+      "label": "links to"
     },
     {
       "source": "home",
-      "target": "comparison"
+      "target": "comparison",
+      "label": "links to"
     },
     {
       "source": "home",
-      "target": "visualization"
+      "target": "visualization",
+      "label": "links to"
     },
     {
       "source": "home",
-      "target": "limitations"
+      "target": "limitations",
+      "label": "links to"
     },
     {
       "source": "home",
-      "target": "research"
+      "target": "research",
+      "label": "links to"
     },
     {
       "source": "home",
-      "target": "responsible-use"
+      "target": "responsible-use",
+      "label": "links to"
     },
     {
       "source": "home",
-      "target": "recommendations"
+      "target": "recommendations",
+      "label": "links to"
     },
     {
       "source": "home",
-      "target": "ai-use"
+      "target": "ai-use",
+      "label": "links to"
     },
     {
       "source": "home",
-      "target": "references"
+      "target": "references",
+      "label": "links to"
     },
     {
       "source": "home",
-      "target": "glossary"
+      "target": "glossary",
+      "label": "links to"
     },
     {
       "source": "research-question",
-      "target": "descriptive"
+      "target": "descriptive",
+      "label": "asks"
     },
     {
       "source": "research-question",
-      "target": "covid"
+      "target": "covid",
+      "label": "is about"
     },
     {
       "source": "dataset",
-      "target": "naep"
+      "target": "naep",
+      "label": "analyzes"
     },
     {
       "source": "dataset",
-      "target": "national"
+      "target": "national",
+      "label": "samples"
     },
     {
       "source": "dataset",
-      "target": "texas"
+      "target": "texas",
+      "label": "samples"
     },
     {
       "source": "dataset",
-      "target": "mean-score"
+      "target": "mean-score",
+      "label": "uses"
     },
     {
       "source": "dataset",
-      "target": "sample"
+      "target": "sample",
+      "label": "draws"
     },
     {
       "source": "analysis",
-      "target": "pre-covid"
+      "target": "pre-covid",
+      "label": "defines"
     },
     {
       "source": "analysis",
-      "target": "post-covid"
+      "target": "post-covid",
+      "label": "defines"
     },
     {
       "source": "analysis",
-      "target": "mean-score"
+      "target": "mean-score",
+      "label": "compares"
     },
     {
       "source": "findings",
-      "target": "g8-math"
+      "target": "g8-math",
+      "label": "reports"
     },
     {
       "source": "findings",
-      "target": "g8-reading"
+      "target": "g8-reading",
+      "label": "reports"
     },
     {
       "source": "findings",
-      "target": "g4-math"
+      "target": "g4-math",
+      "label": "reports"
     },
     {
       "source": "findings",
-      "target": "g4-reading"
+      "target": "g4-reading",
+      "label": "reports"
     },
     {
       "source": "comparison",
-      "target": "national"
+      "target": "national",
+      "label": "compares"
     },
     {
       "source": "comparison",
-      "target": "texas"
+      "target": "texas",
+      "label": "compares"
     },
     {
       "source": "comparison",
-      "target": "descriptive"
+      "target": "descriptive",
+      "label": "is a"
     },
     {
       "source": "visualization",
-      "target": "mean-score"
+      "target": "mean-score",
+      "label": "plots"
     },
     {
       "source": "visualization",
-      "target": "g8-math"
+      "target": "g8-math",
+      "label": "plots"
     },
     {
       "source": "visualization",
-      "target": "g4-reading"
+      "target": "g4-reading",
+      "label": "plots"
     },
     {
       "source": "limitations",
-      "target": "observational"
+      "target": "observational",
+      "label": "notes"
     },
     {
       "source": "limitations",
-      "target": "confound"
+      "target": "confound",
+      "label": "notes"
     },
     {
       "source": "limitations",
-      "target": "mode-effect"
+      "target": "mode-effect",
+      "label": "notes"
     },
     {
       "source": "research",
-      "target": "triangulation"
+      "target": "triangulation",
+      "label": "uses"
     },
     {
       "source": "research",
-      "target": "covid"
+      "target": "covid",
+      "label": "studies"
     },
     {
       "source": "responsible-use",
-      "target": "descriptive"
+      "target": "descriptive",
+      "label": "insists on"
     },
     {
       "source": "responsible-use",
-      "target": "correlation"
+      "target": "correlation",
+      "label": "warns about"
     },
     {
       "source": "responsible-use",
-      "target": "significance"
+      "target": "significance",
+      "label": "cautions on"
     },
     {
       "source": "recommendations",
-      "target": "post-covid"
+      "target": "post-covid",
+      "label": "responds to"
     },
     {
       "source": "recommendations",
-      "target": "g8-reading"
+      "target": "g8-reading",
+      "label": "targets"
     },
     {
       "source": "ai-use",
-      "target": "analysis"
+      "target": "analysis",
+      "label": "assisted"
     },
     {
       "source": "ai-use",
-      "target": "naep"
+      "target": "naep",
+      "label": "queried"
     },
     {
       "source": "references",
-      "target": "research"
+      "target": "research",
+      "label": "supports"
     },
     {
       "source": "glossary",
-      "target": "observational"
+      "target": "observational",
+      "label": "defines"
     },
     {
       "source": "glossary",
-      "target": "confound"
+      "target": "confound",
+      "label": "defines"
     },
     {
       "source": "glossary",
-      "target": "correlation"
+      "target": "correlation",
+      "label": "defines"
     },
     {
       "source": "glossary",
-      "target": "significance"
+      "target": "significance",
+      "label": "defines"
     },
     {
       "source": "glossary",
-      "target": "mode-effect"
+      "target": "mode-effect",
+      "label": "defines"
     },
     {
       "source": "glossary",
-      "target": "triangulation"
+      "target": "triangulation",
+      "label": "defines"
     },
     {
       "source": "glossary",
-      "target": "sample"
+      "target": "sample",
+      "label": "defines"
     },
     {
       "source": "glossary",
-      "target": "mean-score"
+      "target": "mean-score",
+      "label": "defines"
     },
     {
       "source": "glossary",
-      "target": "naep"
+      "target": "naep",
+      "label": "defines"
     },
     {
       "source": "glossary",
-      "target": "descriptive"
+      "target": "descriptive",
+      "label": "defines"
     },
     {
       "source": "naep",
-      "target": "mean-score"
+      "target": "mean-score",
+      "label": "reports"
     },
     {
       "source": "naep",
-      "target": "national"
+      "target": "national",
+      "label": "samples"
     },
     {
       "source": "naep",
-      "target": "texas"
+      "target": "texas",
+      "label": "samples"
     },
     {
       "source": "covid",
-      "target": "pre-covid"
+      "target": "pre-covid",
+      "label": "follows"
     },
     {
       "source": "covid",
-      "target": "post-covid"
+      "target": "post-covid",
+      "label": "precedes"
     },
     {
       "source": "pre-covid",
-      "target": "post-covid"
+      "target": "post-covid",
+      "label": "before"
     },
     {
       "source": "national",
-      "target": "texas"
+      "target": "texas",
+      "label": "compared with"
     },
     {
       "source": "math",
-      "target": "reading"
+      "target": "reading",
+      "label": "tested alongside"
     },
     {
       "source": "descriptive",
-      "target": "observational"
+      "target": "observational",
+      "label": "uses"
     },
     {
       "source": "observational",
-      "target": "confound"
+      "target": "confound",
+      "label": "exposed to"
     },
     {
       "source": "correlation",
-      "target": "confound"
+      "target": "confound",
+      "label": "confused with"
     },
     {
       "source": "significance",
-      "target": "sample"
+      "target": "sample",
+      "label": "depends on"
     },
     {
       "source": "g8-math",
-      "target": "math"
+      "target": "math",
+      "label": "measures"
     },
     {
       "source": "g8-math",
-      "target": "post-covid"
+      "target": "post-covid",
+      "label": "fell in"
     },
     {
       "source": "g8-math",
-      "target": "mean-score"
+      "target": "mean-score",
+      "label": "change in"
     },
     {
       "source": "g8-reading",
-      "target": "reading"
+      "target": "reading",
+      "label": "measures"
     },
     {
       "source": "g8-reading",
-      "target": "post-covid"
+      "target": "post-covid",
+      "label": "fell in"
     },
     {
       "source": "g4-math",
-      "target": "math"
+      "target": "math",
+      "label": "measures"
     },
     {
       "source": "g4-math",
-      "target": "post-covid"
+      "target": "post-covid",
+      "label": "fell in"
     },
     {
       "source": "g4-reading",
-      "target": "reading"
+      "target": "reading",
+      "label": "measures"
     },
     {
       "source": "g4-reading",
-      "target": "post-covid"
+      "target": "post-covid",
+      "label": "fell in"
     }
   ]
 }
