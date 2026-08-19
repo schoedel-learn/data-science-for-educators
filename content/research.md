@@ -10,7 +10,7 @@ Three independent sources converge on the same pattern my data shows: a substant
 
 **Kuhfeld, M., Soland, J., & Lewis, K. (2022).** Test score patterns across three COVID-19-impacted school years. *Educational Researcher, 51*(7), 500–506. https://doi.org/10.3102/0013189X221109178
 
-Using NWEA MAP scores from 5.4 million U.S. students (a different test from NAEP), the authors found math fell 0.20–0.27 standard deviations and reading 0.09–0.18 standard deviations from fall 2019 to fall 2021, and that achievement gaps by race/ethnicity and poverty widened. **This supports my finding** — the decline and widening gaps appear in an independent dataset, so they are not an artifact of NAEP.
+Using NWEA MAP scores from 5.4 million U.S. students (a different test from [NAEP](/dataset/)), the authors found math fell 0.20–0.27 standard deviations and reading 0.09–0.18 standard deviations from fall 2019 to fall 2021, and that achievement gaps by race/ethnicity and poverty widened. **This supports [my finding](/findings/)** — the decline and widening gaps appear in an independent dataset, so they are not an artifact of NAEP.
 
 ## Source 2 — Government report
 
@@ -22,7 +22,7 @@ The official report confirms the numbers I pulled: national reading fell 5 point
 
 **Kane, T. J., & Reardon, S. F., et al. (2025).** Education Recovery Scorecard. Center for Education Policy Research (Harvard) and Educational Opportunity Project (Stanford). https://educationrecoveryscorecard.org/
 
-Using state test results for roughly 35 million students, the Scorecard found the average student remained nearly half a grade level behind 2019 levels in 2024, with the highest-income districts nearly four times as likely to recover as the poorest. It also stresses that the decline began around 2013, *before* the pandemic. **This supports my finding and slightly complicates it** — it confirms the decline and widening gaps, while emphasizing that part of the slide predates COVID, which matches my own pre-COVID reading trend.
+Using state test results for roughly 35 million students, the Scorecard found the average student remained nearly half a grade level behind 2019 levels in 2024, with the highest-income districts nearly four times as likely to recover as the poorest. It also stresses that the decline began around 2013, *before* the pandemic. **This supports my finding and slightly complicates it** — it confirms the decline and widening gaps, while emphasizing that part of the slide predates COVID, which matches my own [pre-COVID reading trend](/limitations/).
 
 ## Triangulation
 

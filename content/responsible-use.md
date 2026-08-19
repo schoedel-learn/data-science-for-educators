@@ -6,7 +6,7 @@ description: "How these findings should — and should not — be used."
 
 ## Who could benefit
 
-Educators, school leaders, and policymakers can use this project to see that recovery has been uneven — that reading needs sustained attention even as math recovers — and to direct tutoring, reading support, and funding where it is most needed.
+Educators, school leaders, and policymakers can use this project to see that [recovery has been uneven](/findings/) — that reading needs sustained attention even as math recovers — and to direct tutoring, reading support, and funding where it is most needed.
 
 ## Who could be harmed if it is misused
 
@@ -16,7 +16,7 @@ Educators, school leaders, and policymakers can use this project to see that rec
 
 ## What to avoid overclaiming
 
-- Do **not** claim this project proves COVID caused the decline — it shows change over time, not cause.
+- Do **not** claim this project proves COVID caused the decline — it shows [change over time, not cause](/limitations/).
 - Do **not** read a state or group average as describing any individual student or school — averages hide wide variation within groups.
 - Do **not** treat a "still declining" state as destined to keep declining — a trend is not destiny.
 

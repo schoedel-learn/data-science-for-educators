@@ -10,10 +10,10 @@ I used an AI assistant (Hermes) throughout the project — to pull and summarize
 
 ## How AI helped
 
-- **Data access and analysis:** wrote and ran the code that queried the NAEP API, computed summaries, and generated the charts.
+- **Data access and analysis:** wrote and ran the code that queried the [NAEP API](/dataset/), computed summaries, and generated the charts.
 - **Interpretation:** helped phrase findings in plain language for an education audience.
-- **Critique:** pushed back on overclaiming — for example, it argued me down from a causal claim to a descriptive one.
-- **Research:** surfaced credible sources and checked DOIs against Crossref.
+- **Critique:** pushed back on overclaiming — for example, it argued me down from a [causal claim](/glossary/#g-causal-inference) to a [descriptive one](/glossary/#g-descriptive).
+- **Research:** surfaced credible [sources](/references/) and checked DOIs against Crossref.
 
 ## What I verified myself
 
@@ -28,7 +28,7 @@ I used an AI assistant (Hermes) throughout the project — to pull and summarize
 
 ## What I changed based on my own judgment
 
-- I kept the project **descriptive** even when it would have been easy to drift toward causal language.
+- I kept the project **[descriptive](/glossary/#g-descriptive)** even when it would have been easy to drift toward causal language.
 - I kept the **demographic context** front and center in the comparison, rather than statistically adjusting it away.
 
 ## What I learned about using AI responsibly

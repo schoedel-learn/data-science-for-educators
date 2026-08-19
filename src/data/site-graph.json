@@ -20,6 +20,12 @@
       "facts": [
         "Descriptive, not causal.",
         "Pre-COVID (2015–2019) vs post-COVID (2022–2024)."
+      ],
+      "related": [
+        "dataset",
+        "analysis",
+        "findings",
+        "limitations"
       ]
     },
     {
@@ -31,6 +37,13 @@
       "facts": [
         "NAEP = the Nation's Report Card, 0–500 scale.",
         "Grades 4 and 8, math and reading, national public and Texas."
+      ],
+      "related": [
+        "research-question",
+        "analysis",
+        "findings",
+        "references",
+        "glossary"
       ]
     },
     {
@@ -42,6 +55,13 @@
       "facts": [
         "Compares mean scale scores across years.",
         "Baseline 2015–2019 vs post 2022–2024."
+      ],
+      "related": [
+        "research-question",
+        "dataset",
+        "findings",
+        "visualization",
+        "comparison"
       ]
     },
     {
@@ -53,6 +73,13 @@
       "facts": [
         "All four tests fell from 2019 to 2024.",
         "Math is recovering; reading is still falling."
+      ],
+      "related": [
+        "analysis",
+        "visualization",
+        "comparison",
+        "limitations",
+        "recommendations"
       ]
     },
     {
@@ -63,6 +90,12 @@
       "summary": "The U.S. national public average compared with Texas.",
       "facts": [
         "Texas was above national in grade 8 math in 2015, below by 2024."
+      ],
+      "related": [
+        "findings",
+        "visualization",
+        "dataset",
+        "analysis"
       ]
     },
     {
@@ -74,6 +107,12 @@
       "facts": [
         "2×2 panels; national solid, Texas dashed.",
         "Shaded band marks the pandemic gap (2019–2022)."
+      ],
+      "related": [
+        "findings",
+        "dataset",
+        "comparison",
+        "analysis"
       ]
     },
     {
@@ -85,6 +124,12 @@
       "facts": [
         "Descriptive only — no causal claim.",
         "NAEP is sample-based; no individual or school scores."
+      ],
+      "related": [
+        "findings",
+        "analysis",
+        "responsible-use",
+        "research"
       ]
     },
     {
@@ -96,6 +141,12 @@
       "facts": [
         "Kuhfeld et al. (2022); NCES (2024); Education Recovery Scorecard.",
         "Triangulated across three independent sources."
+      ],
+      "related": [
+        "findings",
+        "references",
+        "limitations",
+        "dataset"
       ]
     },
     {
@@ -107,6 +158,11 @@
       "facts": [
         "Correlation is not causation.",
         "Statistical significance is not importance."
+      ],
+      "related": [
+        "findings",
+        "limitations",
+        "recommendations"
       ]
     },
     {
@@ -118,6 +174,11 @@
       "facts": [
         "Focus recovery effort on reading, especially grade 8.",
         "Monitor post-2024 trends."
+      ],
+      "related": [
+        "findings",
+        "responsible-use",
+        "limitations"
       ]
     },
     {
@@ -128,6 +189,12 @@
       "summary": "How AI tools were used and verified.",
       "facts": [
         "Hermes assisted the analysis; every number and source was re-verified by hand."
+      ],
+      "related": [
+        "analysis",
+        "references",
+        "dataset",
+        "limitations"
       ]
     },
     {
@@ -138,6 +205,12 @@
       "summary": "The sources and citations behind the project.",
       "facts": [
         "Kuhfeld, Soland & Lewis (2022); NCES; Education Recovery Scorecard."
+      ],
+      "related": [
+        "research",
+        "dataset",
+        "findings",
+        "ai-use"
       ]
     },
     {
@@ -148,6 +221,13 @@
       "summary": "A–Z definitions of the data-science terms used.",
       "facts": [
         "91 plain-language technical definitions."
+      ],
+      "related": [
+        "dataset",
+        "analysis",
+        "findings",
+        "limitations",
+        "research"
       ]
     },
     {

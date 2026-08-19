@@ -4,9 +4,9 @@ title: "Research Question"
 description: "The question this project answers, and why it matters."
 ---
 
-**My research question:** Were average NAEP scores in mathematics and reading (grades 4 and 8) lower after COVID than before COVID?
+**My research question:** Were average [NAEP](/dataset/) scores in [mathematics and reading](/findings/) (grades 4 and 8) lower after COVID than before COVID?
 
-This is a **descriptive** question. It asks whether something happened — whether scores fell — not why it happened or what caused it. That distinction matters, because every claim in this project is deliberately limited to what the data can actually support.
+This is a **[descriptive](/glossary/#g-descriptive)** question. It asks whether something happened — whether scores fell — not why it happened or what caused it. That distinction matters, because every claim in this project is deliberately limited to what the data can actually support.
 
 ## Why this question matters
 

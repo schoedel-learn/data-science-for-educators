@@ -6,7 +6,7 @@ description: "Four findings, each supported by the data."
 
 ## Finding 1 — Scores fell in every subject and grade
 
-Between 2019 and 2024, the mean score fell in all four subject–grade combinations:
+Between 2019 and 2024, the [mean score](/glossary/#g-mean) fell in all four subject–grade combinations:
 
 | Subject / grade | 2019 | 2024 | Change |
 |---|---|---|---|
@@ -17,7 +17,7 @@ Between 2019 and 2024, the mean score fell in all four subject–grade combinati
 
 ![2019 vs 2024 mean scores](/images/pre-vs-post.png)
 
-**Why it matters.** This is the direct answer to the research question: yes, scores were lower after COVID than before, across the board. A decline of 5–9 scale points is large by NAEP standards (roughly half a school year or more of typical learning).
+**Why it matters.** This is the direct answer to the [research question](/research-question/): yes, scores were lower after COVID than before, across the board. A decline of 5–9 scale points is large by NAEP standards (roughly half a school year or more of typical learning).
 
 ## Finding 2 — Reading kept falling while math recovered
 

@@ -14,7 +14,7 @@ Kane, T. J., & Reardon, S. F. (with Fahle, E. M., & Staiger, D. O.). (2025). *Ed
 
 ## Data source
 
-National Assessment of Educational Progress (NAEP), mean scale scores for mathematics and reading, grades 4 and 8, U.S. national public and Texas, 2015–2024. Retrieved August 18, 2026, from the NAEP Data Service API at https://www.nationsreportcard.gov/DataService/GetAdhocData.aspx
+National Assessment of Educational Progress ([NAEP](/dataset/)), mean scale scores for mathematics and reading, grades 4 and 8, U.S. national public and Texas, 2015–2024. Retrieved August 18, 2026, from the NAEP Data Service API at https://www.nationsreportcard.gov/DataService/GetAdhocData.aspx
 
 ## Appendices
 
@@ -22,4 +22,4 @@ The analysis code, the assembled dataset, and the original weekly assignment doc
 
 ## About this project
 
-This portfolio is the final project for STEM-5328 (Data Science for Educators) at UTEP. It compiles and polishes the dataset evaluation, exploratory analysis, responsible-claims, comparison, visualization, and evidence-triangulation work completed across the course — organized around a single descriptive research question.
+This portfolio is the final project for STEM-5328 (Data Science for Educators) at UTEP. It compiles and polishes the [dataset evaluation](/dataset/), [exploratory analysis](/analysis/), responsible-claims, [comparison](/comparison/), [visualization](/visualization/), and [evidence-triangulation](/research/) work completed across the course — organized around a single [descriptive research question](/research-question/).

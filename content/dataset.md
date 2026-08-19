@@ -9,14 +9,14 @@ description: "The public data behind this project."
 - **Name:** NAEP — "The Nation's Report Card"
 - **Source / link:** https://www.nationsreportcard.gov/ (data via the NAEP Data Service API)
 - **Created and maintained by:** the National Center for Education Statistics (NCES), part of the Institute of Education Sciences in the U.S. Department of Education
-- **What it measures:** academic achievement of U.S. students in grades 4, 8, and 12, reported as average scale scores (0–500) and achievement-level percentages for the nation, each state, and a set of large urban districts
+- **What it measures:** academic achievement of U.S. students in grades 4, 8, and 12, reported as average [scale scores](/glossary/#g-scale) (0–500) and achievement-level percentages for the nation, each state, and a set of large urban districts
 - **Important variables:** `subject` (mathematics / reading), `grade` (4 / 8), `jurisdiction` (national / state), `year`, and the mean `score`
 - **Time period:** biennial administrations — this project uses 2015, 2017, 2019 (pre-COVID) and 2022, 2024 (post-COVID)
 - **Unit of analysis:** one row is a jurisdiction × subject × grade × year × student-group summary (e.g., "Texas, grade 8 mathematics, 2024, all students, mean score")
 
-**Strengths.** NAEP is the gold-standard, nationally representative measure of U.S. student achievement; its scale is comparable across states and years, which makes "before vs. after" comparisons legitimate.
+**Strengths.** NAEP is the gold-standard, nationally representative measure of U.S. student achievement; its scale is comparable across states and years, which makes "[before vs. after](/analysis/)" comparisons legitimate.
 
-**Limitations.** It is sample-based (different students each cycle, no individual or school-level scores), it skips years (no 2016, 2018, or 2025), and results for small subgroups are sometimes suppressed.
+**Limitations.** It is [sample-based](/glossary/#g-sample) (different students each cycle, no individual or school-level scores), it skips years (no 2016, 2018, or 2025), and results for small subgroups are sometimes suppressed.
 
 ## Secondary dataset: Stanford Education Data Archive (SEDA)
 

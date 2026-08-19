@@ -1,11 +1,13 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
+import RelatedSections from "../components/RelatedSections";
 
 export default function GlossaryTemplate({ data }) {
   return (
     <Layout title="Glossary" description="Every technical term defined in plain language.">
       <div dangerouslySetInnerHTML={{ __html: data.file.childMarkdownRemark.html }} />
+      <RelatedSections route="/glossary/" />
     </Layout>
   );
 }

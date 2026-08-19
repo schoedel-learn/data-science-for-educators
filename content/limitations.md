@@ -6,7 +6,7 @@ description: "What this project can and cannot claim."
 
 ## The claim ladder
 
-1. **What the data shows:** In the NAEP data, mean mathematics and reading scores for grades 4 and 8 were lower in 2022 and 2024 than they were in 2019.
+1. **What the data shows:** In the [NAEP](/dataset/) data, mean mathematics and reading scores for grades 4 and 8 were lower in 2022 and 2024 than they were in 2019.
 
 2. **What the data may suggest:** The period that included the pandemic is associated with a drop in achievement that has only partly reversed for math and has not reversed for reading.
 
@@ -22,10 +22,10 @@ description: "What this project can and cannot claim."
 
 ## Limitations
 
-- NAEP is **sample-based** — the lines connect different groups of students over time, not the same students.
+- NAEP is **[sample-based](/glossary/#g-sample)** — the lines connect different groups of students over time, not the same students.
 - NAEP is **biennial** — there are no scores for 2016, 2018, or 2025, leaving gaps in the timeline.
 - The **2017 switch from paper to digital testing** may affect year-to-year comparisons, though it does not change the broad pattern.
-- Texas students are **included in the "U.S. national" figure**, so the two lines in the comparison are not fully independent.
+- Texas students are **included in the "U.S. national" figure**, so the two lines in the [comparison](/comparison/) are not fully independent.
 - This project compares **averages**, which can hide wide differences within a group.
 
-Because of these limitations, every finding above is phrased as a description of what the data show — not as a causal explanation.
+Because of these limitations, every [finding](/findings/) above is phrased as a description of what the data show — not as a causal explanation.

@@ -6,7 +6,7 @@ description: "U.S. national vs. Texas, and why context matters."
 
 ## The comparison
 
-I compared the U.S. national public average to **Texas**, across grade 4 and grade 8 in mathematics and reading, for 2015–2024. Both are mean NAEP scale scores, so the comparison is on the same scale — no raw counts are involved, which keeps it fair.
+I compared the U.S. national public average to **Texas**, across grade 4 and grade 8 in mathematics and reading, for 2015–2024. Both are mean [NAEP scale scores](/dataset/), so the comparison is on the same scale — no raw counts are involved, which keeps it fair.
 
 | Subject / grade | U.S. national (2024) | Texas (2024) | Texas − national |
 |---|---|---|---|
@@ -27,4 +27,4 @@ A state comparison reveals what a single national average hides. Texas is the se
 
 ## Context needed to interpret it fairly
 
-The raw gap ignores **student demographics**. Texas educates a larger share of Hispanic students, economically disadvantaged students, and English learners than the national average. Because those groups score lower on average nationally, part of Texas's lower mean reflects *who* it educates, not only *how well* its schools perform. That context does not erase the gap, but it must temper any reading of the gap as a pure measure of school quality.
+The raw gap ignores **[student demographics](/responsible-use/)**. Texas educates a larger share of Hispanic students, economically disadvantaged students, and English learners than the national average. Because those groups score lower on average nationally, part of Texas's lower mean reflects *who* it educates, not only *how well* its schools perform. That context does not erase the gap, but it must temper any reading of the gap as a pure measure of school quality.

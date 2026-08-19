@@ -352,3 +352,53 @@ main code:not(pre code) {
   .graph-banner { flex-direction: column; align-items: flex-start; gap: .5rem; }
   .graph-banner-cta { white-space: normal; }
 }
+
+/* --- Related sections (wiki-style "See also") --- */
+.related-sections {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+.related-heading {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+  margin: 0 0 .9rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.related-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .5rem .9rem;
+}
+.related-item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .12rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--light-accent);
+  border-radius: 6px;
+  padding: .6rem .75rem;
+}
+.related-item:hover { border-left-color: var(--accent); }
+.related-link {
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+.related-link:hover { text-decoration: underline; }
+.related-summary {
+  font-size: .82rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+@media (max-width: 600px) {
+  .related-list { grid-template-columns: 1fr; }
+}

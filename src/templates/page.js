@@ -1,12 +1,15 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
+import RelatedSections, { routeFromPath } from "../components/RelatedSections";
 
 export default function PageTemplate({ data }) {
   const { childMarkdownRemark } = data.file;
+  const route = routeFromPath(data.file.relativePath);
   return (
     <Layout title={childMarkdownRemark.frontmatter?.title} description={childMarkdownRemark.frontmatter?.description}>
       <div dangerouslySetInnerHTML={{ __html: childMarkdownRemark.html }} />
+      <RelatedSections route={route} />
     </Layout>
   );
 }

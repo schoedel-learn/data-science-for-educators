@@ -6,7 +6,7 @@ description: "A descriptive analysis of NAEP math and reading scores (grades 4 a
 
 <div class="hero">
   <p class="eyebrow">Data Science for Educators · Final Project</p>
-  <p class="hero-question">Were average NAEP math and reading scores lower after COVID than before?</p>
+  <p class="hero-question">Were average <a href="/dataset/">NAEP</a> math and reading scores lower after COVID than before?</p>
   <p class="hero-answer">Yes — in every subject and grade. Math is recovering; reading is still falling.</p>
 </div>
 
